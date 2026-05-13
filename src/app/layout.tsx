@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_Arabic } from "next/font/google";
+import { Cormorant_Garamond, Inter, Noto_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -37,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={`${inter.variable} ${notoSansArabic.variable} scroll-smooth`}
+      className={`${inter.variable} ${cormorant.variable} ${notoSansArabic.variable} scroll-smooth`}
     >
       <body className="min-h-full flex flex-col antialiased bg-cream text-charcoal font-sans">
         {children}
