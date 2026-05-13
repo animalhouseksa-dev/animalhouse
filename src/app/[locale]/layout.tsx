@@ -1,3 +1,8 @@
+import {NextIntlClientProvider} from 'next-intl';
+import {notFound} from 'next/navigation';
+import {routing} from '@/i18n/routing';
+import {getMessages} from 'next-intl/server';
+
 export default async function LocaleLayout({
   children,
   params
@@ -6,10 +11,18 @@ export default async function LocaleLayout({
   params: Promise<{locale: string}>;
 }) {
   const {locale} = await params;
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+ 
+  const messages = await getMessages();
+ 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <body className="antialiased bg-white text-gray-900">
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
