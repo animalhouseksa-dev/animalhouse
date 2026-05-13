@@ -1,19 +1,19 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import HomePageClient from './HomePageClient';
+import ContactPageClient from './ContactPageClient';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'ar' }];
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('metadata');
+  const t = await getTranslations('contactPage.metadata');
   return {
     title: t('title'),
     description: t('description'),
   };
 }
 
-export default function HomePage() {
-  return <HomePageClient />;
+export default function ContactPage() {
+  return <ContactPageClient />;
 }

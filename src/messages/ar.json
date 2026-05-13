@@ -5,7 +5,7 @@
   },
   "nav": {
     "home": "الرئيسية",
-    "adopt": "تبنّى",
+    "adopt": "تبنى",
     "donate": "تبرع",
     "about": "من نحن",
     "contact": "تواصل",
@@ -14,7 +14,7 @@
   "hero": {
     "title": "كل حيوان يستحق بيتاً محباً",
     "subtitle": "Animal House ملجأ بلا قتل مقره الرياض، المملكة العربية السعودية. أسسه كولن ريس وخديجة عبدالله، ننقذ القطط والكلاب من جميع أنحاء المملكة — من عرّار إلى جدة — ونوفر لهم منازل محبة حتى في لوس أنجلوس وباريس.",
-    "ctaAdopt": "تبنّى صديقاً",
+    "ctaAdopt": "تبنى صديقاً",
     "ctaDonate": "ادعم مهمتنا"
   },
   "stats": {
@@ -24,7 +24,7 @@
     "impressions": "انطباع إعلامي"
   },
   "features": {
-    "adoptTitle": "تبنّى",
+    "adoptTitle": "تبنى",
     "adoptDesc": "جميع حيواناتنا مُرقّمة بالشريحة الإلكترونية، ومُلقحة، ومُعقّمة قبل التبني. نجري زيارات منزلية ومتابعات رفاهية لضمان حصول كل حيوان على منزل آمن ومحب.",
     "donateTitle": "تبرع",
     "donateDesc": "دعمك يمول عمليات الإنقاذ والرعاية البيطرية والطعام وبرنامجنا للتعقيم/الإخصاء الذي منع أكثر من 270,000 ولادة قطة شارعية في الرياض.",
@@ -45,7 +45,7 @@
     "intake1": "يجب على أي حيوان ينضم إلينا قضاء أسبوعين في العزل لضمان عدم انتشار الأمراض.",
     "intake2": "الإنقاذات تأتي من اتصالات نتلقاها أو من مبادراتنا الخاصة لضمان عدم ترك أي حيوان شارعي دون رعاية.",
     "intake3": "بعض القطط ترسل إلينا من شركاء الإنقاذ في مكة والمدينة.",
-    "intake4": "يجب ترقيم جميع القطط والكلاب بالشريحة الإلكترونية وإخصاؤها وتلقيحها بالكامل قبل الانضمام إلى المجموعة العامة.",
+    "intake4": "يجب ترقيم جميع القطط والكلاب بالشريحة الإلكترونية وإخصائها وتلقيحها بالكامل قبل الانضمام إلى المجموعة العامة.",
     "adoptionTitle": "سياسة التبني",
     "adoption1": "يخضع جميع المتبنّين لعملية فحص تشمل زيارات منزلية وفحص وسائل التواصل الاجتماعي ورسائل توصية.",
     "adoption2": "نقوم بتحديثات نصف شهرية وزيارات رفاهية عشوائية على جميع الحيوانات المتبناة.",
@@ -54,5 +54,332 @@
   "footer": {
     "rights": "جميع الحقوق محفوظة.",
     "madeWith": "صُنع بحب للحيوانات"
+  },
+  "contactPage": {
+    "metadata": {
+      "title": "تواصل مع Animal House - نحن هنا لمساعدتك",
+      "description": "تواصل مع Animal House، ملجأ إنقاذ الحيوانات في المملكة العربية السعودية. تواصل معنا للتبني أو التبرع أو التطوع أو الإنقاذ الطارئ."
+    },
+    "hero": {
+      "title": "نودّ أن نسمع منك",
+      "subtitle": "سواء كنت ترغب في التبني أو التبرع أو التطوع أو الإبلاغ عن حيوان محتاج، فريقنا هنا لمساعدتك."
+    },
+    "form": {
+      "title": "أرسل لنا رسالة",
+      "name": "الاسم الكامل",
+      "namePlaceholder": "اسمك",
+      "email": "عنوان البريد الإلكتروني",
+      "emailPlaceholder": "you@example.com",
+      "subject": "الموضوع",
+      "subjectPlaceholder": "كيف يمكننا المساعدة؟",
+      "message": "الرسالة",
+      "messagePlaceholder": "أخبرنا بالمزيد...",
+      "submit": "إرسال الرسالة",
+      "sending": "جاري الإرسال...",
+      "success": "شكراً لك! تلقينا رسالتك وسنرد عليك قريباً.",
+      "error": "يرجى ملء جميع الحقول المطلوبة بشكل صحيح."
+    },
+    "whatsapp": {
+      "title": "محادثة سريعة عبر واتساب",
+      "description": "تفضّل المراسلة الفورية؟ تواصل معنا مباشرة عبر واتساب.",
+      "cta": "افتح محادثة واتساب"
+    },
+    "info": {
+      "locationTitle": "زورنا",
+      "locationValue": "الرياض، المملكة العربية السعودية",
+      "locationDetail": "ملجأنا على بعد 45 دقيقة من وسط الرياض. الزيارة بالموعد المسبق فقط.",
+      "hotlineTitle": "خط الإنقاذ الطارئ",
+      "hotlineValue": "+966 50 000 0000",
+      "hotlineCta": "اتصل الآن",
+      "emailTitle": "راسلنا بالبريد الإلكتروني",
+      "emailValue": "info@animalhouse.sa"
+    },
+    "social": {
+      "title": "تابع رحلتنا",
+      "instagram": "إنستغرام",
+      "twitter": "تويتر/X",
+      "facebook": "فيسبوك",
+      "tiktok": "تيك توك"
+    }
+  },
+  "adopt": {
+    "metadata": {
+      "title": "تبنى صديقاً - Animal House",
+      "description": "تصفح القطط والكلاب والقطط الصغيرة المتاحة للتبني في Animal House في المملكة العربية السعودية. اعثر على رفيقك المثالي اليوم."
+    },
+    "heroTitle": "تعرف على صديقك الجديد",
+    "heroSubtitle": "لكل حيوان من حيواناتنا قصة فريدة. تصفح حيواناتنا المنقذة واعثر على الرفيق الذي ينتظرك.",
+    "filterAll": "الكل",
+    "filterCats": "قطط",
+    "filterDogs": "كلاب",
+    "filterKittens": "قطط صغيرة",
+    "filterAvailable": "متاح",
+    "filterAdopted": "تم التبني",
+    "statusAvailable": "متاح",
+    "statusPending": "معلق",
+    "statusAdopted": "تم التبني",
+    "speciesCat": "قطة",
+    "speciesDog": "كلب",
+    "speciesKitten": "قطة صغيرة",
+    "cardCta": "قدّم طلب تبني",
+    "noResults": "لا توجد حيوانات تطابق هذا الفلتر. تفقد مرة أخرى قريباً أو تواصل معنا للاستفسار عن الوافدين الجدد.",
+    "applyCtaTitle": "مستعد لاستقبالهم في بيتك؟",
+    "applyCtaDesc": "نرشدك خلال كل خطوة من خطوات عملية التبني، من أول لقاء إلى الزيارات المتابعة التي تضمن حياة سعيدة معاً.",
+    "applyButton": "قدّم طلب تبني"
+  },
+  "volunteerPage": {
+    "metadata": {
+      "title": "تطوع مع Animal House - اصنع الفرق",
+      "description": "انضم إلى أكثر من 600 متطوع يساعدون Animal House في إنقاذ الحيوانات في جميع أنحاء المملكة. قدّم طلبك اليوم."
+    },
+    "hero": {
+      "title": "كن التغيير الذي يحتاجونه",
+      "subtitle": "انضم إلى مجتمع من الأشخاص ذوي القلوب الرحيمة المكرسين لإنقاذ الحيوانات وإيجاد منازل لها في جميع أنحاء المملكة."
+    },
+    "roles": {
+      "title": "طرق التطوع",
+      "onsiteTitle": "رعاية في الموقع",
+      "onsiteDesc": "ساعد في التغذية والتنظيف والتهذيب والتأقل الاجتماعي للحيوانات في ملجأنا بالقرب من الرياض.",
+      "fosterTitle": "بيت الاحتضان",
+      "fosterDesc": "قدم منزلاً مؤقتاً محباً للقطط أو الكلاب حتى يجدوا عائلاتهم الدائمة.",
+      "eventsTitle": "الفعاليات والتوعية",
+      "eventsDesc": "ساعد في أيام التبني والزيارات التعليمية والحملات التوعوية في المدارس والمجمعات التجارية.",
+      "tnrTitle": "مساعد التعقيم والإرجاع",
+      "tnrDesc": "انضم إلى فريق التعقيم/الإرجاع لمساعدة إدارة أعداد قطط الشوارع بشكل إنساني في الرياض."
+    },
+    "requirements": {
+      "title": "متطلبات المتطوعين",
+      "age": "يجب أن يكون عمرك 18 سنة أو أكثر (أو 16+ بموافقة ولي الأمر)",
+      "commitment": "القدرة على التطوع 4 ساعات على الأقل شهرياً",
+      "location": "التواجد في الرياض أو بالقرب منها للأدوار الميدانية",
+      "attitude": "رحيم وموثوق ومستعد للعمل الجاد",
+      "training": "حضور جلسة توجيه موجزة قبل البدء"
+    },
+    "form": {
+      "title": "قدّم طلب التطوع",
+      "name": "الاسم الكامل",
+      "namePlaceholder": "اسمك",
+      "email": "عنوان البريد الإلكتروني",
+      "emailPlaceholder": "you@example.com",
+      "phone": "رقم الهاتف",
+      "phonePlaceholder": "+966 50 000 0000",
+      "role": "الدور المفضل",
+      "rolePlaceholder": "اختر دوراً",
+      "roles": {
+        "onsite": "رعاية في الموقع",
+        "foster": "بيت الاحتضان",
+        "events": "الفعاليات والتوعية",
+        "tnr": "مساعد التعقيم والإرجاع",
+        "other": "أخرى / دعم عام"
+      },
+      "message": "لماذا ترغب في التطوع؟",
+      "messagePlaceholder": "شاركنا قصتك...",
+      "submit": "إرسال الطلب",
+      "sending": "جاري الإرسال...",
+      "success": "شكراً لك! استلمنا طلبك وسنتواصل معك خلال 3–5 أيام عمل.",
+      "error": "يرجى ملء جميع الحقول المطلوبة بشكل صحيح."
+    },
+    "testimonials": {
+      "title": "قصص المتطوعين",
+      "items": [
+        {
+          "quote": "غيّر التطوع في Animal House حياتي. وجدت هدفي في رعاية الحيوانات التي لم يكن لها أحد.",
+          "name": "عائشة الرشيد",
+          "role": "متطوعة رعاية في الموقع"
+        },
+        {
+          "quote": "علّمتنا احتضان القطط الصغيرة التعاطف. ساعدنا حتى الآن في إيجاد منازل لـ 12 قطة!",
+          "name": "نور فهد",
+          "role": "متطوعة بيت احتضان"
+        },
+        {
+          "quote": "برنامج التعقيم والإرجاع يحدث فرقاً حقيقياً في الرياض. كل قطة نساعدها تعني أقل معاناة في الشوارع.",
+          "name": "عمر خالد",
+          "role": "متطوع التعقيم والإرجاع"
+        }
+      ]
+    }
+  },
+  "homePage": {
+    "hero": {
+      "title": "كل حيوان يستحق بيتاً محباً",
+      "subtitle": "Animal House ملجأ بلا قتل مقره الرياض، المملكة العربية السعودية. أسسه كولن ريس وخديجة عبدالله، ننقذ القطط والكلاب من جميع أنحاء المملكة ونوفر لهم منازل محبة في جميع أنحاء العالم.",
+      "ctaAdopt": "تبنّى صديقاً",
+      "ctaDonate": "ادعم مهمتنا"
+    },
+    "stats": {
+      "title": "تأثيرنا بأرقام",
+      "subtitle": "كل رقم يمثّل حياة تم تغييرها وعائلة تشكّلت ومستقبلًا أعاد كتابته.",
+      "rescued": "حيوان تم إنقاذها",
+      "adopted": "حيوان تم تبنّيها",
+      "tnr": "عمليات تعقيم",
+      "volunteers": "متطوع سنوياً"
+    },
+    "features": {
+      "title": "كيف يمكنك المساعدة",
+      "subtitle": "هناك طرق متعددة للتأثير. اختر الطريق الذي يلامك.",
+      "adoptTitle": "تبنّى",
+      "adoptDesc": "امنح قطة أو كلب منقذ منزلًا دائماً. جميع الحيوانات مُلقحة ومُرقّمة ومُعقّمة.",
+      "adoptCta": "اعثر على رفيقك",
+      "donateTitle": "تبرع",
+      "donateDesc": "هديتك تموّل الرعاية الطبية والطعام وعمليات الملجأ وبرنامج التعقيم الأنقذي.",
+      "donateCta": "قدّم هدية",
+      "volunteerTitle": "تطوع",
+      "volunteerDesc": "انضم إلى مجتمعنا المكوّن من 600+ متطوع. ساعد في الرعاية onsite أو الفعاليات أو الاحتضان أو التعقيم.",
+      "volunteerCta": "انضم إلينا",
+      "fosterTitle": "احتضن",
+      "fosterDesc": "افتح منزلك مؤقتاً. بيوت الاحتضان تنقذ الأرواح وتؤهّل الحيوانات للتبني.",
+      "fosterCta": "تعرف أكثر"
+    },
+    "about": {
+      "badge": "قصتنا",
+      "title": "مهمة ولدت من التعاطف",
+      "paragraph1": "أسس Animal House كولن ريس وخديجة عبدالله بهدف تحسين حياة القطط والكلاب في شوارع المملكة. استقبلنا كلاباً من محافظة عرّار ووجدنا متبنّين لحيواناتنا حتى في لوس أنجلوس وباريس.",
+      "paragraph2": "نحن ملجأ بلا قتل. أي حيوان ينضم إلينا يعلم أنه سيعيش حياته بسلام على هذه الأرض. منشأتنا الحالية بالقرب من الرياض تضم 300+ قط و15+ كلب، مع مناطق عزل ورياضية ورعاية مخصصة.",
+      "cta": "اقرأ قصتنا بالكامل"
+    },
+    "gallery": {
+      "title": "صور الإنقاذ",
+      "subtitle": "شاهد الحيوانات التي نرعاها والمنشأة التي تحميها حتى تجد منازلها الدائمة."
+    },
+    "newsletter": {
+      "title": "تابعنا",
+      "subtitle": "تلقى تحديثات عن الإنقاذات والتبنيات والفعاليات وكيفية مساعدة الحيوانات المحتاجة.",
+      "placeholder": "أدخل بريدك الإلكتروني",
+      "button": "اشترك"
+    }
+  },
+  "aboutPage": {
+    "metadata": {
+      "title": "عن Animal House - قصتنا ومهمتنا",
+      "description": "تعرف على Animal House، ملجأ بلا قتل لإنقاذ الحيوانات في المملكة العربية السعودية."
+    },
+    "hero": {
+      "title": "عن Animal House",
+      "subtitle": "من حلم إلى حراكة — اكتشف كيف يتحوّل شخصان ومجتمع منتشر مستقبل لتغيير مستقبل الحيوانات في السعودية."
+    },
+    "mission": {
+      "title": "مهمتنا",
+      "paragraph1": "أسس Animal House كولن ريس وخديجة عبدالله بهدف تحسين حياة القطط والكلاب في شوارع المملكة. استقبلنا كلاباً من محافظة عرّار ووجدنا متبنّين لحيواناتنا حتى في لوس أنجلوس وباريس.",
+      "paragraph2": "نحن ملجأ بلا قتل. أي حيوان ينضم إلينا يعلم أنه سيعيش حياته بسلام على هذه الأرض. نمداجنا يشمل الإنقاذ الفوري، وبرامج التعقيم المدعومة بالبيانات، والتثقيف الشبابي، والتنمية المستدامة للملاجئ.",
+      "quote": "لا يمكن الجدال مع النتائج. لا يمكن الجدال مع البيانات + البولستان. لا يمكن الجدال مع التاريخ."
+    },
+    "pillars": {
+      "title": "ركائز رؤيتنا",
+      "subtitle": "خمسة أولويات استراتيجية تهيم كل شيء نفعله في Animal House.",
+      "actionTitle": "التدخل الفوري",
+      "actionDesc": "نحل المشاكل على الأرض بالإنقاذ المباشر، ليس فقط بالحديث. كل حيوان ننقذه يثبت "
+    },
+    "facility": {
+      "title": "منشأتنا",
+      "paragraph1": "منشأتنا الحالية في استراحة على بعد 45 دقيقة من الرياض. تضم مناطق مخصصة للقطط والكلاب والعزل والقطط الصغيرة والأمّهات المرضعات والموجبة لفيروس نقص المناعة.",
+      "item1": "منطقة مستعمرة للقطط — حياة مستعمرة ليس أقفاص",
+      "item2": "منطقة مجموعة للكلاب",
+      "item3": "غرف عزل للوافدين الجدد",
+      "item4": "رياض مشان للقطط الصغيرة",
+      "item5": "غرف الأمّهات المرضعات",
+      "item6": "منطقة عزل للقطط الموجبة لفيروس نقص المناعة",
+      "paragraph2": "يزورنا طبيب بيطري أسبوعياً، وفريقنا المكوّن onsite يضمن تهذيب وتغذية والتنشيط لكل حيوان يومياً."
+    },
+    "timeline": {
+      "title": "رحلتنا",
+      "subtitle": "من بدايات متواضعة إلى حراكة تحوّل رفاهية الحيوانات في المملكة.",
+      "foundedTitle": "التأسيس",
+      "foundedDesc": "كولن ريس وخديجة عبدالله يبدأان Animal House برؤية وعزم.",
+      "firstfacilityTitle": "أول منشأة",
+      "firstfacilityDesc": "إطلاق أول ملجأ في استراحة لإيواء الحيوانات المنقذة.",
+      "tnrlaunchTitle": "برنامج التعقيم",
+      "tnrlaunchDesc": "إطلاق برنامج التعقيم/الإرجاع، ممنوع آلاف الولادات الشارعية.",
+      "internationalTitle": "تبنيات دولية",
+      "internationalDesc": "أول تبنيات دولية إلى لوس أنجلوس وباريس، مثبتة أن الحب لا يعرف الحدود.",
+      "youthprogramTitle": "برنامج الشباب",
+      "youthprogramDesc": "أول زيارات تعليمية مدرسية، بمشاركة 600+ شاب سعودي سنوياً.",
+      "waqfTitle": "رؤية الوقف",
+      "waqfDesc": "بدأنا بتخطيط ملجأ خاص بناء كوقف مستدام لالحيوانات."
+    },
+    "team": {
+      "title": "تعرف على الفريق",
+      "subtitle": "فريق صغير لكن قوي، بدعم مئات المتطوعين الذين يجعلون المستحيل ممكناً.",
+      "founder1Role": "المؤسس المشارك",
+      "founder2Role": "المؤسسة المشاركة",
+      "directorName": "مدير الملجأ",
+      "directorRole": "مسؤول عمليات onsite"
+    }
+  },
+  "donate": {
+    "metadata": {
+      "title": "Donate - Animal House - Save Lives Today",
+      "description": "Support Animal House animal rescue in Saudi Arabia. Choose a donation tier and help fund medical care, food, and rescue operations for animals in need."
+    },
+    "heroTitle": "Your Gift Saves Lives",
+    "heroSubtitle": "Every donation goes directly to rescuing, healing, and rehoming animals across the Kingdom. Whether it is vaccines, emergency surgery, or a warm meal, your generosity makes it possible.",
+    "ctaButton": "Donate Now",
+    "ctaContact": "Contact Us",
+    "impactTitle": "Your Impact, Real Numbers",
+    "sar": "SAR",
+    "impactVaccines": "= full vaccination course for 1 rescued animal",
+    "impactSpay": "= spay/neuter surgery for 1 animal",
+    "impactRescue": "= covers a full rescue operation including transport and initial care",
+    "impactFood": "= feeds all shelter animals for an entire month",
+    "tierTitle": "Choose Your Gift",
+    "tierSubtitle": "Select an amount that works for you. Every single riyal brings hope to an animal who needs it.",
+    "monthlyToggle": "Monthly",
+    "oneTimeToggle": "One-time",
+    "perMonth": "/ month",
+    "monthly": "monthly",
+    "selected": "Selected",
+    "selectedAmount": "You are giving",
+    "donateNow": "Donate Now",
+    "selectTierPrompt": "Select an amount above to continue",
+    "tier50Covers": "Vaccinations",
+    "tier50Desc": "Provides full vaccines for one rescued animal, protecting them from deadly diseases.",
+    "tier100Covers": "Emergency Care",
+    "tier100Desc": "Covers urgent medical treatment and medication for an injured or sick animal.",
+    "tier250Covers": "Rescue Mission",
+    "tier250Desc": "Funds transport, quarantine, and initial veterinary care for one rescued animal.",
+    "tier500Covers": "Monthly Sponsorship",
+    "tier500Desc": "Sponsors food, shelter, and ongoing care for a high-needs animal for a full month.",
+    "methodsTitle": "Ways to Give",
+    "methodsSubtitle": "We offer multiple secure options to make donating easy, wherever you are in the world.",
+    "bankTransferTitle": "Bank Transfer",
+    "bankTransferDesc": "Direct bank transfer in Saudi Riyals. Perfect for local donors and corporate sponsors.",
+    "localBadge": "Local",
+    "bankName": "Bank",
+    "bankNameValue": "National Commercial Bank",
+    "accountName": "Account Name",
+    "accountNameValue": "Animal House Rescue",
+    "iban": "IBAN",
+    "ibanValue": "SA00 0000 0000 0000 0000 0000",
+    "paypalTitle": "PayPal",
+    "paypalDesc": "Give securely from anywhere in the world using your PayPal account or credit card.",
+    "intlBadge": "International",
+    "paypalEmail": "PayPal email",
+    "cryptoTitle": "Cryptocurrency",
+    "cryptoDesc": "Donate Bitcoin, Ethereum, or USDT for fast, borderless giving with full transparency.",
+    "globalBadge": "Global",
+    "transparencyTitle": "Where Your Money Goes",
+    "transparencySubtitle": "We believe in complete transparency. Here is exactly how every donated riyal is spent across our operations.",
+    "transparencyMedical": "Medical Care & Veterinary",
+    "transparencyFood": "Food & Nutrition",
+    "transparencyOps": "Shelter Operations",
+    "transparencyTNR": "TNR Program",
+    "transparencyAdmin": "Administration",
+    "socialProofBadge": "Trusted by Hundreds",
+    "socialProofTitle": "Join 600+ Supporters",
+    "socialProofSubtitle": "From local volunteers to international donors, a global community stands behind Animal House. Together, we are rewriting the future for animals in Saudi Arabia.",
+    "socialRescued": "Animals Rescued",
+    "socialTNR": "TNR Procedures",
+    "socialBirths": "Future Births Prevented",
+    "testimonial1": "I started giving monthly 50 SAR and it felt amazing to know I was vaccinating a real cat every single month. This is the most transparent charity I have ever supported.",
+    "testimonial1Name": "Layla Al-Otaibi",
+    "testimonial1Role": "Monthly Donor",
+    "testimonial2": "As an expat living in Riyadh, I wanted to give back to the community. Donating via PayPal was seamless, and the team sends updates on how funds are used.",
+    "testimonial2Name": "James Morrison",
+    "testimonial2Role": "International Donor",
+    "testimonial3": "We organized a company fundraiser and donated 5,000 SAR. The transparency report they shared with us gave our entire team confidence to keep supporting their mission.",
+    "testimonial3Name": "Noura Al-Harbi",
+    "testimonial3Role": "Corporate Partner",
+    "ctaTitle": "Ready to Make a Difference?",
+    "ctaSubtitle": "No gift is too small. A single vaccine, a meal, or a surgery — every donation is a promise that we will never turn an animal away."
   }
 }

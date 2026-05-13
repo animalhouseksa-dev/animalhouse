@@ -54,5 +54,340 @@
   "footer": {
     "rights": "All rights reserved.",
     "madeWith": "Made with love for animals"
+  },
+  "contactPage": {
+    "metadata": {
+      "title": "Contact Animal House - Get in Touch",
+      "description": "Contact Animal House animal rescue in Saudi Arabia. Reach us for adoptions, donations, volunteering, or emergency rescues."
+    },
+    "hero": {
+      "title": "We'd Love to Hear From You",
+      "subtitle": "Whether you want to adopt, donate, volunteer, or report an animal in need, our team is here to help."
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Full Name",
+      "namePlaceholder": "Your name",
+      "email": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us more...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! We have received your message and will respond shortly.",
+      "error": "Please fill in all required fields correctly."
+    },
+    "whatsapp": {
+      "title": "Quick Chat on WhatsApp",
+      "description": "Prefer instant messaging? Chat with us directly on WhatsApp.",
+      "cta": "Open WhatsApp Chat"
+    },
+    "info": {
+      "locationTitle": "Visit Us",
+      "locationValue": "Riyadh, Saudi Arabia",
+      "locationDetail": "Our shelter is located 45 minutes from central Riyadh. Visits by appointment only.",
+      "hotlineTitle": "Emergency Rescue Hotline",
+      "hotlineValue": "+966 50 000 0000",
+      "hotlineCta": "Call Now",
+      "emailTitle": "Email Us",
+      "emailValue": "info@animalhouse.sa"
+    },
+    "social": {
+      "title": "Follow Our Journey",
+      "instagram": "Instagram",
+      "twitter": "Twitter/X",
+      "facebook": "Facebook",
+      "tiktok": "TikTok"
+    }
+  },
+  "adopt": {
+    "metadata": {
+      "title": "Adopt a Friend - Animal House",
+      "description": "Browse cats, dogs, and kittens available for adoption at Animal House in Saudi Arabia. Find your perfect companion today."
+    },
+    "heroTitle": "Meet Your New Best Friend",
+    "heroSubtitle": "Every one of our animals has a unique story. Browse our rescues and find the companion who is waiting just for you.",
+    "filterAll": "All",
+    "filterCats": "Cats",
+    "filterDogs": "Dogs",
+    "filterKittens": "Kittens",
+    "filterAvailable": "Available",
+    "filterAdopted": "Adopted",
+    "statusAvailable": "Available",
+    "statusPending": "Pending",
+    "statusAdopted": "Adopted",
+    "speciesCat": "Cat",
+    "speciesDog": "Dog",
+    "speciesKitten": "Kitten",
+    "cardCta": "Apply to Adopt",
+    "noResults": "No animals match this filter. Check back soon or contact us to learn about new arrivals.",
+    "applyCtaTitle": "Ready to Welcome Them Home?",
+    "applyCtaDesc": "We guide you through every step of the adoption process, from the first hello to the follow-up visits that ensure a happy life together.",
+    "applyButton": "Apply to Adopt"
+  },
+  "donate": {
+    "metadata": {
+      "title": "Donate - Animal House - Save Lives Today",
+      "description": "Support Animal House animal rescue in Saudi Arabia. Choose a donation tier and help fund medical care, food, and rescue operations for animals in need."
+    },
+    "heroTitle": "Your Gift Saves Lives",
+    "heroSubtitle": "Every donation goes directly to rescuing, healing, and rehoming animals across the Kingdom. Whether it is vaccines, emergency surgery, or a warm meal, your generosity makes it possible.",
+    "ctaButton": "Donate Now",
+    "ctaContact": "Contact Us",
+    "impactTitle": "Your Impact, Real Numbers",
+    "sar": "SAR",
+    "impactVaccines": "= full vaccination course for 1 rescued animal",
+    "impactSpay": "= spay/neuter surgery for 1 animal",
+    "impactRescue": "= covers a full rescue operation including transport and initial care",
+    "impactFood": "= feeds all shelter animals for an entire month",
+    "tierTitle": "Choose Your Gift",
+    "tierSubtitle": "Select an amount that works for you. Every single riyal brings hope to an animal who needs it.",
+    "monthlyToggle": "Monthly",
+    "oneTimeToggle": "One-time",
+    "perMonth": "/ month",
+    "monthly": "monthly",
+    "selected": "Selected",
+    "selectedAmount": "You are giving",
+    "donateNow": "Donate Now",
+    "selectTierPrompt": "Select an amount above to continue",
+    "tier50Covers": "Vaccinations",
+    "tier50Desc": "Provides full vaccines for one rescued animal, protecting them from deadly diseases.",
+    "tier100Covers": "Emergency Care",
+    "tier100Desc": "Covers urgent medical treatment and medication for an injured or sick animal.",
+    "tier250Covers": "Rescue Mission",
+    "tier250Desc": "Funds transport, quarantine, and initial veterinary care for one rescued animal.",
+    "tier500Covers": "Monthly Sponsorship",
+    "tier500Desc": "Sponsors food, shelter, and ongoing care for a high-needs animal for a full month.",
+    "methodsTitle": "Ways to Give",
+    "methodsSubtitle": "We offer multiple secure options to make donating easy, wherever you are in the world.",
+    "bankTransferTitle": "Bank Transfer",
+    "bankTransferDesc": "Direct bank transfer in Saudi Riyals. Perfect for local donors and corporate sponsors.",
+    "localBadge": "Local",
+    "bankName": "Bank",
+    "bankNameValue": "National Commercial Bank",
+    "accountName": "Account Name",
+    "accountNameValue": "Animal House Rescue",
+    "iban": "IBAN",
+    "ibanValue": "SA00 0000 0000 0000 0000 0000",
+    "paypalTitle": "PayPal",
+    "paypalDesc": "Give securely from anywhere in the world using your PayPal account or credit card.",
+    "intlBadge": "International",
+    "paypalEmail": "PayPal email",
+    "cryptoTitle": "Cryptocurrency",
+    "cryptoDesc": "Donate Bitcoin, Ethereum, or USDT for fast, borderless giving with full transparency.",
+    "globalBadge": "Global",
+    "transparencyTitle": "Where Your Money Goes",
+    "transparencySubtitle": "We believe in complete transparency. Here is exactly how every donated riyal is spent across our operations.",
+    "transparencyMedical": "Medical Care & Veterinary",
+    "transparencyFood": "Food & Nutrition",
+    "transparencyOps": "Shelter Operations",
+    "transparencyTNR": "TNR Program",
+    "transparencyAdmin": "Administration",
+    "socialProofBadge": "Trusted by Hundreds",
+    "socialProofTitle": "Join 600+ Supporters",
+    "socialProofSubtitle": "From local volunteers to international donors, a global community stands behind Animal House. Together, we are rewriting the future for animals in Saudi Arabia.",
+    "socialRescued": "Animals Rescued",
+    "socialTNR": "TNR Procedures",
+    "socialBirths": "Future Births Prevented",
+    "testimonial1": "I started giving monthly 50 SAR and it felt amazing to know I was vaccinating a real cat every single month. This is the most transparent charity I have ever supported.",
+    "testimonial1Name": "Layla Al-Otaibi",
+    "testimonial1Role": "Monthly Donor",
+    "testimonial2": "As an expat living in Riyadh, I wanted to give back to the community. Donating via PayPal was seamless, and the team sends updates on how funds are used.",
+    "testimonial2Name": "James Morrison",
+    "testimonial2Role": "International Donor",
+    "testimonial3": "We organized a company fundraiser and donated 5,000 SAR. The transparency report they shared with us gave our entire team confidence to keep supporting their mission.",
+    "testimonial3Name": "Noura Al-Harbi",
+    "testimonial3Role": "Corporate Partner",
+    "ctaTitle": "Ready to Make a Difference?",
+    "ctaSubtitle": "No gift is too small. A single vaccine, a meal, or a surgery — every donation is a promise that we will never turn an animal away."
+  },
+  "volunteerPage": {
+    "metadata": {
+      "title": "Volunteer at Animal House - Make a Difference",
+      "description": "Join 600+ volunteers helping Animal House rescue animals across Saudi Arabia. Apply today to foster, care, or support events."
+    },
+    "hero": {
+      "title": "Be the Change They Need",
+      "subtitle": "Join a community of compassionate people dedicated to rescuing and rehoming animals across the Kingdom."
+    },
+    "roles": {
+      "title": "Ways to Volunteer",
+      "onsiteTitle": "On-Site Care",
+      "onsiteDesc": "Help with feeding, cleaning, grooming, and socializing animals at our shelter near Riyadh.",
+      "fosterTitle": "Foster Home",
+      "fosterDesc": "Provide a temporary loving home for cats or dogs until they find their forever family.",
+      "eventsTitle": "Events & Outreach",
+      "eventsDesc": "Assist with adoption days, educational visits, and awareness campaigns in schools and malls.",
+      "tnrTitle": "TNR Helper",
+      "tnrDesc": "Join our Trap-Neuter-Return team to help manage street cat populations humanely across Riyadh."
+    },
+    "requirements": {
+      "title": "Volunteer Requirements",
+      "age": "Must be 18 years or older (or 16+ with guardian consent)",
+      "commitment": "Able to commit at least 4 hours per month",
+      "location": "Based in or near Riyadh for on-site roles",
+      "attitude": "Compassionate, reliable, and ready to get your hands dirty",
+      "training": "Attend a brief orientation before starting"
+    },
+    "form": {
+      "title": "Apply to Volunteer",
+      "name": "Full Name",
+      "namePlaceholder": "Your name",
+      "email": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+966 50 000 0000",
+      "role": "Preferred Role",
+      "rolePlaceholder": "Select a role",
+      "roles": {
+        "onsite": "On-Site Care",
+        "foster": "Foster Home",
+        "events": "Events & Outreach",
+        "tnr": "TNR Helper",
+        "other": "Other / General Support"
+      },
+      "message": "Why do you want to volunteer?",
+      "messagePlaceholder": "Share your story...",
+      "submit": "Submit Application",
+      "sending": "Submitting...",
+      "success": "Thank you! Your application has been received. We will contact you within 3–5 business days.",
+      "error": "Please fill in all required fields correctly."
+    },
+    "testimonials": {
+      "title": "Volunteer Stories",
+      "items": [
+        {
+          "quote": "Volunteering at Animal House changed my life. I found purpose in caring for animals who had no one else.",
+          "name": "Aisha Al-Rashid",
+          "role": "On-Site Care Volunteer"
+        },
+        {
+          "quote": "Fostering kittens taught my whole family empathy. We have helped 12 cats find homes so far!",
+          "name": "Noor Fahad",
+          "role": "Foster Home Volunteer"
+        },
+        {
+          "quote": "The TNR program is making a real difference in Riyadh. Every cat we help means fewer suffering on the streets.",
+          "name": "Omar Khalid",
+          "role": "TNR Volunteer"
+        }
+      ]
+    }
+  },
+  "homePage": {
+    "hero": {
+      "title": "Every Animal Deserves a Loving Home",
+      "subtitle": "Animal House is a NO-KILL rescue based in Riyadh, Saudi Arabia. Founded by Colin Rhys and Khadija Abdullah, we rescue cats and dogs from across the Kingdom and find them loving homes worldwide.",
+      "ctaAdopt": "Adopt a Friend",
+      "ctaDonate": "Support Our Mission"
+    },
+    "stats": {
+      "title": "Our Impact in Numbers",
+      "subtitle": "Every number represents a life changed, a family formed, and a future rewritten.",
+      "rescued": "Animals Rescued",
+      "adopted": "Animals Adopted",
+      "tnr": "TNR Procedures",
+      "volunteers": "Yearly Volunteers"
+    },
+    "features": {
+      "title": "How You Can Help",
+      "subtitle": "There are many ways to make a difference. Choose the path that speaks to you.",
+      "adoptTitle": "Adopt",
+      "adoptDesc": "Give a rescued cat or dog their forever home. All animals are vaccinated, microchipped, and spayed/neutered.",
+      "adoptCta": "Find Your Companion",
+      "donateTitle": "Donate",
+      "donateDesc": "Your gift funds medical care, food, shelter operations, and our life-saving TNR program.",
+      "donateCta": "Give a Gift",
+      "volunteerTitle": "Volunteer",
+      "volunteerDesc": "Join our community of 600+ volunteers. Help with on-site care, events, fostering, or TNR.",
+      "volunteerCta": "Join Us",
+      "fosterTitle": "Foster",
+      "fosterDesc": "Open your home temporarily. Foster homes save lives and prepare animals for adoption.",
+      "fosterCta": "Learn More"
+    },
+    "about": {
+      "badge": "Our Story",
+      "title": "A Mission Born from Compassion",
+      "paragraph1": "Animal House was started by Colin Rhys and Khadija Abdullah with a mission to improve the lives of cats and dogs on the streets of the Kingdom. We have taken dogs in from as far as Arar province and found adopters as far as Los Angeles and Paris.",
+      "paragraph2": "We are a NO-KILL rescue. Any animal who joins us knows they will live their life out in peace on this earth. Our current facility near Riyadh houses 300+ cats and 15+ dogs, with dedicated quarantine, kitten, and nursing areas.",
+      "cta": "Read Our Full Story"
+    },
+    "gallery": {
+      "title": "Rescue Photos",
+      "subtitle": "See the animals we care for and the facility that keeps them safe until they find their forever homes."
+    },
+    "newsletter": {
+      "title": "Stay Connected",
+      "subtitle": "Get updates on rescues, adoptions, events, and how you can help animals in need.",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    }
+  },
+  "aboutPage": {
+    "metadata": {
+      "title": "About Animal House - Our Story & Mission",
+      "description": "Learn about Animal House, a NO-KILL animal rescue in Saudi Arabia founded by Colin Rhys and Khadija Abdullah. Discover our mission, facility, and team."
+    },
+    "hero": {
+      "title": "About Animal House",
+      "subtitle": "From a dream to a movement — discover how two people and a growing community are changing the future for animals in Saudi Arabia."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "paragraph1": "Animal House was started by Colin Rhys and Khadija Abdullah with a mission to improve the lives of cats and dogs on the streets of the Kingdom. We have taken dogs in from as far as Arar province and have found adopters for our animals as far as Los Angeles and Paris.",
+      "paragraph2": "We are a NO-KILL rescue so any animal who joins us knows they will live their life out in peace on this earth. Our approach combines immediate rescue action, data-driven TNR programs, youth education, and sustainable shelter development.",
+      "quote": "Nobody can argue with results. Nobody can argue with data + proof. Nobody can argue with history."
+    },
+    "pillars": {
+      "title": "Our Vision Pillars",
+      "subtitle": "Five strategic priorities guide everything we do at Animal House.",
+      "actionTitle": "Immediate Action",
+      "actionDesc": "We solve problems on the ground through direct rescue, not just talk. Every animal we save is proof that change is possible.",
+      "dataTitle": "Data & Proof",
+      "dataDesc": "We train wildlife investigators, document crimes, and publish data. Evidence drives policy change and public awareness.",
+      "awarenessTitle": "Cultural Awareness",
+      "awarenessDesc": "We amplify sermons and historic teachings that promote fair treatment of animals, swaying hearts and minds through heritage.",
+      "youthTitle": "Youth Engagement",
+      "youthDesc": "We engage the youth of Saudi Arabia because they will decide the future of animal welfare in the Kingdom.",
+      "scaleTitle": "Sustainable Scale",
+      "scaleDesc": "We are developing a replicable shelter model to expand across Saudi Arabia, starting with the capital and building outward."
+    },
+    "facility": {
+      "title": "Our Facility",
+      "paragraph1": "Our current facility is housed within an Istraha 45 minutes from Riyadh. It includes dedicated zones for cats, dogs, quarantine, kittens, nursing mothers, and FIV-positive cats.",
+      "item1": "Cat colony area — open living, not cages",
+      "item2": "Dog pack area — social group housing",
+      "item3": "Quarantine rooms for new arrivals",
+      "item4": "Kitten nursery for vulnerable babies",
+      "item5": "Nursing mothers room",
+      "item6": "FIV isolation zone with specialist care",
+      "paragraph2": "A local veterinarian visits weekly, and our on-site team ensures every animal receives grooming, nutrition, and enrichment daily."
+    },
+    "timeline": {
+      "title": "Our Journey",
+      "subtitle": "From humble beginnings to a movement transforming animal welfare in the Kingdom.",
+      "foundedTitle": "Founded",
+      "foundedDesc": "Colin Rhys and Khadija Abdullah start Animal House with a vision and determination.",
+      "firstfacilityTitle": "First Facility",
+      "firstfacilityDesc": "Established the initial Istraha-based shelter to house rescued animals safely.",
+      "tnrlaunchTitle": "TNR Program",
+      "tnrlaunchDesc": "Launched Trap-Neuter-Return initiative, preventing tens of thousands of future street births.",
+      "internationalTitle": "International Adoptions",
+      "internationalDesc": "First adoptions to homes in Los Angeles and Paris, proving love knows no borders.",
+      "youthprogramTitle": "Youth Program",
+      "youthprogramDesc": "Hosted first educational school visits, engaging 600+ young Saudis annually.",
+      "waqfTitle": "Waqf Vision",
+      "waqfDesc": "Began planning a purpose-built rescue center as a sustainable waqf for animals."
+    },
+    "team": {
+      "title": "Meet the Team",
+      "subtitle": "A small but mighty team, supported by hundreds of volunteers who make the impossible possible.",
+      "founder1Role": "Co-Founder",
+      "founder2Role": "Co-Founder",
+      "directorName": "Shelter Director",
+      "directorRole": "On-site Operations Lead"
+    }
   }
 }
