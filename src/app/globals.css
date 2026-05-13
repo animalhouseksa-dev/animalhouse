@@ -24,6 +24,15 @@
     background-color: var(--color-cream);
     color: var(--color-charcoal);
   }
+
+  #smooth-wrapper {
+    overflow: hidden;
+  }
+
+  #smooth-content {
+    overflow: visible;
+    width: 100%;
+  }
 }
 
 @layer utilities {
