@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "title": "Animal House - Give Them a Home",
+    "description": "A NO-KILL animal rescue in Saudi Arabia founded by Colin Rhys and Khadija Abdullah. We rescue, rehabilitate, and rehome cats and dogs across the Kingdom."
+  },
+  "nav": {
+    "home": "Home",
+    "adopt": "Adopt",
+    "donate": "Donate",
+    "about": "About",
+    "contact": "Contact",
+    "volunteer": "Volunteer"
+  },
+  "hero": {
+    "title": "Every Animal Deserves a Loving Home",
+    "subtitle": "Animal House is a NO-KILL rescue based in Riyadh, Saudi Arabia. Founded by Colin Rhys and Khadija Abdullah, we rescue cats and dogs from across the Kingdom — from Arar to Jeddah — and find them loving homes as far as Los Angeles and Paris.",
+    "ctaAdopt": "Adopt a Friend",
+    "ctaDonate": "Support Our Mission"
+  },
+  "stats": {
+    "rescued": "Animals Rescued",
+    "adopted": "Animals Adopted",
+    "volunteers": "Yearly Volunteers",
+    "impressions": "Media Impressions"
+  },
+  "features": {
+    "adoptTitle": "Adopt",
+    "adoptDesc": "All our animals are microchipped, vaccinated, and spayed/neutered before adoption. We conduct home checks and follow-up welfare visits to ensure every pet finds a safe, loving home.",
+    "donateTitle": "Donate",
+    "donateDesc": "Your support funds rescue operations, veterinary care, food, and our TNR program that has prevented over 270,000 future street cat births in Riyadh.",
+    "volunteerTitle": "Volunteer",
+    "volunteerDesc": "Join 600+ local Saudi volunteers who help with rescue operations, on-site care, and youth awareness campaigns. We host 12+ educational site visits per year.",
+    "fosterTitle": "Foster",
+    "fosterDesc": "Open your home temporarily to a cat or dog in need. Foster homes save lives and help animals transition from street life to family life."
+  },
+  "about": {
+    "title": "Our Story",
+    "history": "Animal House was started by Colin Rhys and Khadija Abdullah with a mission to improve the lives of cats and dogs on the streets of the Kingdom. We have taken dogs in from as far as Arar province and have found adopters for our animals as far as Los Angeles and Paris.",
+    "nokill": "We are a NO-KILL rescue. Any animal who joins us knows they will live their life out in peace on this earth.",
+    "facility": "Our current facility is housed within an Istraha 45 minutes from Riyadh. It includes a cat area, dog area, quarantine rooms, kitten rooms, a nursing mothers room, and an isolation zone for FIV positive cats. We have a weekly visit by a local vet and grooming tables for all animals.",
+    "team": "Our team consists of 4 full-time members who live on-site: a Shelter Director, 2 full-time cleaners, and a driver for pick-up and drop-off. We are supported by a network of dedicated volunteers."
+  },
+  "policies": {
+    "intakeTitle": "Our Intake Policy",
+    "intake1": "Any animal who joins us must spend two weeks in quarantine to ensure no diseases spread.",
+    "intake2": "Rescues come from calls we receive or through our own initiative to leave no street animal unattended.",
+    "intake3": "Some cats are sent to us from rescue partners in Makkah and Madinah.",
+    "intake4": "All cats and dogs must be microchipped, spayed/neutered, and fully vaccinated before joining the general population.",
+    "adoptionTitle": "Our Adoption Policy",
+    "adoption1": "All adoptees go through a screening process including home checks, social media screening, and reference letters.",
+    "adoption2": "We perform bi-monthly updates and random welfare checks on all adopted animals.",
+    "adoption3": "No animal is adopted without being microchipped, vaccinated, and spayed/neutered."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "madeWith": "Made with love for animals"
+  }
+}
