@@ -29,7 +29,7 @@
     "donateTitle": "تبرع",
     "donateDesc": "دعمك يمول عمليات الإنقاذ والرعاية البيطرية والطعام وبرنامجنا للتعقيم/الإخصاء الذي منع أكثر من 270,000 ولادة قطة شارعية في الرياض.",
     "volunteerTitle": "تطوع",
-    "volunteerDesc": "انضم إلى أكثر من 600 متطوع سعودي محلي يساعدون في عمليات الإنقاذ والرعاية onsite والحملات التوعوية للشباب. نستضيف أكثر من 12 زيارة تعليمية سنوياً.",
+    "volunteerDesc": "انضم إلى أكثر من 600 متطوع سعودي محلي يساعدون في عمليات الإنقاذ والرعاية في الموقع والحملات التوعوية للشباب. نستضيف أكثر من 12 زيارة تعليمية سنوياً.",
     "fosterTitle": "احتضن",
     "fosterDesc": "افتح منزلك مؤقتاً لقطة أو كلب محتاج. بيوت الاحتضان تنقذ الأرواح وتساعد الحيوانات على الانتقال من حياة الشارع إلى حياة العائلة."
   },
@@ -53,7 +53,17 @@
   },
   "footer": {
     "rights": "جميع الحقوق محفوظة.",
-    "madeWith": "صُنع بحب للحيوانات"
+    "madeWith": "صُنع بحب للحيوانات",
+    "navigate": "التنقل",
+    "ourStory": "قصتنا",
+    "contact": "تواصل",
+    "ourImpact": "أثرنا",
+    "catsSpayed": "قطة تم تعقيمها",
+    "dogsSpayed": "كلب تم تعقيمه",
+    "birthsPrevented": "ولادة مُنعت",
+    "yearlyVolunteers": "متطوع سنوياً",
+    "emergencyHotline": "خط الإنقاذ الطارئ",
+    "brandDesc": "ملجأ حيوانات بلا قتل مُكرّس لإنقاذ القطط والكلاب في جميع أنحاء المملكة العربية السعودية."
   },
   "contactPage": {
     "metadata": {
@@ -205,27 +215,62 @@
       "title": "كل حيوان يستحق بيتاً محباً",
       "subtitle": "Animal House ملجأ بلا قتل مقره الرياض، المملكة العربية السعودية. أسسه كولن ريس وخديجة عبدالله، ننقذ القطط والكلاب من جميع أنحاء المملكة ونوفر لهم منازل محبة في جميع أنحاء العالم.",
       "ctaAdopt": "تبنّى صديقاً",
-      "ctaDonate": "ادعم مهمتنا"
+      "ctaDonate": "ادعم مهمتنا",
+      "badge": "ملجأ بلا قتل · الرياض، المملكة العربية السعودية",
+      "ctaStory": "اقرأ القصة",
+      "ctaProof": "شاهد الدليل"
     },
     "stats": {
       "title": "تأثيرنا بأرقام",
-      "subtitle": "كل رقم يمثّل حياة تم تغييرها وعائلة تشكّلت ومستقبلًا أعاد كتابته.",
-      "rescued": "حيوان تم إنقاذها",
-      "adopted": "حيوان تم تبنّيها",
+      "subtitle": "كل رقم يمثّل حياة تم تغييرها وعائلة تشكّلت ومستقبلًا أعيد كتابته.",
+      "rescued": "حيوان تم إنقاذه",
+      "adopted": "حيوان تم تبنّيه",
       "tnr": "عمليات تعقيم",
-      "volunteers": "متطوع سنوياً"
+      "volunteers": "متطوع سنوياً",
+      "items": [
+        {
+          "value": "1,200+",
+          "label": "قطة تم تعقيمها",
+          "detail": "أثر موثّق لبرنامج TNR"
+        },
+        {
+          "value": "500+",
+          "label": "كلب تم تعقيمه",
+          "detail": "سيطرة مباشرة على التعداد"
+        },
+        {
+          "value": "270,000+",
+          "label": "موالد قطط تم منعها",
+          "detail": "في شوارع الرياض"
+        },
+        {
+          "value": "600+",
+          "label": "متطوع مشارك سنوياً",
+          "detail": "سعوديون محليون"
+        },
+        {
+          "value": "1.2B+",
+          "label": "تعريف إعلامي",
+          "detail": "وصول التوعية"
+        },
+        {
+          "value": "12+",
+          "label": "زيارة ميدانية تعليمية",
+          "detail": "سنوياً"
+        }
+      ]
     },
     "features": {
       "title": "كيف يمكنك المساعدة",
-      "subtitle": "هناك طرق متعددة للتأثير. اختر الطريق الذي يلامك.",
+      "subtitle": "هناك طرق متعددة للتأثير. اختر الطريق الذي يلامس قلبك.",
       "adoptTitle": "تبنّى",
       "adoptDesc": "امنح قطة أو كلب منقذ منزلًا دائماً. جميع الحيوانات مُلقحة ومُرقّمة ومُعقّمة.",
       "adoptCta": "اعثر على رفيقك",
       "donateTitle": "تبرع",
-      "donateDesc": "هديتك تموّل الرعاية الطبية والطعام وعمليات الملجأ وبرنامج التعقيم الأنقذي.",
+      "donateDesc": "هديتك تموّل الرعاية الطبية والطعام وعمليات الملجأ وبرنامج التعقيم المنقذ للحياة.",
       "donateCta": "قدّم هدية",
       "volunteerTitle": "تطوع",
-      "volunteerDesc": "انضم إلى مجتمعنا المكوّن من 600+ متطوع. ساعد في الرعاية onsite أو الفعاليات أو الاحتضان أو التعقيم.",
+      "volunteerDesc": "انضم إلى مجتمعنا المكوّن من أكثر من 600 متطوع. ساعد في الرعاية في الموقع أو الفعاليات أو الاحتضان أو التعقيم.",
       "volunteerCta": "انضم إلينا",
       "fosterTitle": "احتضن",
       "fosterDesc": "افتح منزلك مؤقتاً. بيوت الاحتضان تنقذ الأرواح وتؤهّل الحيوانات للتبني.",
@@ -235,18 +280,188 @@
       "badge": "قصتنا",
       "title": "مهمة ولدت من التعاطف",
       "paragraph1": "أسس Animal House كولن ريس وخديجة عبدالله بهدف تحسين حياة القطط والكلاب في شوارع المملكة. استقبلنا كلاباً من محافظة عرّار ووجدنا متبنّين لحيواناتنا حتى في لوس أنجلوس وباريس.",
-      "paragraph2": "نحن ملجأ بلا قتل. أي حيوان ينضم إلينا يعلم أنه سيعيش حياته بسلام على هذه الأرض. منشأتنا الحالية بالقرب من الرياض تضم 300+ قط و15+ كلب، مع مناطق عزل ورياضية ورعاية مخصصة.",
+      "paragraph2": "نحن ملجأ بلا قتل. أي حيوان ينضم إلينا يعلم أنه سيعيش حياته بسلام على هذه الأرض. منشأتنا الحالية بالقرب من الرياض تضم أكثر من 300 قطة وأكثر من 15 كلباً، مع مناطق عزل ورياضة قطط صغيرة ورعاية مخصصة.",
       "cta": "اقرأ قصتنا بالكامل"
+    },
+    "story": {
+      "sectionLabel": "قصتنا",
+      "title": "ملجأ بُني كَوَعد.",
+      "notes": [
+        {
+          "eyebrow": "إنقاذ شامل في المملكة",
+          "title": "من عرّار إلى جدة",
+          "text": "ينقذ Animal House القطط والكلاب من جميع أنحاء المملكة العربية السعودية، مع قصص تبني تصل إلى لوس أنجلوس وباريس."
+        },
+        {
+          "eyebrow": "مبدأ غير قابل للتفاوض",
+          "title": "بلا قتل، دائماً"
+        },
+        {
+          "eyebrow": "فريق صغير وشبكة واسعة",
+          "title": "رعاية في الموقع وقوة المتطوعين"
+        }
+      ]
+    },
+    "vision": {
+      "sectionLabel": "ركائز رؤيتنا الأساسية",
+      "title": "العمل، الدليل، الثقافة، الشباب، التوسع.",
+      "pillars": [
+        {
+          "title": "العمل الفوري",
+          "proof": "لا يمكن الجدال مع النتائج.",
+          "text": "حل المشكلة على الأرض من خلال عمل الإنقاذ، وليس الكلام."
+        },
+        {
+          "title": "البيانات + الدليل",
+          "proof": "لا يمكن الجدال مع البيانات والدليل.",
+          "text": "الإبقاء على محققي الحياة البرية وتدريبهم لكشف الجرائم ونشر البيانات المطلوبة لاتخاذ الإجراءات."
+        },
+        {
+          "title": "التاريخ + التوعية",
+          "proof": "لا يمكن الجدال مع التاريخ.",
+          "text": "تعزيز الخطب والتعاليم التاريخية التي توعي بالمعاملة العادلة للحيوانات."
+        },
+        {
+          "title": "إشراك الشباب",
+          "proof": "لا أحد يستطيع تقرير مستقبل الحيوانات في المملكة أفضل منهم.",
+          "text": "إشراك شباب المملكة العربية السعودية لأنهم سيحددون العصر التالي لرفاهية الحيوان."
+        },
+        {
+          "title": "تقدم من الدرجة الأولى",
+          "proof": "لا يمكن الجدال مع تقدم العالم الأول.",
+          "text": "تطوير نموذج ملجأ مستدام قابل للتوسع في جميع أنحاء المملكة العربية السعودية، بدءاً من العاصمة."
+        }
+      ]
+    },
+    "sanctuary": {
+      "label": "المَلجأ",
+      "title": "استراحة على بعد 45 دقيقة من الرياض، أُعيد تصميمها حول الرعاية.",
+      "facility": [
+        "منطقة مستعمرة القطط — حياة مفتوحة، ليس أقفاص",
+        "منطقة مجموعة الكلاب — سكن جماعي اجتماعي",
+        "غرف عزل للوافدين الجدد",
+        "رياضة للقطط الصغيرة الضعيفة",
+        "غرفة الأمّهات المرضعات",
+        "منطقة عزل القطط الموجبة لفيروس نقص المناعة مع رعاية متخصصة",
+        "زيارات أسبوعية من طبيب بيطري وطاولات تزيين"
+      ]
+    },
+    "policies": {
+      "intakeTitle": "سياسة الاستلام",
+      "intake1": "يجب على أي حيوان ينضم إلينا قضاء أسبوعين في العزل لضمان عدم انتشار الأمراض.",
+      "intake2": "الإنقاذات تأتي من اتصالات نتلقاها أو من مبادراتنا الخاصة لضمان عدم ترك أي حيوان شارعي دون رعاية.",
+      "intake3": "بعض القطط ترسل إلينا من شركاء الإنقاذ في مكة والمدينة.",
+      "intake4": "يجب ترقيم جميع القطط والكلاب بالشريحة الإلكترونية وإخصائها وتلقيحها بالكامل قبل الانضمام إلى المجموعة العامة.",
+      "adoptionTitle": "سياسة التبني",
+      "adoption1": "يخضع جميع المتبنّين لعملية فحص تشمل زيارات منزلية وفحص وسائل التواصل الاجتماعي ورسائل توصية.",
+      "adoption2": "نقوم بتحديثات نصف شهرية وزيارات رفاهية عشوائية على جميع الحيوانات المتبناة.",
+      "adoption3": "لا يتم تبني أي حيوان دون ترقيمه بالشريحة الإلكترونية وتلقيحه وإخصائه.",
+      "sectionLabel": "معايير الرعاية",
+      "homeTitle": "الجمال هو الخُطّاف. النظام هو الإنقاذ."
     },
     "gallery": {
       "title": "صور الإنقاذ",
-      "subtitle": "شاهد الحيوانات التي نرعاها والمنشأة التي تحميها حتى تجد منازلها الدائمة."
+      "subtitle": "شاهد الحيوانات التي نرعاها والمنشأة التي تحميها حتى تجد منازلها الدائمة.",
+      "sectionLabel": "مقال مصوّر",
+      "homeTitle": "حيوات في تطور، ليست دعاية تسويقية.",
+      "descriptiveText": "منطقة القطط العامة: جميع القطط تعيش كمستعمرة، ليس في أقفاص. منطقة الكلاب: جميع الكلاب تعيش كمجموعة، ليس في أقفاص. غرف العزل ومناطق القطط الصغيرة الإضافية جزء من نظام الرعاية.",
+      "images": [
+        {
+          "alt": "حيوانات إنقاذ Animal House"
+        },
+        {
+          "alt": "منطقة مستعمرة القطط"
+        },
+        {
+          "alt": "كلاب منقذة"
+        },
+        {
+          "alt": "رياضة القطط الصغيرة"
+        },
+        {
+          "alt": "مؤسسا Animal House"
+        }
+      ]
+    },
+    "impact": {
+      "title": "الإنقاذ، البيانات، التعليم، التوسع.",
+      "pillars": [
+        {
+          "label": "الإنقاذ + إعادة التأهيل",
+          "copy": "كل وافد يمر عبر العزل والرعاية البيطرية والتطعيم والترقيم الدقيق والتعقيم قبل الانضمام للمجموعة العامة أو خط التبني."
+        },
+        {
+          "label": "TNR بالدليل",
+          "copy": "أكثر من 1,700 عملية مص-تعقيم-إرجاع منعت ما يُقدّر بـ 270,000 ولادة قطة شارعية في الرياض."
+        },
+        {
+          "label": "توعية الشباب",
+          "copy": "الزيارات الميدانية التعليمية والحملات تساعد شباب السعودية على بناء ثقافة الرحمة والمسؤولية ورفاهية الحيوان."
+        },
+        {
+          "label": "إعادة التوطين الدولية",
+          "copy": "عندما تكون العائلة المناسبة في الخارج، يجعل Animal House المسافة تعمل — لأن المنزل الآمن الدائم هو الهدف."
+        }
+      ],
+      "leadText": "الصفحة الأولى أصبحت الآن القصة.",
+      "grid": [
+        "الطاقة الاستيعابية للمنشأة المستقبلية: 600 قطة في الموقع",
+        "الطاقة الاستيعابية للمنشأة المستقبلية: 50 كلب في الموقع",
+        "المستهدف المستقبلي لـ TNR: 2,400 عملية تعقيم/إخصاء سنوياً",
+        "المؤشر المستقبلي الرئيسي: إنقاذ 600+ قطة",
+        "المؤشر المستقبلي الرئيسي: إنقاذ 100+ كلب",
+        "المؤشر المستقبلي الرئيسي: تبني 240+ قطة",
+        "المؤشر المستقبلي الرئيسي: تبني 50+ كلب",
+        "أكثر من 100 محطة لتغذية ومياه المجتمع",
+        "أكثر من 4 شراكات حكومية: سبورت بوليفارد، الخارجية، الدرعية، نيومرابا"
+      ]
+    },
+    "cta": {
+      "title": "مستعد لصنع الفرق؟",
+      "desc": "كل تبني وتبرع وساعة تطوع تنقذ حياة. انضم إلى الحركة وساعدنا في بناء مستقبل بلا قتل للحيوانات في المملكة العربية السعودية.",
+      "ctaPrimary": "تواصل معنا",
+      "ctaSecondary": "شاهد الدليل"
+    },
+    "contact": {
+      "sectionLabel": "شارك معنا",
+      "title": "تواصل. نحن نسمع.",
+      "locationLabel": "الموقع",
+      "locationValue": "الرياض، المملكة العربية السعودية",
+      "locationDetail": "المنشأة على بعد 45 دقيقة من وسط المدينة",
+      "emailLabel": "البريد الإلكتروني",
+      "emailValue": "info@animalhouse.sa",
+      "phoneLabel": "الهاتف",
+      "phoneValue": "+966 50 000 0000",
+      "whatsapp": "محادثة على واتساب",
+      "form": {
+        "nameLabel": "الاسم",
+        "namePlaceholder": "اسمك",
+        "emailLabel": "البريد الإلكتروني",
+        "emailPlaceholder": "you@example.com",
+        "subjectLabel": "الموضوع",
+        "subjectPlaceholder": "كيف يمكننا المساعدة؟",
+        "messageLabel": "الرسالة",
+        "messagePlaceholder": "أخبرنا بالمزيد...",
+        "sending": "جاري الإرسال...",
+        "submit": "إرسال الرسالة",
+        "error": "يرجى ملء جميع الحقول المطلوبة."
+      },
+      "success": {
+        "title": "تم إرسال الرسالة",
+        "text": "شكراً لتواصلك. سنرد عليك قريباً."
+      }
     },
     "newsletter": {
       "title": "تابعنا",
       "subtitle": "تلقى تحديثات عن الإنقاذات والتبنيات والفعاليات وكيفية مساعدة الحيوانات المحتاجة.",
       "placeholder": "أدخل بريدك الإلكتروني",
-      "button": "اشترك"
+      "button": "اشترك",
+      "homeTitle": "تابع آخر الأخبار",
+      "homeSubtitle": "تلقى تحديثات الإنقاذ وقصص التبني ودعوات الفعاليات في بريدك.",
+      "homeButton": "اشترك",
+      "homeSending": "جاري الاشتراك...",
+      "homeSuccess": "شكراً لاشتراكك! سنكون على تواصل قريباً.",
+      "homeError": "يرجى إدخال عنوان بريد إلكتروني صالح."
     }
   },
   "aboutPage": {
@@ -256,46 +471,54 @@
     },
     "hero": {
       "title": "عن Animal House",
-      "subtitle": "من حلم إلى حراكة — اكتشف كيف يتحوّل شخصان ومجتمع منتشر مستقبل لتغيير مستقبل الحيوانات في السعودية."
+      "subtitle": "من حلم إلى حراك — اكتشف كيف يحوّل شخصان ومجتمع منتشر مستقبل الحيوانات في السعودية."
     },
     "mission": {
       "title": "مهمتنا",
       "paragraph1": "أسس Animal House كولن ريس وخديجة عبدالله بهدف تحسين حياة القطط والكلاب في شوارع المملكة. استقبلنا كلاباً من محافظة عرّار ووجدنا متبنّين لحيواناتنا حتى في لوس أنجلوس وباريس.",
-      "paragraph2": "نحن ملجأ بلا قتل. أي حيوان ينضم إلينا يعلم أنه سيعيش حياته بسلام على هذه الأرض. نمداجنا يشمل الإنقاذ الفوري، وبرامج التعقيم المدعومة بالبيانات، والتثقيف الشبابي، والتنمية المستدامة للملاجئ.",
-      "quote": "لا يمكن الجدال مع النتائج. لا يمكن الجدال مع البيانات + البولستان. لا يمكن الجدال مع التاريخ."
+      "paragraph2": "نحن ملجأ بلا قتل. أي حيوان ينضم إلينا يعلم أنه سيعيش حياته بسلام على هذه الأرض. نهجنا يشمل الإنقاذ الفوري، وبرامج التعقيم المدعومة بالبيانات، والتثقيف الشبابي، والتنمية المستدامة للملاجئ.",
+      "quote": "لا يمكن الجدال مع النتائج. لا يمكن الجدال مع البيانات والدليل. لا يمكن الجدال مع التاريخ."
     },
     "pillars": {
       "title": "ركائز رؤيتنا",
-      "subtitle": "خمسة أولويات استراتيجية تهيم كل شيء نفعله في Animal House.",
-      "actionTitle": "التدخل الفوري",
-      "actionDesc": "نحل المشاكل على الأرض بالإنقاذ المباشر، ليس فقط بالحديث. كل حيوان ننقذه يثبت "
+      "subtitle": "خمسة أولويات استراتيجية توجه كل ما نفعله في Animal House.",
+      "actionTitle": "العمل الفوري",
+      "actionDesc": "نحل المشاكل على الأرض من خلال الإنقاذ المباشر، ليس بالكلام فقط. كل حيوان ننقذه يثبت أن التغيير ممكن.",
+      "dataTitle": "البيانات والدليل",
+      "dataDesc": "نحافظ على محققي الحياة البرية وندرّبهم لكشف الجرائم ونشر البيانات اللازمة لاتخاذ القرارات.",
+      "awarenessTitle": "التوعية الثقافية",
+      "awarenessDesc": "ننشّط الخطب والتعاليم التاريخية التي تعزز المعاملة العادلة للحيوانات ونؤثر في القلوب والعقول.",
+      "youthTitle": "إشراك الشباب",
+      "youthDesc": "نشارك شباب المملكة العربية السعودية لأنهم سيحدّدون مستقبل رفاهية الحيوان في المملكة.",
+      "scaleTitle": "التوسع المستدام",
+      "scaleDesc": "نطوّر نموذج ملجأ قابل للتكرار للتوسع في جميع أنحاء المملكة، بدءاً من العاصمة."
     },
     "facility": {
       "title": "منشأتنا",
       "paragraph1": "منشأتنا الحالية في استراحة على بعد 45 دقيقة من الرياض. تضم مناطق مخصصة للقطط والكلاب والعزل والقطط الصغيرة والأمّهات المرضعات والموجبة لفيروس نقص المناعة.",
-      "item1": "منطقة مستعمرة للقطط — حياة مستعمرة ليس أقفاص",
-      "item2": "منطقة مجموعة للكلاب",
+      "item1": "منطقة مستعمرة القطط — حياة مفتوحة ليست أقفاص",
+      "item2": "منطقة مجموعة الكلاب — سكن اجتماعي جماعي",
       "item3": "غرف عزل للوافدين الجدد",
-      "item4": "رياض مشان للقطط الصغيرة",
-      "item5": "غرف الأمّهات المرضعات",
-      "item6": "منطقة عزل للقطط الموجبة لفيروس نقص المناعة",
-      "paragraph2": "يزورنا طبيب بيطري أسبوعياً، وفريقنا المكوّن onsite يضمن تهذيب وتغذية والتنشيط لكل حيوان يومياً."
+      "item4": "رياضة القطط الصغيرة للرعاية المكثفة",
+      "item5": "غرفة الأمّهات المرضعات",
+      "item6": "منطقة عزل القطط الموجبة لفيروس نقص المناعة مع رعاية متخصصة",
+      "paragraph2": "يزورنا طبيب بيطري أسبوعياً، وفريقنا الموجود في الموقع يضمن التزيين والتغذية والأنشطة لكل حيوان يومياً."
     },
     "timeline": {
       "title": "رحلتنا",
-      "subtitle": "من بدايات متواضعة إلى حراكة تحوّل رفاهية الحيوانات في المملكة.",
+      "subtitle": "من بدايات متواضعة إلى حراك يحوّل رفاهية الحيوانات في المملكة.",
       "foundedTitle": "التأسيس",
       "foundedDesc": "كولن ريس وخديجة عبدالله يبدأان Animal House برؤية وعزم.",
       "firstfacilityTitle": "أول منشأة",
-      "firstfacilityDesc": "إطلاق أول ملجأ في استراحة لإيواء الحيوانات المنقذة.",
+      "firstfacilityDesc": "إطلاق أول ملجأ في استراحة لإيواء الحيوانات المنقذة بأمان.",
       "tnrlaunchTitle": "برنامج التعقيم",
-      "tnrlaunchDesc": "إطلاق برنامج التعقيم/الإرجاع، ممنوع آلاف الولادات الشارعية.",
+      "tnrlaunchDesc": "إطلاق برنامج المص والتعقيم والإرجاع، مانع آلاف الولادات الشارعية.",
       "internationalTitle": "تبنيات دولية",
-      "internationalDesc": "أول تبنيات دولية إلى لوس أنجلوس وباريس، مثبتة أن الحب لا يعرف الحدود.",
+      "internationalDesc": "أول تبنيات دولية إلى لوس أنجلوس وباريس، مثبتين أن الحب لا يعرف الحدود.",
       "youthprogramTitle": "برنامج الشباب",
-      "youthprogramDesc": "أول زيارات تعليمية مدرسية، بمشاركة 600+ شاب سعودي سنوياً.",
+      "youthprogramDesc": "أول زيارات تعليمية مدرسية، بمشاركة أكثر من 600 شاب سعودي سنوياً.",
       "waqfTitle": "رؤية الوقف",
-      "waqfDesc": "بدأنا بتخطيط ملجأ خاص بناء كوقف مستدام لالحيوانات."
+      "waqfDesc": "بدأنا بتخطيط ملجأ خاص مبني كوقف مستدام للحيوانات."
     },
     "team": {
       "title": "تعرف على الفريق",
@@ -303,83 +526,91 @@
       "founder1Role": "المؤسس المشارك",
       "founder2Role": "المؤسسة المشاركة",
       "directorName": "مدير الملجأ",
-      "directorRole": "مسؤول عمليات onsite"
+      "directorRole": "مسؤول عمليات في الموقع"
     }
   },
   "donate": {
     "metadata": {
-      "title": "Donate - Animal House - Save Lives Today",
-      "description": "Support Animal House animal rescue in Saudi Arabia. Choose a donation tier and help fund medical care, food, and rescue operations for animals in need."
+      "title": "تبرع - Animal House - أنقذ أرواح اليوم",
+      "description": "ادعم Animal House في إنقاذ الحيوانات في المملكة العربية السعودية. اختر مستوى التبرع وساعد في تمويل الرعاية الطبية والطعام وعمليات الإنقاذ."
     },
-    "heroTitle": "Your Gift Saves Lives",
-    "heroSubtitle": "Every donation goes directly to rescuing, healing, and rehoming animals across the Kingdom. Whether it is vaccines, emergency surgery, or a warm meal, your generosity makes it possible.",
-    "ctaButton": "Donate Now",
-    "ctaContact": "Contact Us",
-    "impactTitle": "Your Impact, Real Numbers",
-    "sar": "SAR",
-    "impactVaccines": "= full vaccination course for 1 rescued animal",
-    "impactSpay": "= spay/neuter surgery for 1 animal",
-    "impactRescue": "= covers a full rescue operation including transport and initial care",
-    "impactFood": "= feeds all shelter animals for an entire month",
-    "tierTitle": "Choose Your Gift",
-    "tierSubtitle": "Select an amount that works for you. Every single riyal brings hope to an animal who needs it.",
-    "monthlyToggle": "Monthly",
-    "oneTimeToggle": "One-time",
-    "perMonth": "/ month",
-    "monthly": "monthly",
-    "selected": "Selected",
-    "selectedAmount": "You are giving",
-    "donateNow": "Donate Now",
-    "selectTierPrompt": "Select an amount above to continue",
-    "tier50Covers": "Vaccinations",
-    "tier50Desc": "Provides full vaccines for one rescued animal, protecting them from deadly diseases.",
-    "tier100Covers": "Emergency Care",
-    "tier100Desc": "Covers urgent medical treatment and medication for an injured or sick animal.",
-    "tier250Covers": "Rescue Mission",
-    "tier250Desc": "Funds transport, quarantine, and initial veterinary care for one rescued animal.",
-    "tier500Covers": "Monthly Sponsorship",
-    "tier500Desc": "Sponsors food, shelter, and ongoing care for a high-needs animal for a full month.",
-    "methodsTitle": "Ways to Give",
-    "methodsSubtitle": "We offer multiple secure options to make donating easy, wherever you are in the world.",
-    "bankTransferTitle": "Bank Transfer",
-    "bankTransferDesc": "Direct bank transfer in Saudi Riyals. Perfect for local donors and corporate sponsors.",
-    "localBadge": "Local",
-    "bankName": "Bank",
-    "bankNameValue": "National Commercial Bank",
-    "accountName": "Account Name",
+    "heroTitle": "هبتك تنقذ أرواح",
+    "heroSubtitle": "كل تبرع يذهب مباشرة لإنقاذ وشفاء وإعادة توطين الحيوانات في جميع أنحاء المملكة. سواء كان لقاحات أو جراحة طارئة أو وجبة دافئة، كرمك يجعل ذلك ممكناً.",
+    "ctaButton": "تبرع الآن",
+    "ctaContact": "تواصل معنا",
+    "impactTitle": "تأثيرك بأرقام حقيقية",
+    "sar": "ريال",
+    "impactVaccines": "= دورة تطعيم كاملة لحيوان منقذ واحد",
+    "impactSpay": "= عملية تعقيم/إخصاء لحيوان واحد",
+    "impactRescue": "= تغطية عملية إنقاذ كاملة تشمل النقل والرعاية الأولية",
+    "impactFood": "= إطعام جميع حيوانات الملجأ لمدة شهر كامل",
+    "tierTitle": "اختر تبرعك",
+    "tierSubtitle": "اختر المبلغ المناسب لك. كل ريال واحد يجلب الأمل لحيوان يحتاجه.",
+    "monthlyToggle": "شهري",
+    "oneTimeToggle": "مرة واحدة",
+    "perMonth": "/ شهرياً",
+    "monthly": "شهري",
+    "selected": "محدد",
+    "selectedAmount": "أنت تقدم",
+    "donateNow": "تبرع الآن",
+    "selectTierPrompt": "اختر مبلغاً أعلاه للمتابعة",
+    "tier50Covers": "التطعيمات",
+    "tier50Desc": "يوفر تطعيمات كاملة لحيوان منقذ واحد، يحميه من الأمراض المميتة.",
+    "tier100Covers": "الرعاية الطارئة",
+    "tier100Desc": "يغطي العلاج الطبي العاجل والدواء لحيوان مصاب أو مريض.",
+    "tier250Covers": "مهمة إنقاذ",
+    "tier250Desc": "ي مول النقل والعزل والرعاية البيطرية الأولية لحيوان منقذ واحد.",
+    "tier500Covers": "الرعاية الشهرية",
+    "tier500Desc": "يرعى الطعام والمأوى والرعاية المستمرة لحيوان ذي احتياجات خاصة لمدة شهر كامل.",
+    "methodsTitle": "طرق التبرع",
+    "methodsSubtitle": "نوفر خيارات متعددة آمنة لتسهيل التبرع، أينما كنت في العالم.",
+    "bankTransferTitle": "تحويل بنكي",
+    "bankTransferDesc": "تحويل بنكي مباشر بالريال السعودي. مثالي للمتبرعين المحليين والراعيين المؤسسيين.",
+    "localBadge": "محلي",
+    "bankName": "البنك",
+    "bankNameValue": "البنك الأهلي السعودي",
+    "accountName": "اسم الحساب",
     "accountNameValue": "Animal House Rescue",
-    "iban": "IBAN",
+    "iban": "رقم الحساب الدولي (IBAN)",
     "ibanValue": "SA00 0000 0000 0000 0000 0000",
     "paypalTitle": "PayPal",
-    "paypalDesc": "Give securely from anywhere in the world using your PayPal account or credit card.",
-    "intlBadge": "International",
-    "paypalEmail": "PayPal email",
-    "cryptoTitle": "Cryptocurrency",
-    "cryptoDesc": "Donate Bitcoin, Ethereum, or USDT for fast, borderless giving with full transparency.",
-    "globalBadge": "Global",
-    "transparencyTitle": "Where Your Money Goes",
-    "transparencySubtitle": "We believe in complete transparency. Here is exactly how every donated riyal is spent across our operations.",
-    "transparencyMedical": "Medical Care & Veterinary",
-    "transparencyFood": "Food & Nutrition",
-    "transparencyOps": "Shelter Operations",
-    "transparencyTNR": "TNR Program",
-    "transparencyAdmin": "Administration",
-    "socialProofBadge": "Trusted by Hundreds",
-    "socialProofTitle": "Join 600+ Supporters",
-    "socialProofSubtitle": "From local volunteers to international donors, a global community stands behind Animal House. Together, we are rewriting the future for animals in Saudi Arabia.",
-    "socialRescued": "Animals Rescued",
-    "socialTNR": "TNR Procedures",
-    "socialBirths": "Future Births Prevented",
-    "testimonial1": "I started giving monthly 50 SAR and it felt amazing to know I was vaccinating a real cat every single month. This is the most transparent charity I have ever supported.",
-    "testimonial1Name": "Layla Al-Otaibi",
-    "testimonial1Role": "Monthly Donor",
-    "testimonial2": "As an expat living in Riyadh, I wanted to give back to the community. Donating via PayPal was seamless, and the team sends updates on how funds are used.",
-    "testimonial2Name": "James Morrison",
-    "testimonial2Role": "International Donor",
-    "testimonial3": "We organized a company fundraiser and donated 5,000 SAR. The transparency report they shared with us gave our entire team confidence to keep supporting their mission.",
-    "testimonial3Name": "Noura Al-Harbi",
-    "testimonial3Role": "Corporate Partner",
-    "ctaTitle": "Ready to Make a Difference?",
-    "ctaSubtitle": "No gift is too small. A single vaccine, a meal, or a surgery — every donation is a promise that we will never turn an animal away."
+    "paypalDesc": "تبرع آمن من أي مكان في العالم عبر حساب PayPal أو بطاقتك الائتمانية.",
+    "intlBadge": "دولي",
+    "paypalEmail": "بريد PayPal",
+    "cryptoTitle": "العملات المشفرة",
+    "cryptoDesc": "تبرع ببيتكوين أو إيثيريوم أو USDT للتبرع السريع عبر الحدود مع شفافية كاملة.",
+    "globalBadge": "عالمي",
+    "transparencyTitle": "أين تذهب أموالك",
+    "transparencySubtitle": "نؤمن بالشفافية الكاملة. إليك بالضبط كيف يُنفق كل ريال متبرع به في عملياتنا.",
+    "transparencyMedical": "الرعاية الطبية والبيطرية",
+    "transparencyFood": "الطعام والتغذية",
+    "transparencyOps": "عمليات الملجأ",
+    "transparencyTNR": "برنامج TNR",
+    "transparencyAdmin": "الإدارة",
+    "socialProofBadge": "موثوق من مئات",
+    "socialProofTitle": "انضم إلى أكثر من 600 داعم",
+    "socialProofSubtitle": "من متطوعين محليين إلى متبرعين دوليين، يقف مجتمع عالمي خلف Animal House. معاً، نعيد كتابة مستقبل الحيوانات في السعودية.",
+    "socialRescued": "حيوان تم إنقاذه",
+    "socialTNR": "إجراءات TNR",
+    "socialBirths": "موالد مستقبلية تم منعها",
+    "testimonial1": "أبدأ بالتبرع شهرياً بـ 50 ريال وأصبح أمر رائع لمعرفة أنني أطعم قطة حقيقية كل شهر. هذه أكثر جمعية شفافة دعمتها.",
+    "testimonial1Name": "ليلى العتيبي",
+    "testimonial1Role": "متبرعة شهرية",
+    "testimonial2": "كمغترب أعيش في الرياض، أردت أن أرد الجميل للمجتمع. التبرع عبر PayPal كان سلساً، والفريق يرسل تحديثات عن كيفية استخدام الأموال.",
+    "testimonial2Name": "جيمس موريسون",
+    "testimonial2Role": "متبرع دولي",
+    "testimonial3": "نظمنا حملة لجمع التبرعات من شركتنا وتبرعنا بـ 5,000 ريال. تقرير الشفافية الذي شاركوه معنا أعطى فريقنا الثقة لمواصلة دعم مهمتهم.",
+    "testimonial3Name": "نورة الحربي",
+    "testimonial3Role": "شريك مؤسسي",
+    "ctaTitle": "مستعد لصنع الفرق؟",
+    "ctaSubtitle": "لا يوجد تبرع صغير جداً. لقاح واحد أو وجبة أو عملية — كل تبرع هو وعد بأننا لن نرفض حيواناً أبداً."
+  },
+  "navLinks": {
+    "story": "قصتنا",
+    "vision": "رؤيتنا",
+    "sanctuary": "المأوى",
+    "policies": "السياسات",
+    "impact": "أثرنا",
+    "contact": "تواصل"
   }
 }

@@ -18,6 +18,7 @@ const WhatsAppIcon = () => (
 
 export default function Footer() {
   const t = useTranslations('footer');
+  const navT = useTranslations('navLinks');
 
   return (
     <footer className="bg-[#0a0a08] text-white/50">
@@ -31,7 +32,7 @@ export default function Footer() {
               Animal House
             </div>
             <p className="text-sm leading-relaxed mb-6">
-              A NO-KILL animal rescue dedicated to saving cats and dogs across the Kingdom of Saudi Arabia.
+              {t('brandDesc')}
             </p>
             <div className="flex items-center gap-3">
               <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
@@ -51,26 +52,26 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Navigate</h4>
+            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">{t('navigate')}</h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="#story" className="hover:text-white transition-colors">Our Story</a></li>
-              <li><a href="#vision" className="hover:text-white transition-colors">Vision</a></li>
-              <li><a href="#sanctuary" className="hover:text-white transition-colors">Sanctuary</a></li>
-              <li><a href="#policies" className="hover:text-white transition-colors">Policies</a></li>
-              <li><a href="#impact" className="hover:text-white transition-colors">Impact</a></li>
+              <li><a href="#story" className="hover:text-white transition-colors">{navT('story')}</a></li>
+              <li><a href="#vision" className="hover:text-white transition-colors">{navT('vision')}</a></li>
+              <li><a href="#sanctuary" className="hover:text-white transition-colors">{navT('sanctuary')}</a></li>
+              <li><a href="#policies" className="hover:text-white transition-colors">{navT('policies')}</a></li>
+              <li><a href="#impact" className="hover:text-white transition-colors">{navT('impact')}</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contact</h4>
+            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">{t('contact')}</h4>
             <ul className="space-y-2.5 text-sm">
               <li>Riyadh, Saudi Arabia</li>
               <li>info@animalhouse.sa</li>
               <li>+966 50 000 0000</li>
               <li className="pt-1">
                 <span className="inline-block px-2 py-1 bg-white/10 text-white/80 text-xs font-semibold rounded">
-                  Emergency Hotline
+                  {t('emergencyHotline')}
                 </span>
               </li>
             </ul>
@@ -78,12 +79,12 @@ export default function Footer() {
 
           {/* Impact */}
           <div>
-            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Our Impact</h4>
+            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">{t('ourImpact')}</h4>
             <ul className="space-y-2.5 text-sm">
-              <li>1,200+ Cats Spayed</li>
-              <li>500+ Dogs Spayed</li>
-              <li>270,000+ Births Prevented</li>
-              <li>600+ Yearly Volunteers</li>
+              <li>1,200+ {t('catsSpayed')}</li>
+              <li>500+ {t('dogsSpayed')}</li>
+              <li>270,000+ {t('birthsPrevented')}</li>
+              <li>600+ {t('yearlyVolunteers')}</li>
               <li>1.2B+ Media Impressions</li>
             </ul>
           </div>

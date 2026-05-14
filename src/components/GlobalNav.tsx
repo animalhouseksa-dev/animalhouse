@@ -1,20 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { PawPrint } from "lucide-react";
 
-const navLinks = [
-  { href: "#story", label: "Story" },
-  { href: "#vision", label: "Vision" },
-  { href: "#sanctuary", label: "Sanctuary" },
-  { href: "#policies", label: "Policies" },
-  { href: "#impact", label: "Impact" },
-  { href: "#contact", label: "Contact" },
-];
+const navKeys = ["story", "vision", "sanctuary", "policies", "impact", "contact"] as const;
+const navHrefs = ["#story", "#vision", "#sanctuary", "#policies", "#impact", "#contact"] as const;
 
 export default function GlobalNav() {
+  const t = useTranslations("navLinks");
   const locale = useLocale();
   const otherLocale = locale === "en" ? "ar" : "en";
   const [scrolled, setScrolled] = useState(false);
@@ -46,13 +41,13 @@ export default function GlobalNav() {
           Animal House
         </a>
         <div className="hidden items-center gap-5 md:flex">
-          {navLinks.map((link) => (
+          {navKeys.map((key, i) => (
             <a
-              key={link.href}
-              href={link.href}
+              key={key}
+              href={navHrefs[i]}
               className="transition hover:text-white"
             >
-              {link.label}
+              {t(key)}
             </a>
           ))}
           <div className="mx-2 h-4 w-px bg-white/20" />
