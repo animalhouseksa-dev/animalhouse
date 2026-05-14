@@ -5,8 +5,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
 
@@ -155,7 +153,6 @@ export default function AdoptPageClient() {
 
   return (
     <>
-      <Navbar />
       <main>
         {/* Hero */}
         <section className="relative bg-emerald-700 text-white overflow-hidden">
@@ -303,7 +300,6 @@ export default function AdoptPageClient() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

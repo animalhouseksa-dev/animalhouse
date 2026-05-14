@@ -3,6 +3,8 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import {getMessages} from 'next-intl/server';
 import ScrollSmootherProvider from '@/components/ScrollSmootherProvider';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export default async function LocaleLayout({
   children,
@@ -22,7 +24,11 @@ export default async function LocaleLayout({
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <body className="antialiased bg-white text-gray-900">
         <NextIntlClientProvider messages={messages}>
-          <ScrollSmootherProvider>{children}</ScrollSmootherProvider>
+          <Navbar />
+          <ScrollSmootherProvider>
+            {children}
+            <Footer />
+          </ScrollSmootherProvider>
         </NextIntlClientProvider>
       </body>
     </html>

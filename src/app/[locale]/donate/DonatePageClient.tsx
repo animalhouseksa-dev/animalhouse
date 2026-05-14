@@ -5,8 +5,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
 import Counter from "@/components/Counter";
@@ -108,7 +106,6 @@ export default function DonatePageClient() {
 
   return (
     <>
-      <Navbar />
       <main>
         {/* Hero */}
         <section className="relative bg-emerald-700 text-white overflow-hidden">
@@ -591,7 +588,6 @@ export default function DonatePageClient() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

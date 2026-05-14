@@ -1,7 +1,8 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -19,6 +20,7 @@ import {
   Sparkles,
   Stethoscope,
   Users,
+  Send,
 } from "lucide-react";
 
 const imageCards = [
@@ -33,6 +35,8 @@ export default function HomePageClient() {
   const home = useTranslations("homePage");
   const about = useTranslations("about");
   const policies = useTranslations("policies");
+  const [email, setEmail] = useState("");
+  const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const heroRef = useRef<HTMLDivElement>(null);
   const sanctuaryRef = useRef<HTMLDivElement>(null);
 
@@ -229,22 +233,6 @@ export default function HomePageClient() {
           <Image src="/images/cover.jpg" alt="Animal House rescue" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.55)_48%,#0d0d0b_100%)]" />
         </div>
-
-        <header className="absolute left-0 right-0 top-0 z-20 px-5 py-6 sm:px-8 lg:px-12">
-          <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/15 bg-black/25 px-5 py-3 text-xs uppercase tracking-[0.28em] text-white/80 backdrop-blur-xl">
-            <div className="flex items-center gap-2 font-semibold text-white">
-              <PawPrint className="h-4 w-4" />
-              Animal House
-            </div>
-            <div className="hidden items-center gap-6 md:flex">
-              <a href="#story" className="transition hover:text-white">Story</a>
-              <a href="#vision" className="transition hover:text-white">Vision</a>
-              <a href="#sanctuary" className="transition hover:text-white">Sanctuary</a>
-              <a href="#policies" className="transition hover:text-white">Policies</a>
-              <a href="#impact" className="transition hover:text-white">Impact</a>
-            </div>
-          </nav>
-        </header>
 
         <div ref={heroContentRef} className="relative z-10 flex min-h-screen items-end px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-24">
           <div className="mx-auto grid w-full max-w-7xl items-end gap-10 lg:grid-cols-[1.15fr_0.85fr]">
@@ -480,6 +468,106 @@ export default function HomePageClient() {
                 ))}
               </div>
             </div>
+          </AnimatedSection>
+        </div>
+      </section>
+      {/* CTA Banner */}
+      <section className="relative bg-emerald-primary text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[url('/images/cover.jpg')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-gradient-to-b from-emerald-dark/40 to-emerald-primary/80" />
+        <div className="relative max-w-7xl mx-auto px-5 py-20 sm:px-8 lg:px-12 lg:py-28 text-center">
+          <AnimatedSection>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
+              Ready to make a difference?
+            </h2>
+            <p className="text-lg md:text-xl text-emerald-100 max-w-2xl mx-auto mb-10 leading-relaxed">
+              Every adoption, donation, and volunteer hour saves a life. Join the movement and help us build a no-kill future for animals in Saudi Arabia.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/adopt"
+                className="inline-block px-8 py-4 rounded-xl bg-white text-emerald-800 text-lg font-semibold hover:bg-[#f5f0e8] transition-colors shadow-lg"
+              >
+                Adopt a Friend
+              </Link>
+              <Link
+                href="/donate"
+                className="inline-block px-8 py-4 rounded-xl bg-emerald-800/60 border border-emerald-400/40 text-white text-lg font-semibold hover:bg-emerald-800/80 transition-colors"
+              >
+                Support Our Mission
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Newsletter signup */}
+      <section className="bg-cream px-5 py-20 sm:px-8 lg:px-12">
+        <div className="max-w-3xl mx-auto text-center">
+          <AnimatedSection>
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 mb-6">
+              <Send className="w-7 h-7" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              Stay in the loop
+            </h2>
+            <p className="text-lg text-charcoal-light mb-8 max-w-xl mx-auto leading-relaxed">
+              Get rescue updates, adoption stories, and event invites delivered to your inbox.
+            </p>
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                if (!email) {
+                  setNewsletterStatus("error");
+                  return;
+                }
+                setNewsletterStatus("sending");
+                try {
+                  const res = await fetch("/api/inquiry", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ type: "newsletter", email }),
+                  });
+                  if (res.ok) {
+                    setNewsletterStatus("success");
+                    setEmail("");
+                  } else {
+                    setNewsletterStatus("error");
+                  }
+                } catch {
+                  setNewsletterStatus("error");
+                }
+              }}
+              className="flex flex-col sm:flex-row gap-3 justify-center"
+            >
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  if (newsletterStatus === "error") setNewsletterStatus("idle");
+                }}
+                placeholder="Enter your email"
+                className="flex-1 max-w-md px-5 py-3.5 rounded-xl border border-sand bg-white text-charcoal placeholder:text-charcoal-light focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm"
+              />
+              <button
+                type="submit"
+                disabled={newsletterStatus === "sending"}
+                className="px-7 py-3.5 rounded-xl bg-emerald-primary text-white text-sm font-semibold hover:bg-emerald-dark transition-colors shadow-md disabled:opacity-60"
+              >
+                {newsletterStatus === "sending" ? "Subscribing..." : "Subscribe"}
+              </button>
+            </form>
+            {newsletterStatus === "success" && (
+              <p className="mt-4 text-sm text-emerald-700 font-medium">
+                Thank you for subscribing! We&apos;ll be in touch soon.
+              </p>
+            )}
+            {newsletterStatus === "error" && (
+              <p className="mt-4 text-sm text-coral-dark font-medium">
+                Please enter a valid email address.
+              </p>
+            )}
           </AnimatedSection>
         </div>
       </section>

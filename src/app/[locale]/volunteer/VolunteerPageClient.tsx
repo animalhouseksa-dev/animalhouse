@@ -22,14 +22,35 @@ export default function VolunteerPageClient() {
   const roles = ["onsite", "foster", "events", "tnr"] as const;
   const requirements = ["age", "commitment", "location", "attitude", "training"] as const;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.role) {
       setStatus("error");
       return;
     }
     setStatus("sending");
-    setTimeout(() => setStatus("success"), 1500);
+    try {
+      const res = await fetch("/api/inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "volunteer",
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          role: form.role,
+          message: form.message,
+        }),
+      });
+      if (res.ok) {
+        setStatus("success");
+        setForm({ name: "", email: "", phone: "", role: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
