@@ -165,7 +165,7 @@ export default function HomePageClient() {
           trigger: heroRef.current,
           scroller: "#smooth-content",
           start: "top top",
-          end: "+=150%",
+          end: "+=100vh",
           pin: true,
           scrub: 1,
           invalidateOnRefresh: true,
