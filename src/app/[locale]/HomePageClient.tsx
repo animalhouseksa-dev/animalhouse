@@ -23,11 +23,10 @@ import {
 } from "lucide-react";
 
 const imageSrcs = [
-  "/images/cover.jpg",
+  "/images/founders.jpg",
   "/images/cats1.jpg",
   "/images/dogs1.jpg",
   "/images/kittens1.jpg",
-  "/images/founders.jpg",
 ];
 
 export default function HomePageClient() {
@@ -76,7 +75,6 @@ export default function HomePageClient() {
     "",
     "",
     "",
-    "md:col-span-2",
   ];
 
   // ── GSAP ──
