@@ -17,7 +17,7 @@ export default function AboutSection() {
           <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
             <Image
               src="/images/founders.jpg"
-              alt="Animal House founders"
+              alt="Animal House Animals"
               fill
               className="object-cover"
             />
