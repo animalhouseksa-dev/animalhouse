@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
 import { PawPrint, Heart } from 'lucide-react';
 
 const InstagramIcon = () => (
@@ -21,30 +20,30 @@ export default function Footer() {
   const t = useTranslations('footer');
 
   return (
-    <footer className="bg-charcoal text-gray-400">
+    <footer className="bg-[#0a0a08] text-white/50">
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 text-white text-xl font-bold mb-4">
-              <PawPrint className="w-6 h-6 text-emerald-400" />
+            <div className="flex items-center gap-2 text-white text-xl font-bold mb-4">
+              <PawPrint className="w-6 h-6 text-white/80" />
               Animal House
-            </Link>
+            </div>
             <p className="text-sm leading-relaxed mb-6">
               A NO-KILL animal rescue dedicated to saving cats and dogs across the Kingdom of Saudi Arabia.
             </p>
             <div className="flex items-center gap-3">
-              <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-emerald-primary transition-colors">
+              <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
                 <InstagramIcon />
               </a>
-              <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-emerald-primary transition-colors">
+              <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
                 <XIcon />
               </a>
-              <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-emerald-primary transition-colors">
+              <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
                 <FacebookIcon />
               </a>
-              <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-emerald-primary transition-colors">
+              <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
                 <WhatsAppIcon />
               </a>
             </div>
@@ -52,25 +51,25 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold mb-4">Quick Links</h4>
+            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Navigate</h4>
             <ul className="space-y-2.5 text-sm">
-              <li><Link href="/adopt" className="hover:text-white transition-colors">Adopt</Link></li>
-              <li><Link href="/donate" className="hover:text-white transition-colors">Donate</Link></li>
-              <li><Link href="/volunteer" className="hover:text-white transition-colors">Volunteer</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><a href="#story" className="hover:text-white transition-colors">Our Story</a></li>
+              <li><a href="#vision" className="hover:text-white transition-colors">Vision</a></li>
+              <li><a href="#sanctuary" className="hover:text-white transition-colors">Sanctuary</a></li>
+              <li><a href="#policies" className="hover:text-white transition-colors">Policies</a></li>
+              <li><a href="#impact" className="hover:text-white transition-colors">Impact</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-bold mb-4">Contact</h4>
+            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contact</h4>
             <ul className="space-y-2.5 text-sm">
               <li>Riyadh, Saudi Arabia</li>
               <li>info@animalhouse.sa</li>
               <li>+966 50 000 0000</li>
               <li className="pt-1">
-                <span className="inline-block px-2 py-1 bg-coral/20 text-coral text-xs font-semibold rounded">
+                <span className="inline-block px-2 py-1 bg-white/10 text-white/80 text-xs font-semibold rounded">
                   Emergency Hotline
                 </span>
               </li>
@@ -79,13 +78,13 @@ export default function Footer() {
 
           {/* Impact */}
           <div>
-            <h4 className="text-white font-bold mb-4">Our Impact</h4>
+            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Our Impact</h4>
             <ul className="space-y-2.5 text-sm">
-              <li>500+ Animals Rescued</li>
-              <li>320+ Adoptions</li>
-              <li>1,700+ TNR Procedures</li>
+              <li>1,200+ Cats Spayed</li>
+              <li>500+ Dogs Spayed</li>
               <li>270,000+ Births Prevented</li>
               <li>600+ Yearly Volunteers</li>
+              <li>1.2B+ Media Impressions</li>
             </ul>
           </div>
         </div>
@@ -93,11 +92,11 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
           <div>
             &copy; {new Date().getFullYear()} Animal House. {t('rights')}
           </div>
-          <div className="flex items-center gap-1.5 text-emerald-400">
+          <div className="flex items-center gap-1.5 text-white/60">
             <span>{t('madeWith')}</span>
             <Heart className="w-4 h-4 fill-current" />
           </div>

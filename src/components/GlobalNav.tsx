@@ -1,0 +1,70 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useLocale } from "next-intl";
+import { Link } from "@/i18n/routing";
+import { PawPrint } from "lucide-react";
+
+const navLinks = [
+  { href: "#story", label: "Story" },
+  { href: "#vision", label: "Vision" },
+  { href: "#sanctuary", label: "Sanctuary" },
+  { href: "#policies", label: "Policies" },
+  { href: "#impact", label: "Impact" },
+  { href: "#contact", label: "Contact" },
+];
+
+export default function GlobalNav() {
+  const locale = useLocale();
+  const otherLocale = locale === "en" ? "ar" : "en";
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 80);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <header
+      className={`fixed left-0 right-0 top-0 z-50 px-5 py-5 sm:px-8 lg:px-10 transition-all duration-500 ${
+        scrolled ? "bg-[#0d0d0b]/80 backdrop-blur-xl" : ""
+      }`}
+    >
+      <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/15 bg-black/25 px-5 py-2.5 text-[0.65rem] uppercase tracking-[0.28em] text-white/80 backdrop-blur-xl transition-colors duration-500 hover:bg-black/40">
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="flex items-center gap-2 font-semibold text-white"
+        >
+          <PawPrint className="h-4 w-4" />
+          Animal House
+        </a>
+        <div className="hidden items-center gap-5 md:flex">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="transition hover:text-white"
+            >
+              {link.label}
+            </a>
+          ))}
+          <div className="mx-2 h-4 w-px bg-white/20" />
+          <Link
+            href="/"
+            locale={otherLocale}
+            className="rounded-lg bg-white/10 px-2.5 py-1.5 text-[0.6rem] transition hover:bg-white/20"
+          >
+            {otherLocale === "ar" ? "العربية" : "English"}
+          </Link>
+        </div>
+      </nav>
+    </header>
+  );
+}
