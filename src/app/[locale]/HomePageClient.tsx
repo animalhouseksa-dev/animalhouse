@@ -151,10 +151,10 @@ export default function HomePageClient() {
     if (typeof window === "undefined") return;
     gsap.registerPlugin(ScrollTrigger);
     const ctx = gsap.context(() => {
-      // Hero background: slower y + subtle scale
+      // Hero background: slower y + scale up under next section
       gsap.to(heroBgRef.current, {
-        y: "28%",
-        scale: 1.14,
+        y: "40%",
+        scale: 1.25,
         ease: "none",
         scrollTrigger: {
           trigger: heroRef.current,
