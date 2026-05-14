@@ -161,6 +161,13 @@ export default function HomePageClient() {
     const ctx = gsap.context(() => {
       // ── Hero: zoom image, darken overlay, fade content ──
       const scrollDist = "+" + window.innerHeight;
+
+      // Log to verify scrub is firing
+      console.log("[hero gsap] Setting up triggers, scrollDist =", scrollDist,
+        "heroBg:", !!heroBgRef.current,
+        "heroOverlay:", !!heroOverlayRef.current,
+        "heroContent:", !!heroContentRef.current);
+
       // Image zoom + rotate + blur
       gsap.to(heroBgRef.current, {
         scale: 1.55,
@@ -174,6 +181,7 @@ export default function HomePageClient() {
           end: scrollDist,
           scrub: true,
           markers: true,
+          onUpdate: (self) => console.log("[hero gsap scrub] progress =", self.progress),
         },
       });
       // Overlay darkens
