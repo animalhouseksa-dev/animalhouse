@@ -157,122 +157,49 @@ export default function HomePageClient() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     gsap.registerPlugin(ScrollTrigger);
+
     const ctx = gsap.context(() => {
-      // Hero background zooms in, slight rotation, gentle blur → cinematic push-in
+      // ── Hero: zoom and darken as you scroll past ──
+      // Image push-in + rotation
       gsap.to(heroBgRef.current, {
-        scale: 1.35,
-        rotate: 2,
-        filter: "blur(8px)",
+        scale: 1.5,
+        rotation: 4,
         ease: "none",
         scrollTrigger: {
           trigger: heroRef.current,
           scroller: "#smooth-content",
           start: "top top",
-          end: "100% top",
+          end: "bottom top",
           scrub: true,
         },
       });
-      // Overlay gradient tightens and darkens as we zoom
+      // Gradient overlay fades to near-black
       gsap.to(heroOverlayRef.current, {
-        opacity: 0.85,
+        opacity: 1,
         ease: "none",
         scrollTrigger: {
           trigger: heroRef.current,
           scroller: "#smooth-content",
-          start: "top top",
-          end: "80% top",
+          start: "60% top",
+          end: "bottom top",
           scrub: true,
         },
       });
-      // Hero content: fade + drift
+      // Hero content fades and drifts
       gsap.to(heroContentRef.current, {
-        y: -80,
+        yPercent: -25,
+        opacity: 0,
         ease: "none",
         scrollTrigger: {
           trigger: heroRef.current,
           scroller: "#smooth-content",
-          start: "top top",
-          end: "80% top",
+          start: "20% top",
+          end: "70% top",
           scrub: true,
         },
       });
-      // Title: dramatic stretch — wider letter-spacing + fade
-      if (heroTitleRef.current) {
-        gsap.to(heroTitleRef.current, {
-          letterSpacing: "0.01em",
-          opacity: 0,
-          y: -40,
-          ease: "none",
-          scrollTrigger: {
-            trigger: heroRef.current,
-            scroller: "#smooth-content",
-            start: "10% top",
-            end: "70% top",
-            scrub: true,
-          },
-        });
-      }
-      // Subtitle: shoots upward faster, breaking away from title
-      if (heroSubtitleRef.current) {
-        gsap.to(heroSubtitleRef.current, {
-          y: -200,
-          opacity: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: heroRef.current,
-            scroller: "#smooth-content",
-            start: "top top",
-            end: "60% top",
-            scrub: true,
-          },
-        });
-      }
-      // Sub-paragraph (right column): separate drift
-      if (heroSubtitleParaRef.current) {
-        gsap.to(heroSubtitleParaRef.current, {
-          y: -140,
-          opacity: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: heroRef.current,
-            scroller: "#smooth-content",
-            start: "top top",
-            end: "65% top",
-            scrub: true,
-          },
-        });
-      }
-      // Buttons: last thing to fade — linger a beat
-      if (heroButtonsRef.current) {
-        gsap.to(heroButtonsRef.current, {
-          y: -100,
-          opacity: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: heroRef.current,
-            scroller: "#smooth-content",
-            start: "5% top",
-            end: "55% top",
-            scrub: true,
-          },
-        });
-      }
-      // Hero right column container: subtle downward drift
-      if (heroRightRef.current) {
-        gsap.to(heroRightRef.current, {
-          y: 30,
-          opacity: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: heroRef.current,
-            scroller: "#smooth-content",
-            start: "top top",
-            end: "60% top",
-            scrub: true,
-          },
-        });
-      }
-      // Sanctuary image: gentle parallax
+
+      // ── Parallax sanctuary ──
       gsap.to(sanctuaryImgRef.current, {
         y: "8%",
         ease: "none",
@@ -289,14 +216,14 @@ export default function HomePageClient() {
   }, []);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#0d0d0b] text-white">
+    <main className="min-h-screen bg-[#0d0d0b] text-white">
       {/* Cinematic hero */}
       <section ref={heroRef} className="relative min-h-screen isolate overflow-hidden">
         <div ref={heroBgRef} className="absolute inset-0 -z-10 will-change-transform">
           <Image src="/images/cover.jpg" alt="Animal House rescue" fill priority className="object-cover" />
           <div 
             ref={heroOverlayRef}
-            className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.55)_48%,#0d0d0b_100%)]"
+            className="absolute inset-0 opacity-60 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.55)_48%,#0d0d0b_100%)]"
           />
         </div>
 
