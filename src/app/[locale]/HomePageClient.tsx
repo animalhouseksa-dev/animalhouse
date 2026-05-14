@@ -160,12 +160,13 @@ export default function HomePageClient() {
 
     const ctx = gsap.context(() => {
       // ── Hero: pin section + zoom image, fade content ──
+      const heroScrollHeight = window.innerHeight;
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: heroRef.current,
           scroller: "#smooth-content",
           start: "top top",
-          end: "+=100vh",
+          end: "+=" + heroScrollHeight,
           pin: true,
           scrub: 1,
           invalidateOnRefresh: true,
