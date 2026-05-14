@@ -275,7 +275,7 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* PDF impact numbers */}
+      {/* Impact numbers */}
       <section className="border-y border-white/10 bg-[#0d0d0b] px-5 py-10 sm:px-8 lg:px-12">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 md:grid-cols-3 lg:grid-cols-6">
           {stats.map((stat) => (
@@ -319,13 +319,13 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Vision pillars from the PDF */}
+      {/* Vision pillars */}
       <section id="vision" className="bg-white px-5 py-24 text-[#1d1d1b] sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <AnimatedSection className="mb-14 max-w-4xl">
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#8b6f4e]">Key pillars of our vision</p>
             <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
-              The PDF is clear: action, evidence, culture, youth, scale.
+              Action, evidence, culture, youth, scale.
             </h2>
           </AnimatedSection>
           <StaggerContainer className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
@@ -426,7 +426,6 @@ export default function HomePageClient() {
       <section id="impact" className="bg-white px-5 py-24 text-[#1d1d1b] sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <AnimatedSection className="mx-auto mb-16 max-w-4xl text-center">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#8b6f4e]">What the PDF says, plainly</p>
             <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
               Rescue, data, education, scale.
             </h2>
