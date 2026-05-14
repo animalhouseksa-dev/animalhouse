@@ -40,9 +40,13 @@ export default function HomePageClient() {
   const sanctuaryRef = useRef<HTMLDivElement>(null);
 
   const heroBgRef = useRef<HTMLDivElement>(null);
+  const heroOverlayRef = useRef<HTMLDivElement>(null);
   const heroContentRef = useRef<HTMLDivElement>(null);
   const heroTitleRef = useRef<HTMLParagraphElement>(null);
   const heroSubtitleRef = useRef<HTMLDivElement>(null);
+  const heroSubtitleParaRef = useRef<HTMLParagraphElement>(null);
+  const heroButtonsRef = useRef<HTMLDivElement>(null);
+  const heroRightRef = useRef<HTMLDivElement>(null);
   const sanctuaryImgRef = useRef<HTMLDivElement>(null);
 
   const stats = [
@@ -154,32 +158,120 @@ export default function HomePageClient() {
     if (typeof window === "undefined") return;
     gsap.registerPlugin(ScrollTrigger);
     const ctx = gsap.context(() => {
-      // Hero background: slower y + scale up under next section
+      // Hero background zooms in, slight rotation, gentle blur → cinematic push-in
       gsap.to(heroBgRef.current, {
-        y: "40%",
-        scale: 1.25,
+        scale: 1.35,
+        rotate: 2,
+        filter: "blur(8px)",
         ease: "none",
         scrollTrigger: {
           trigger: heroRef.current,
           scroller: "#smooth-content",
           start: "top top",
-          end: "bottom top",
+          end: "100% top",
           scrub: true,
         },
       });
-      // Hero content: fade out
-      gsap.to(heroContentRef.current, {
-        opacity: 0.2,
-        y: -60,
+      // Overlay gradient tightens and darkens as we zoom
+      gsap.to(heroOverlayRef.current, {
+        opacity: 0.85,
         ease: "none",
         scrollTrigger: {
           trigger: heroRef.current,
           scroller: "#smooth-content",
-          start: "20% top",
-          end: "75% top",
-          scrub: 0.5,
+          start: "top top",
+          end: "80% top",
+          scrub: true,
         },
       });
+      // Hero content: fade + drift
+      gsap.to(heroContentRef.current, {
+        y: -80,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          scroller: "#smooth-content",
+          start: "top top",
+          end: "80% top",
+          scrub: true,
+        },
+      });
+      // Title: dramatic stretch — wider letter-spacing + fade
+      if (heroTitleRef.current) {
+        gsap.to(heroTitleRef.current, {
+          letterSpacing: "0.01em",
+          opacity: 0,
+          y: -40,
+          ease: "none",
+          scrollTrigger: {
+            trigger: heroRef.current,
+            scroller: "#smooth-content",
+            start: "10% top",
+            end: "70% top",
+            scrub: true,
+          },
+        });
+      }
+      // Subtitle: shoots upward faster, breaking away from title
+      if (heroSubtitleRef.current) {
+        gsap.to(heroSubtitleRef.current, {
+          y: -200,
+          opacity: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: heroRef.current,
+            scroller: "#smooth-content",
+            start: "top top",
+            end: "60% top",
+            scrub: true,
+          },
+        });
+      }
+      // Sub-paragraph (right column): separate drift
+      if (heroSubtitleParaRef.current) {
+        gsap.to(heroSubtitleParaRef.current, {
+          y: -140,
+          opacity: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: heroRef.current,
+            scroller: "#smooth-content",
+            start: "top top",
+            end: "65% top",
+            scrub: true,
+          },
+        });
+      }
+      // Buttons: last thing to fade — linger a beat
+      if (heroButtonsRef.current) {
+        gsap.to(heroButtonsRef.current, {
+          y: -100,
+          opacity: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: heroRef.current,
+            scroller: "#smooth-content",
+            start: "5% top",
+            end: "55% top",
+            scrub: true,
+          },
+        });
+      }
+      // Hero right column container: subtle downward drift
+      if (heroRightRef.current) {
+        gsap.to(heroRightRef.current, {
+          y: 30,
+          opacity: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: heroRef.current,
+            scroller: "#smooth-content",
+            start: "top top",
+            end: "60% top",
+            scrub: true,
+          },
+        });
+      }
       // Sanctuary image: gentle parallax
       gsap.to(sanctuaryImgRef.current, {
         y: "8%",
@@ -192,34 +284,6 @@ export default function HomePageClient() {
           scrub: true,
         },
       });
-      // Hero title: subtle upward drift on scroll
-      if (heroTitleRef.current) {
-        gsap.to(heroTitleRef.current, {
-          y: -120,
-          ease: "none",
-          scrollTrigger: {
-            trigger: heroRef.current,
-            scroller: "#smooth-content",
-            start: "top top",
-            end: "bottom top",
-            scrub: true,
-          },
-        });
-      }
-      // Hero subtitle: slightly faster upward drift → differential parallax
-      if (heroSubtitleRef.current) {
-        gsap.to(heroSubtitleRef.current, {
-          y: -160,
-          ease: "none",
-          scrollTrigger: {
-            trigger: heroRef.current,
-            scroller: "#smooth-content",
-            start: "top top",
-            end: "bottom top",
-            scrub: true,
-          },
-        });
-      }
     });
     return () => ctx.revert();
   }, []);
@@ -230,7 +294,10 @@ export default function HomePageClient() {
       <section ref={heroRef} className="relative min-h-screen isolate overflow-hidden">
         <div ref={heroBgRef} className="absolute inset-0 -z-10 will-change-transform">
           <Image src="/images/cover.jpg" alt="Animal House rescue" fill priority className="object-cover" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.55)_48%,#0d0d0b_100%)]" />
+          <div 
+            ref={heroOverlayRef}
+            className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.55)_48%,#0d0d0b_100%)]"
+          />
         </div>
 
         <div ref={heroContentRef} className="relative z-10 flex min-h-screen items-end px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-24">
@@ -255,22 +322,26 @@ export default function HomePageClient() {
                 Every animal deserves a loving home.
               </motion.h1>
             </div>
-            <motion.div
-              initial={{ opacity: 0, y: 32 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.25 }}
-              className="max-w-xl border-l border-white/20 pl-6"
+            <div
+              ref={heroRightRef}
             >
-              <p className="text-lg leading-8 text-white/78 md:text-xl">{home("hero.subtitle")}</p>
-              <div className="mt-8 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-white/70">
-                <a href="#story" className="rounded-full border border-white/20 px-5 py-3 backdrop-blur transition hover:border-white/60 hover:text-white">
-                  Read the story
-                </a>
-                <a href="#impact" className="rounded-full bg-white px-5 py-3 text-black transition hover:bg-white/85">
-                  See the proof
-                </a>
-              </div>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 32 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.25 }}
+                className="max-w-xl border-l border-white/20 pl-6"
+              >
+                <p ref={heroSubtitleParaRef} className="text-lg leading-8 text-white/78 md:text-xl">{home("hero.subtitle")}</p>
+                <div ref={heroButtonsRef} className="mt-8 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-white/70">
+                  <a href="#story" className="rounded-full border border-white/20 px-5 py-3 backdrop-blur transition hover:border-white/60 hover:text-white">
+                    Read the story
+                  </a>
+                  <a href="#impact" className="rounded-full bg-white px-5 py-3 text-black transition hover:bg-white/85">
+                    See the proof
+                  </a>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
