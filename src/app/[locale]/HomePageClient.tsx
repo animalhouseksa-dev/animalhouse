@@ -1,11 +1,13 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import AnimatedSection from "@/components/AnimatedSection";
 import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   CheckCircle2,
   Globe2,
@@ -34,19 +36,9 @@ export default function HomePageClient() {
   const heroRef = useRef<HTMLDivElement>(null);
   const sanctuaryRef = useRef<HTMLDivElement>(null);
 
-  const { scrollYProgress: heroProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"],
-  });
-  const { scrollYProgress: sanctuaryProgress } = useScroll({
-    target: sanctuaryRef,
-    offset: ["start end", "end start"],
-  });
-
-  const heroY = useTransform(heroProgress, [0, 1], ["0%", "28%"]);
-  const heroScale = useTransform(heroProgress, [0, 1], [1, 1.14]);
-  const heroOpacity = useTransform(heroProgress, [0, 0.75], [1, 0.2]);
-  const sanctuaryY = useTransform(sanctuaryProgress, [0, 1], ["-8%", "8%"]);
+  const heroBgRef = useRef<HTMLDivElement>(null);
+  const heroContentRef = useRef<HTMLDivElement>(null);
+  const sanctuaryImgRef = useRef<HTMLDivElement>(null);
 
   const stats = [
     { value: "1,200+", label: "Cats spayed", detail: "Documented TNR impact" },
@@ -152,14 +144,61 @@ export default function HomePageClient() {
     },
   ];
 
+  // GSAP scroll-parallax runs off the smoothed scroll value
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    gsap.registerPlugin(ScrollTrigger);
+    const ctx = gsap.context(() => {
+      // Hero background: slower y + subtle scale
+      gsap.to(heroBgRef.current, {
+        y: "28%",
+        scale: 1.14,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          scroller: "#smooth-content",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+      // Hero content: fade out
+      gsap.to(heroContentRef.current, {
+        opacity: 0.2,
+        y: -60,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          scroller: "#smooth-content",
+          start: "20% top",
+          end: "75% top",
+          scrub: 0.5,
+        },
+      });
+      // Sanctuary image: gentle parallax
+      gsap.to(sanctuaryImgRef.current, {
+        y: "8%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: sanctuaryRef.current,
+          scroller: "#smooth-content",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+    });
+    return () => ctx.revert();
+  }, []);
+
   return (
     <main className="min-h-screen overflow-hidden bg-[#0d0d0b] text-white">
       {/* Cinematic hero */}
       <section ref={heroRef} className="relative min-h-screen isolate overflow-hidden">
-        <motion.div className="absolute inset-0 -z-10" style={{ y: heroY, scale: heroScale }}>
+        <div ref={heroBgRef} className="absolute inset-0 -z-10 will-change-transform">
           <Image src="/images/cover.jpg" alt="Animal House rescue" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.55)_48%,#0d0d0b_100%)]" />
-        </motion.div>
+        </div>
 
         <header className="absolute left-0 right-0 top-0 z-20 px-5 py-6 sm:px-8 lg:px-12">
           <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/15 bg-black/25 px-5 py-3 text-xs uppercase tracking-[0.28em] text-white/80 backdrop-blur-xl">
@@ -177,10 +216,7 @@ export default function HomePageClient() {
           </nav>
         </header>
 
-        <motion.div
-          className="relative z-10 flex min-h-screen items-end px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-24"
-          style={{ opacity: heroOpacity }}
-        >
+        <div ref={heroContentRef} className="relative z-10 flex min-h-screen items-end px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-24">
           <div className="mx-auto grid w-full max-w-7xl items-end gap-10 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <motion.p
@@ -217,7 +253,7 @@ export default function HomePageClient() {
               </div>
             </motion.div>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* PDF impact numbers */}
@@ -290,10 +326,10 @@ export default function HomePageClient() {
 
       {/* Parallax sanctuary */}
       <section id="sanctuary" ref={sanctuaryRef} className="relative min-h-screen overflow-hidden px-5 py-24 sm:px-8 lg:px-12">
-        <motion.div className="absolute inset-0 -z-10" style={{ y: sanctuaryY }}>
+        <div ref={sanctuaryImgRef} className="absolute inset-0 -z-10 will-change-transform">
           <Image src="/images/founders.jpg" alt="Animal House sanctuary" fill className="object-cover" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.86)_0%,rgba(0,0,0,0.56)_44%,rgba(0,0,0,0.18)_100%)]" />
-        </motion.div>
+        </div>
         <div className="mx-auto flex min-h-[74vh] max-w-7xl items-center">
           <AnimatedSection className="max-w-2xl">
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.34em] text-white/50">The sanctuary</p>
