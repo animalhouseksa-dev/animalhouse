@@ -159,39 +159,48 @@ export default function HomePageClient() {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      // ── Hero: pin section + zoom image, fade content ──
-      const heroScrollHeight = window.innerHeight;
-      const tl = gsap.timeline({
+      // ── Hero: zoom image, darken overlay, fade content ──
+      const scrollDist = "+" + window.innerHeight;
+      // Image zoom + rotate + blur
+      gsap.to(heroBgRef.current, {
+        scale: 1.55,
+        rotation: 4,
+        filter: "blur(8px)",
+        ease: "none",
         scrollTrigger: {
           trigger: heroRef.current,
           scroller: "#smooth-content",
           start: "top top",
-          end: "+=" + heroScrollHeight,
-          pin: true,
-          scrub: 1,
-          invalidateOnRefresh: true,
+          end: scrollDist,
+          scrub: true,
           markers: true,
         },
       });
-      tl
-        // Image: scale + rotate + blur
-        .to(heroBgRef.current, {
-          scale: 1.55,
-          rotation: 4,
-          filter: "blur(8px)",
-          duration: 1,
-        }, 0)
-        // Overlay darkens (starts at opacity 0.4)
-        .to(heroOverlayRef.current, {
-          opacity: 0.88,
-          duration: 1,
-        }, 0)
-        // Content: fade + drift upward
-        .to(heroContentRef.current, {
-          y: -80,
-          opacity: 0,
-          duration: 1,
-        }, 0);
+      // Overlay darkens
+      gsap.to(heroOverlayRef.current, {
+        opacity: 0.88,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          scroller: "#smooth-content",
+          start: "top top",
+          end: scrollDist,
+          scrub: true,
+        },
+      });
+      // Content fades and drifts up
+      gsap.to(heroContentRef.current, {
+        y: -80,
+        opacity: 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          scroller: "#smooth-content",
+          start: "20% top",
+          end: scrollDist,
+          scrub: true,
+        },
+      });
 
       // ── Parallax sanctuary ──
       gsap.to(sanctuaryImgRef.current, {
