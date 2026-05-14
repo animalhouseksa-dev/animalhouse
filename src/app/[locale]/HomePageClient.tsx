@@ -38,6 +38,8 @@ export default function HomePageClient() {
 
   const heroBgRef = useRef<HTMLDivElement>(null);
   const heroContentRef = useRef<HTMLDivElement>(null);
+  const heroTitleRef = useRef<HTMLParagraphElement>(null);
+  const heroSubtitleRef = useRef<HTMLDivElement>(null);
   const sanctuaryImgRef = useRef<HTMLDivElement>(null);
 
   const stats = [
@@ -187,6 +189,34 @@ export default function HomePageClient() {
           scrub: true,
         },
       });
+      // Hero title: subtle upward drift on scroll
+      if (heroTitleRef.current) {
+        gsap.to(heroTitleRef.current, {
+          y: -120,
+          ease: "none",
+          scrollTrigger: {
+            trigger: heroRef.current,
+            scroller: "#smooth-content",
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      }
+      // Hero subtitle: slightly faster upward drift → differential parallax
+      if (heroSubtitleRef.current) {
+        gsap.to(heroSubtitleRef.current, {
+          y: -160,
+          ease: "none",
+          scrollTrigger: {
+            trigger: heroRef.current,
+            scroller: "#smooth-content",
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      }
     });
     return () => ctx.revert();
   }, []);
@@ -220,6 +250,7 @@ export default function HomePageClient() {
           <div className="mx-auto grid w-full max-w-7xl items-end gap-10 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <motion.p
+                ref={heroSubtitleRef as any}
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -228,6 +259,7 @@ export default function HomePageClient() {
                 NO-KILL Shelter · Riyadh, Saudi Arabia
               </motion.p>
               <motion.h1
+                ref={heroTitleRef as any}
                 initial={{ opacity: 0, y: 36 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.1 }}
