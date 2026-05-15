@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import AnimatedSection from "@/components/AnimatedSection";
 import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
@@ -39,12 +38,10 @@ export default function HomePageClient() {
   const sanctuaryRef = useRef<HTMLDivElement>(null);
 
   const heroBgRef = useRef<HTMLDivElement>(null);
-  const heroOverlayRef = useRef<HTMLDivElement>(null);
+  const heroDarkOverlayRef = useRef<HTMLDivElement>(null);
   const heroContentRef = useRef<HTMLDivElement>(null);
-  const heroTitleRef = useRef<HTMLParagraphElement>(null);
-  const heroSubtitleRef = useRef<HTMLDivElement>(null);
-  const heroSubtitleParaRef = useRef<HTMLParagraphElement>(null);
-  const heroButtonsRef = useRef<HTMLDivElement>(null);
+  const heroBadgeRef = useRef<HTMLParagraphElement>(null);
+  const heroTitleRef = useRef<HTMLHeadingElement>(null);
   const heroRightRef = useRef<HTMLDivElement>(null);
   const sanctuaryImgRef = useRef<HTMLDivElement>(null);
 
@@ -77,23 +74,54 @@ export default function HomePageClient() {
     "",
   ];
 
-  // ── GSAP ──
+  // ── Hero intro + parallax ──
   useEffect(() => {
     if (typeof window === "undefined") return;
     gsap.registerPlugin(ScrollTrigger);
+
     const ctx = gsap.context(() => {
+      // Cinematic hero reveal — staggered, slow, luxurious.
+      // Initial state is set inline on each element so first paint shows hidden.
+      const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
+      tl.to(heroBadgeRef.current, { opacity: 1, y: 0, duration: 1.0 }, 0.1)
+        .to(heroTitleRef.current, { opacity: 1, y: 0, duration: 1.4 }, 0.2)
+        .to(heroRightRef.current, { opacity: 1, y: 0, duration: 1.2 }, 0.55);
+
+      // Hero scroll-off: scale up, blur, fade-to-dark while content drifts up faster.
+      // Single scrubbed timeline so all properties move in lockstep with scroll.
+      const heroScroll = gsap.timeline({
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 0.6, // slight smoothing — feels premium
+        },
+        defaults: { ease: "none" },
+      });
+
+      heroScroll
+        .fromTo(
+          heroBgRef.current,
+          { scale: 1, filter: "blur(0px)", yPercent: 0, transformOrigin: "50% 15%" },
+          { scale: 1.15, filter: "blur(12px)", yPercent: 8, transformOrigin: "50% 15%" },
+          0,
+        )
+        .fromTo(heroDarkOverlayRef.current, { opacity: 0 }, { opacity: 0.7 }, 0)
+        .fromTo(heroContentRef.current, { yPercent: 0, opacity: 1 }, { yPercent: -25, opacity: 0 }, 0);
+
+      // Sanctuary parallax
       gsap.to(sanctuaryImgRef.current, {
         y: "8%",
         ease: "none",
         scrollTrigger: {
           trigger: sanctuaryRef.current,
-          scroller: "#smooth-content",
           start: "top bottom",
           end: "bottom top",
           scrub: true,
         },
       });
     });
+
     return () => ctx.revert();
   }, []);
 
@@ -101,54 +129,53 @@ export default function HomePageClient() {
     <main className="min-h-screen bg-[#0d0d0b] text-white">
       {/* Cinematic hero */}
       <section ref={heroRef} className="relative min-h-screen isolate overflow-hidden">
-        <div ref={heroBgRef} className="absolute inset-0 -z-10 will-change-transform">
+        <div
+          ref={heroBgRef}
+          className="absolute inset-0 -z-10 will-change-[filter,transform]"
+        >
           <Image src="/images/cover.jpg" alt="Animal House rescue" fill priority className="object-cover" />
-          <div
-            ref={heroOverlayRef}
-            style={{ opacity: 0.4 }}
-            className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.55)_48%,#0d0d0b_100%)]"
-          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.55)_48%,#0d0d0b_100%)] opacity-90" />
         </div>
 
-        <div ref={heroContentRef} className="relative z-10 flex min-h-screen items-end px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-24">
+        {/* Sharp dark overlay that fades in as the hero scrolls off */}
+        <div
+          ref={heroDarkOverlayRef}
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-[5] bg-black opacity-0 will-change-[opacity]"
+        />
+
+        <div ref={heroContentRef} className="relative z-10 flex min-h-screen items-end px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-24 will-change-[transform,opacity]">
           <div className="mx-auto grid w-full max-w-7xl items-end gap-10 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <motion.p
-                ref={heroSubtitleRef as any}
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+              <p
+                ref={heroBadgeRef}
+                style={{ opacity: 0, transform: "translateY(24px)" }}
                 className="mb-5 text-xs font-semibold uppercase tracking-[0.42em] text-white/70"
               >
                 {hp("hero.badge")}
-              </motion.p>
-              <motion.h1
-                ref={heroTitleRef as any}
-                initial={{ opacity: 0, y: 36 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.1 }}
+              </p>
+              <h1
+                ref={heroTitleRef}
+                style={{ opacity: 0, transform: "translateY(56px)" }}
                 className="max-w-5xl text-balance font-serif text-6xl font-semibold leading-[0.92] tracking-[-0.06em] text-white sm:text-7xl md:text-8xl lg:text-[8.5rem]"
               >
                 {hp("hero.title")}
-              </motion.h1>
+              </h1>
             </div>
-            <div ref={heroRightRef}>
-              <motion.div
-                initial={{ opacity: 0, y: 32 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.25 }}
-                className="max-w-xl border-l border-white/20 pl-6"
-              >
-                <p ref={heroSubtitleParaRef} className="text-lg leading-8 text-white/78 md:text-xl">{hp("hero.subtitle")}</p>
-                <div ref={heroButtonsRef} className="mt-8 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-white/70">
-                  <a href="#story" className="rounded-full border border-white/20 px-5 py-3 backdrop-blur transition hover:border-white/60 hover:text-white">
-                    {hp("hero.ctaStory")}
-                  </a>
-                  <a href="#impact" className="rounded-full bg-white px-5 py-3 text-black transition hover:bg-white/85">
-                    {hp("hero.ctaProof")}
-                  </a>
-                </div>
-              </motion.div>
+            <div
+              ref={heroRightRef}
+              style={{ opacity: 0, transform: "translateY(36px)" }}
+              className="max-w-xl border-l border-white/20 pl-6"
+            >
+              <p className="text-lg leading-8 text-white/78 md:text-xl">{hp("hero.subtitle")}</p>
+              <div className="mt-8 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-white/70">
+                <a href="#story" className="rounded-full border border-white/20 px-5 py-3 backdrop-blur transition hover:border-white/60 hover:text-white">
+                  {hp("hero.ctaStory")}
+                </a>
+                <a href="#impact" className="rounded-full bg-white px-5 py-3 text-black transition hover:bg-white/85">
+                  {hp("hero.ctaProof")}
+                </a>
+              </div>
             </div>
           </div>
         </div>

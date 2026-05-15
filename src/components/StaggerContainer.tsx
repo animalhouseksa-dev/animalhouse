@@ -1,7 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface StaggerContainerProps {
   children: ReactNode;
@@ -9,32 +12,48 @@ interface StaggerContainerProps {
   staggerDelay?: number;
 }
 
-export default function StaggerContainer({ children, className = "", staggerDelay = 0.1 }: StaggerContainerProps) {
+export default function StaggerContainer({ children, className = "", staggerDelay = 0.12 }: StaggerContainerProps) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const items = el.querySelectorAll<HTMLElement>("[data-stagger-item]");
+    if (!items.length) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        items,
+        { opacity: 0, y: 36 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.95,
+          ease: "expo.out",
+          stagger: staggerDelay,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 82%",
+            once: true,
+          },
+        },
+      );
+    });
+
+    return () => ctx.revert();
+  }, [staggerDelay]);
+
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
-      variants={{
-        visible: { transition: { staggerChildren: staggerDelay } },
-      }}
-      className={className}
-    >
+    <div ref={ref} className={className}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 
 export function StaggerItem({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
-      }}
-      className={className}
-    >
+    <div data-stagger-item className={className} style={{ opacity: 0 }}>
       {children}
-    </motion.div>
+    </div>
   );
 }

@@ -1,7 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface AnimatedSectionProps {
   children: ReactNode;
@@ -10,15 +13,37 @@ interface AnimatedSectionProps {
 }
 
 export default function AnimatedSection({ children, className = "", delay = 0 }: AnimatedSectionProps) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        el,
+        { opacity: 0, y: 48 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.1,
+          delay,
+          ease: "expo.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            once: true,
+          },
+        },
+      );
+    });
+
+    return () => ctx.revert();
+  }, [delay]);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={className}
-    >
+    <div ref={ref} className={className} style={{ opacity: 0 }}>
       {children}
-    </motion.div>
+    </div>
   );
 }

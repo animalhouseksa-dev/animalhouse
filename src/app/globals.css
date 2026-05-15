@@ -16,13 +16,8 @@
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
   body {
     font-family: var(--font-sans);
-    background-color: var(--color-cream);
-    color: var(--color-charcoal);
   }
 
   #smooth-wrapper {

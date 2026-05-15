@@ -8,6 +8,12 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
+declare global {
+  interface Window {
+    __registerScrollTriggers?: (fn: () => void) => void;
+  }
+}
+
 export default function ScrollSmootherProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const smootherRef = useRef<ReturnType<typeof ScrollSmoother.create> | null>(null);
@@ -53,7 +59,7 @@ export default function ScrollSmootherProvider({ children }: { children: ReactNo
   // can call it from their useLayoutEffect to ensure they fire
   // AFTER our ScrollSmoother is ready.
   useEffect(() => {
-    (window as any).__registerScrollTriggers = (fn: () => void) => {
+    window.__registerScrollTriggers = (fn: () => void) => {
       readyRef.current = fn;
     };
   }, []);
