@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Animal House - Give Them a Home",
-    "description": "A NO-KILL animal rescue in Saudi Arabia founded by Khadija Abdullah. We rescue, rehabilitate, and rehome cats and dogs across the Kingdom."
+    "description": "Animal House is a NO-KILL rescue in Riyadh advancing compassionate care for cats and dogs through rescue, TNR, education, and future sanctuary expansion."
   },
   "nav": {
     "home": "Home",
@@ -18,9 +18,9 @@
     "ctaDonate": "Support Our Mission"
   },
   "stats": {
-    "rescued": "Animals Rescued",
-    "adopted": "Animals Adopted",
-    "volunteers": "Yearly Volunteers",
+    "rescued": "Cats Rescued",
+    "adopted": "Dogs Rescued",
+    "volunteers": "Volunteers Engaged",
     "impressions": "Media Impressions"
   },
   "features": {
@@ -29,15 +29,15 @@
     "donateTitle": "Donate",
     "donateDesc": "Your support funds rescue operations, veterinary care, food, and our TNR program that has prevented over 270,000 future street cat births in Riyadh.",
     "volunteerTitle": "Volunteer",
-    "volunteerDesc": "Join 600+ local Saudi volunteers who help with rescue operations, on-site care, and youth awareness campaigns. We host 12+ educational site visits per year.",
+    "volunteerDesc": "Join 100+ volunteers helping with rescue operations, on-site care, awareness campaigns, and educational site visits.",
     "fosterTitle": "Foster",
     "fosterDesc": "Open your home temporarily to a cat or dog in need. Foster homes save lives and help animals transition from street life to family life."
   },
   "about": {
     "title": "Our Story",
-    "history": "Animal House was started by Khadija Abdullah with a mission to improve the lives of cats and dogs on the streets of the Kingdom. We have taken dogs in from as far as Arar province and have found adopters for our animals as far as Los Angeles and Paris.",
+    "history": "Animal House began with Khadija Abdullah’s work to protect Riyadh’s most vulnerable cats and dogs. Today, that hands-on rescue mission is growing into a larger, evidence-led model for animal welfare in Saudi Arabia.",
     "nokill": "We are a NO-KILL rescue. Any animal who joins us knows they will live their life out in peace on this earth.",
-    "facility": "Our current facility is housed within an Istraha 45 minutes from Riyadh. It includes a cat area, dog area, quarantine rooms, kitten rooms, a nursing mothers room, and an isolation zone for FIV positive cats. We have a weekly visit by a local vet and grooming tables for all animals.",
+    "facility": "Our current sanctuary operates from an Istraha outside Riyadh with dedicated spaces for cats, dogs, quarantine, kittens, nursing mothers, and FIV-positive cats — built around calm daily care rather than cages.",
     "team": "Our team consists of 4 full-time members who live on-site: a Shelter Director, 2 full-time cleaners, and a driver for pick-up and drop-off. We are supported by a network of dedicated volunteers."
   },
   "policies": {
@@ -58,12 +58,15 @@
     "ourStory": "Our Story",
     "contact": "Contact",
     "ourImpact": "Our Impact",
-    "catsSpayed": "Cats Spayed",
-    "dogsSpayed": "Dogs Spayed",
+    "catsSpayed": "Cats Spayed/Neutered",
+    "dogsSpayed": "Dogs Spayed/Neutered",
     "birthsPrevented": "Births Prevented",
     "yearlyVolunteers": "Yearly Volunteers",
     "emergencyHotline": "Emergency Hotline",
-    "brandDesc": "A NO-KILL animal rescue dedicated to saving cats and dogs across the Kingdom of Saudi Arabia."
+    "brandDesc": "A NO-KILL rescue advancing compassionate care for cats and dogs across Saudi Arabia.",
+    "catsRescued": "Cats Rescued",
+    "dogsRescued": "Dogs Rescued",
+    "volunteersEngaged": "Volunteers Engaged"
   },
   "contactPage": {
     "metadata": {
@@ -90,19 +93,19 @@
       "error": "Please fill in all required fields correctly."
     },
     "whatsapp": {
-      "title": "Quick Chat on WhatsApp",
-      "description": "Prefer instant messaging? Chat with us directly on WhatsApp.",
-      "cta": "Open WhatsApp Chat"
+      "title": "",
+      "description": "",
+      "cta": ""
     },
     "info": {
-      "locationTitle": "Visit Us",
-      "locationValue": "Riyadh, Saudi Arabia",
-      "locationDetail": "Our shelter is located 45 minutes from central Riyadh. Visits by appointment only.",
-      "hotlineTitle": "Emergency Rescue Hotline",
-      "hotlineValue": "+966 50 000 0000",
-      "hotlineCta": "Call Now",
+      "locationTitle": "Email Us",
+      "locationValue": "",
+      "locationDetail": "",
+      "hotlineTitle": "",
+      "hotlineValue": "",
+      "hotlineCta": "",
       "emailTitle": "Email Us",
-      "emailValue": "info@animalhouse.sa"
+      "emailValue": "animalhouseksa@gmail.com"
     },
     "social": {
       "title": "Follow Our Journey",
@@ -216,7 +219,7 @@
   "volunteerPage": {
     "metadata": {
       "title": "Volunteer at Animal House - Make a Difference",
-      "description": "Join 600+ volunteers helping Animal House rescue animals across Saudi Arabia. Apply today to foster, care, or support events."
+      "description": "Join 100+ volunteers helping Animal House support cats and dogs across Saudi Arabia. Apply today to foster, care, or support events."
     },
     "hero": {
       "title": "Be the Change They Need",
@@ -248,7 +251,7 @@
       "email": "Email Address",
       "emailPlaceholder": "you@example.com",
       "phone": "Phone Number",
-      "phonePlaceholder": "+966 50 000 0000",
+      "phonePlaceholder": "Optional contact number",
       "role": "Preferred Role",
       "rolePlaceholder": "Select a role",
       "roles": {
@@ -288,13 +291,13 @@
   },
   "homePage": {
     "hero": {
-      "title": "Every Animal Deserves a Loving Home",
-      "subtitle": "Animal House is a NO-KILL rescue based in Riyadh, Saudi Arabia. Founded by Khadija Abdullah, we rescue cats and dogs from across the Kingdom and find them loving homes worldwide.",
+      "title": "A sanctuary for Saudi Arabia’s rescued cats and dogs.",
+      "subtitle": "Animal House is a NO-KILL rescue in Riyadh turning compassion into practical action: rescue, sterilization, education, and a future sanctuary built to protect more lives.",
       "ctaAdopt": "Adopt a Friend",
       "ctaDonate": "Support Our Mission",
-      "badge": "NO-KILL Shelter · Riyadh, Saudi Arabia",
-      "ctaStory": "Read the story",
-      "ctaProof": "See the proof"
+      "badge": "NO-KILL Rescue · Riyadh",
+      "ctaStory": "Our future plans",
+      "ctaProof": "See our impact"
     },
     "stats": {
       "title": "Our Impact in Numbers",
@@ -305,24 +308,34 @@
       "volunteers": "Yearly Volunteers",
       "items": [
         {
-          "value": "1,200+",
-          "label": "Cats spayed",
-          "detail": "Documented TNR impact"
+          "value": "3,000+",
+          "label": "Cats rescued",
+          "detail": "Through Khadija’s work"
         },
         {
-          "value": "500+",
-          "label": "Dogs spayed",
-          "detail": "Direct population control"
+          "value": "2,500+",
+          "label": "Street cats spayed/neutered",
+          "detail": "Across Riyadh"
+        },
+        {
+          "value": "150+",
+          "label": "Dogs spayed/neutered",
+          "detail": "Humane population control"
         },
         {
           "value": "270,000+",
-          "label": "Future cat births prevented",
-          "detail": "On Riyadh streets"
+          "label": "Future births prevented",
+          "detail": "By our TNR efforts"
         },
         {
-          "value": "600+",
-          "label": "Yearly volunteers engaged",
-          "detail": "Local Saudis"
+          "value": "250+",
+          "label": "Dogs rescued",
+          "detail": "From streets and unsafe conditions"
+        },
+        {
+          "value": "100+",
+          "label": "Volunteers engaged",
+          "detail": "A growing care network"
         },
         {
           "value": "1.2B+",
@@ -332,7 +345,7 @@
         {
           "value": "12+",
           "label": "Educational site visits",
-          "detail": "Per year"
+          "detail": "Youth and community learning"
         }
       ]
     },
@@ -346,7 +359,7 @@
       "donateDesc": "Your gift funds medical care, food, shelter operations, and our life-saving TNR program.",
       "donateCta": "Give a Gift",
       "volunteerTitle": "Volunteer",
-      "volunteerDesc": "Join our community of 600+ volunteers. Help with on-site care, events, fostering, or TNR.",
+      "volunteerDesc": "Join our community of 100+ volunteers. Help with on-site care, events, fostering, or TNR.",
       "volunteerCta": "Join Us",
       "fosterTitle": "Foster",
       "fosterDesc": "Open your home temporarily. Foster homes save lives and prepare animals for adoption.",
@@ -356,62 +369,66 @@
       "badge": "Our Story",
       "title": "A Mission Born from Compassion",
       "paragraph1": "Animal House was started by Colin Rhys and Khadija Abdullah with a mission to improve the lives of cats and dogs on the streets of the Kingdom. We have taken dogs in from as far as Arar province and found adopters as far as Los Angeles and Paris.",
-      "paragraph2": "We are a NO-KILL rescue. Any animal who joins us knows they will live their life out in peace on this earth. Our current facility near Riyadh houses 300+ cats and 15+ dogs, with dedicated quarantine, kitten, and nursing areas.",
+      "paragraph2": "We are a NO-KILL rescue. Any animal who joins us is treated as a life worth protecting, with dedicated quarantine, kitten, nursing, and specialist-care areas supporting the daily mission.",
       "cta": "Read Our Full Story"
     },
     "story": {
-      "sectionLabel": "Our story",
-      "title": "A rescue built like a promise.",
+      "sectionLabel": "Our future plans",
+      "title": "The next Animal House must be built for scale.",
+      "intro1": "The current sanctuary proves what focused rescue can do. The next phase is a purpose-built location with stronger veterinary workflows, better intake capacity, safer species-specific zones, and room for community education.",
+      "intro2": "Support now helps turn an improvised rescue operation into a lasting Saudi model for no-kill care — ambitious, transparent, and beautiful enough to make people stop, look, and act.",
       "notes": [
         {
-          "eyebrow": "Kingdom-wide rescue",
-          "title": "From Arar to Jeddah",
-          "text": "Animal House rescues cats and dogs from across Saudi Arabia, with adoption stories reaching as far as Los Angeles and Paris."
+          "eyebrow": "Next-location ambition",
+          "title": "More lives protected",
+          "text": "A larger site can expand safe intake, quarantine, recovery, and adoption preparation for cats and dogs who currently have nowhere else to go."
         },
         {
-          "eyebrow": "Non-negotiable principle",
-          "title": "NO-KILL, always"
+          "eyebrow": "Designed for care",
+          "title": "Calm, clean, species-specific spaces",
+          "text": "Purpose-built cat and dog areas will reduce stress, improve welfare, and help every rescue move through care with dignity."
         },
         {
-          "eyebrow": "A small team with a wide network",
-          "title": "On-site care, volunteer power"
+          "eyebrow": "Built to inspire support",
+          "title": "A public-facing rescue model",
+          "text": "The future site should welcome donors, volunteers, schools, and partners into a clear story of proof, compassion, and measurable results."
         }
       ]
     },
     "vision": {
-      "sectionLabel": "Key pillars of our vision",
-      "title": "Action, evidence, culture, youth, scale.",
+      "sectionLabel": "How we get there",
+      "title": "Proof, care, education, and scale.",
       "pillars": [
         {
-          "title": "Immediate action",
-          "proof": "Nobody can argue with results.",
-          "text": "Solve the problem on the ground through rescue work, not talk."
+          "title": "Rescue with urgency",
+          "proof": "Immediate action saves lives.",
+          "text": "Respond to cats and dogs in danger, stabilize them, and move them into safe care."
         },
         {
-          "title": "Data + proof",
-          "proof": "Nobody can argue with data + proof.",
-          "text": "Retain and train wildlife investigators to expose crimes and publish the data needed for action."
+          "title": "TNR with consistent data",
+          "proof": "Numbers keep the mission honest.",
+          "text": "Track sterilization work carefully so population-control impact stays clear across the whole site."
         },
         {
-          "title": "History + awareness",
-          "proof": "Nobody can argue with history.",
-          "text": "Amplify sermons and historic teachings that drive awareness around the fair treatment of animals."
+          "title": "A sanctuary worth seeing",
+          "proof": "Beauty can move people to act.",
+          "text": "Use striking photography and honest facility storytelling to make the rescue feel tangible and worthy of support."
         },
         {
-          "title": "Youth engagement",
-          "proof": "Nobody can decide the future of animals in KSA better than them.",
-          "text": "Engage the youth of Saudi Arabia because they will define the next era of animal welfare."
+          "title": "Youth and community learning",
+          "proof": "Culture changes through experience.",
+          "text": "Host educational visits that help young people understand mercy, responsibility, and animal welfare."
         },
         {
-          "title": "First-world progress",
-          "proof": "Nobody can argue with first world progress.",
-          "text": "Develop a sustainable shelter model that can scale across Saudi Arabia, starting with the capital."
+          "title": "A model that can grow",
+          "proof": "Saudi Arabia needs scalable solutions.",
+          "text": "Build systems, partnerships, and future capacity that can influence animal welfare beyond one shelter."
         }
       ]
     },
     "sanctuary": {
       "label": "The sanctuary",
-      "title": "An Istraha 45 minutes from Riyadh, redesigned around care.",
+      "title": "A working rescue site, cared for daily and ready for its next chapter.",
       "facility": [
         "Cat colony area — open living, not cages",
         "Dog pack area — social group housing",
@@ -433,31 +450,31 @@
       "adoption2": "We perform bi-monthly updates and random welfare checks on all adopted animals.",
       "adoption3": "No animal is adopted without being microchipped, vaccinated, and spayed/neutered.",
       "sectionLabel": "Standards of care",
-      "homeTitle": "Beauty is the hook. The system is the rescue."
+      "homeTitle": "Every rescue deserves a system that protects them."
     },
     "gallery": {
       "title": "Rescue Photos",
       "subtitle": "See the animals we care for and the facility that keeps them safe until they find their forever homes.",
-      "sectionLabel": "Photo essay",
-      "homeTitle": "Lives in progress, not marketing props.",
-      "descriptiveText": "General cat area: all cats live as a colony, not in cages. Dog area: all dogs live as a pack, not in cages. Quarantine and additional kitten areas are part of the care system.",
+      "sectionLabel": "Sanctuary portraits",
+      "homeTitle": "The animals are the heart of the story.",
+      "descriptiveText": "A quieter edit of rescue life: cats, dogs, caregivers, and the spaces that keep them safe while we prepare for the next location.",
       "images": [
         {
-          "alt": "Animal House Animals"
+          "alt": "Founders with rescued animals"
         },
         {
-          "alt": "Cat colony area"
+          "alt": "Cat colony portrait"
         },
         {
-          "alt": "Rescued dogs"
+          "alt": "Rescued dog portrait"
         },
         {
-          "alt": "Kitten nursery"
+          "alt": "Kitten care moment"
         }
       ]
     },
     "impact": {
-      "title": "Rescue, data, education, scale.",
+      "title": "Measured impact, bigger ambition.",
       "pillars": [
         {
           "label": "Rescue + rehabilitation",
@@ -465,7 +482,7 @@
         },
         {
           "label": "TNR with proof",
-          "copy": "1,700+ Trap-Neuter-Return procedures have prevented an estimated 270,000 future street-cat births in Riyadh."
+          "copy": "2,500+ street cats have been spayed/neutered through TNR efforts, helping prevent an estimated 270,000 future births in Riyadh."
         },
         {
           "label": "Youth awareness",
@@ -476,36 +493,36 @@
           "copy": "When the right family is abroad, Animal House makes the distance work — because a permanent safe home is the goal."
         }
       ],
-      "leadText": "The front page is now the story.",
+      "leadText": "Our future plans are the next chapter of the rescue.",
       "grid": [
-        "Future facility capacity: 600 cats on site",
-        "Future facility capacity: 50 dogs on site",
+        "Purpose-built future sanctuary with stronger intake, quarantine, and recovery workflows",
+        "Expanded cat and dog zones designed around welfare, cleanliness, and calm",
         "Future TNR target: 2,400 spay/neuter procedures per year",
-        "Future KPI: 600+ cats rescued",
-        "Future KPI: 100+ dogs rescued",
-        "Future KPI: 240+ cats adopted",
-        "Future KPI: 50+ dogs adopted",
+        "Future KPI: 600+ cats rescued annually",
+        "Future KPI: 100+ dogs rescued annually",
+        "Future KPI: 240+ cats adopted annually",
+        "Future KPI: 50+ dogs adopted annually",
         "100+ community feeding and water stations installed",
-        "4+ government partnerships: Sports Boulevard, MOFA, Diriyah, New Murabba"
+        "Partnership pathway with public and private stakeholders across Riyadh"
       ]
     },
     "cta": {
-      "title": "Ready to make a difference?",
-      "desc": "Every adoption, donation, and volunteer hour saves a life. Join the movement and help us build a no-kill future for animals in Saudi Arabia.",
+      "title": "Help build the next chapter.",
+      "desc": "Your support turns rescue work into lasting infrastructure for cats and dogs in Saudi Arabia — safer spaces, stronger systems, and more lives saved.",
       "ctaPrimary": "Get in Touch",
       "ctaSecondary": "See the Proof"
     },
     "contact": {
       "sectionLabel": "Get involved",
-      "title": "Reach out. We're listening.",
-      "locationLabel": "Location",
-      "locationValue": "Riyadh, Saudi Arabia",
-      "locationDetail": "Facility 45 minutes from city center",
+      "title": "Email us to support the next phase.",
+      "locationLabel": "",
+      "locationValue": "",
+      "locationDetail": "",
       "emailLabel": "Email",
-      "emailValue": "info@animalhouse.sa",
-      "phoneLabel": "Phone",
-      "phoneValue": "+966 50 000 0000",
-      "whatsapp": "Chat on WhatsApp",
+      "emailValue": "animalhouseksa@gmail.com",
+      "phoneLabel": "",
+      "phoneValue": "",
+      "whatsapp": "",
       "form": {
         "nameLabel": "Name",
         "namePlaceholder": "Your name",
@@ -603,7 +620,7 @@
     }
   },
   "navLinks": {
-    "story": "Story",
+    "story": "Future Plans",
     "vision": "Vision",
     "sanctuary": "Sanctuary",
     "policies": "Policies",

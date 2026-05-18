@@ -9,7 +9,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:e2e": "PLAYWRIGHT_BROWSERS_PATH=/opt/data/.cache/ms-playwright playwright test",
+    "qa": "npm run lint && npm run build && npm run test:e2e",
+    "qa:visual": "PLAYWRIGHT_BROWSERS_PATH=/opt/data/.cache/ms-playwright playwright test tests/visual-snapshots.spec.ts",
+    "qa:lighthouse": "node scripts/run-lighthouse.mjs",
+    "images:optimize": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "gsap": "^3.15.0",
@@ -20,12 +25,15 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "lighthouse": "^12.8.2",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
