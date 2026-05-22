@@ -283,9 +283,9 @@ export default function HomePageClient() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </AnimatedSection>
 
-            {/* Right top — outdoor corridor scene */}
+            {/* Right top — shelter cat portrait */}
             <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black md:col-span-2">
-              <Image src="/images/shelter/sanctuary-outdoor-1.webp" alt="Outdoor sanctuary corridor with greenery and animals resting" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <Image src="/images/shelter/sanctuary-outdoor-1.webp" alt="Tuxedo cat portrait in soft sanctuary lighting" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </AnimatedSection>
 
