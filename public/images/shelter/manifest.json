@@ -1,0 +1,156 @@
+[
+  {
+    "sample_number": 54,
+    "slug": "shelter-hero",
+    "source_name": "779A7545.jpg",
+    "drive_id": "1MZ42MiCZMu7dfdq9yZyD3WfLoY2HCPxp",
+    "drive_url": "https://drive.google.com/file/d/1MZ42MiCZMu7dfdq9yZyD3WfLoY2HCPxp/view?usp=drivesdk",
+    "output": "/images/shelter/shelter-hero.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/shelter-hero-779A7545.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/shelter-hero.webp",
+    "bytes": 199120
+  },
+  {
+    "sample_number": 93,
+    "slug": "shelter-sanctuary",
+    "source_name": "779A7884.jpg",
+    "drive_id": "1arsKgLVGZ5-ypI6fzEAQHNnNEPwbDnmP",
+    "drive_url": "https://drive.google.com/file/d/1arsKgLVGZ5-ypI6fzEAQHNnNEPwbDnmP/view?usp=drivesdk",
+    "output": "/images/shelter/shelter-sanctuary.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/shelter-sanctuary-779A7884.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/shelter-sanctuary.webp",
+    "bytes": 104848
+  },
+  {
+    "sample_number": 91,
+    "slug": "shelter-intake",
+    "source_name": "779A7871.jpg",
+    "drive_id": "1E97TfH9HdYKn1aGh1UCxZpbBTK-Hpq9A",
+    "drive_url": "https://drive.google.com/file/d/1E97TfH9HdYKn1aGh1UCxZpbBTK-Hpq9A/view?usp=drivesdk",
+    "output": "/images/shelter/shelter-intake.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/shelter-intake-779A7871.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/shelter-intake.webp",
+    "bytes": 47898
+  },
+  {
+    "sample_number": 64,
+    "slug": "shelter-adoption",
+    "source_name": "779A7624.jpg",
+    "drive_id": "1i2ej_xzmqwNwhgCiKRhqn53irBKbj3ZT",
+    "drive_url": "https://drive.google.com/file/d/1i2ej_xzmqwNwhgCiKRhqn53irBKbj3ZT/view?usp=drivesdk",
+    "output": "/images/shelter/shelter-adoption.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/shelter-adoption-779A7624.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/shelter-adoption.webp",
+    "bytes": 104168
+  },
+  {
+    "sample_number": 1,
+    "slug": "gallery-tuxedo-cat",
+    "source_name": "779A7159.jpg",
+    "drive_id": "1DnwwWV1w7uIFRKFDMcZz7NGigg-gHd5Z",
+    "drive_url": "https://drive.google.com/file/d/1DnwwWV1w7uIFRKFDMcZz7NGigg-gHd5Z/view?usp=drivesdk",
+    "output": "/images/shelter/gallery-tuxedo-cat.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/gallery-tuxedo-cat-779A7159.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/gallery-tuxedo-cat.webp",
+    "bytes": 31270
+  },
+  {
+    "sample_number": 12,
+    "slug": "gallery-dog-walk",
+    "source_name": "779A7250.jpg",
+    "drive_id": "1CWKBckj2HeO4PVbgM06-rVkSkZS1iKNF",
+    "drive_url": "https://drive.google.com/file/d/1CWKBckj2HeO4PVbgM06-rVkSkZS1iKNF/view?usp=drivesdk",
+    "output": "/images/shelter/gallery-dog-walk.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/gallery-dog-walk-779A7250.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/gallery-dog-walk.webp",
+    "bytes": 51334
+  },
+  {
+    "sample_number": 31,
+    "slug": "gallery-fluffy-cat",
+    "source_name": "779A7391.jpg",
+    "drive_id": "1IGmDwZkRRf9VRJd1h7a5XqMAoTybcPga",
+    "drive_url": "https://drive.google.com/file/d/1IGmDwZkRRf9VRJd1h7a5XqMAoTybcPga/view?usp=drivesdk",
+    "output": "/images/shelter/gallery-fluffy-cat.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/gallery-fluffy-cat-779A7391.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/gallery-fluffy-cat.webp",
+    "bytes": 80622
+  },
+  {
+    "sample_number": 41,
+    "slug": "gallery-cat-tree",
+    "source_name": "779A7460.jpg",
+    "drive_id": "1rUDbdYDyMm9_Yt76GUeVOmXV7F-fE1ut",
+    "drive_url": "https://drive.google.com/file/d/1rUDbdYDyMm9_Yt76GUeVOmXV7F-fE1ut/view?usp=drivesdk",
+    "output": "/images/shelter/gallery-cat-tree.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/gallery-cat-tree-779A7460.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/gallery-cat-tree.webp",
+    "bytes": 50740
+  },
+  {
+    "sample_number": 47,
+    "slug": "gallery-lounging-cat",
+    "source_name": "779A7495.jpg",
+    "drive_id": "1DtDjZnZgJ79HEW2JZOQ-K2FT7WWagY28",
+    "drive_url": "https://drive.google.com/file/d/1DtDjZnZgJ79HEW2JZOQ-K2FT7WWagY28/view?usp=drivesdk",
+    "output": "/images/shelter/gallery-lounging-cat.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/gallery-lounging-cat-779A7495.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/gallery-lounging-cat.webp",
+    "bytes": 64236
+  },
+  {
+    "sample_number": 60,
+    "slug": "gallery-white-cat",
+    "source_name": "779A7597.jpg",
+    "drive_id": "19kQBU-501gTzVSf2QRmgz8aTji4XrxFS",
+    "drive_url": "https://drive.google.com/file/d/19kQBU-501gTzVSf2QRmgz8aTji4XrxFS/view?usp=drivesdk",
+    "output": "/images/shelter/gallery-white-cat.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/gallery-white-cat-779A7597.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/gallery-white-cat.webp",
+    "bytes": 50362
+  },
+  {
+    "sample_number": 61,
+    "slug": "gallery-cat-perch",
+    "source_name": "779A7602.jpg",
+    "drive_id": "1SmpQ9XshZCc4OG3wQ4HnCjB7jqx_4foE",
+    "drive_url": "https://drive.google.com/file/d/1SmpQ9XshZCc4OG3wQ4HnCjB7jqx_4foE/view?usp=drivesdk",
+    "output": "/images/shelter/gallery-cat-perch.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/gallery-cat-perch-779A7602.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/gallery-cat-perch.webp",
+    "bytes": 61482
+  },
+  {
+    "sample_number": 82,
+    "slug": "gallery-gate-cat",
+    "source_name": "779A7780.jpg",
+    "drive_id": "1X0mMJ-jM1sdlFxl4Ksb8jPFZ_gKuXpWS",
+    "drive_url": "https://drive.google.com/file/d/1X0mMJ-jM1sdlFxl4Ksb8jPFZ_gKuXpWS/view?usp=drivesdk",
+    "output": "/images/shelter/gallery-gate-cat.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/gallery-gate-cat-779A7780.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/gallery-gate-cat.webp",
+    "bytes": 198182
+  },
+  {
+    "sample_number": 89,
+    "slug": "gallery-shelter-dog",
+    "source_name": "779A7855.jpg",
+    "drive_id": "1qqPIIyYaVXtgN3vhgJiTepZg7XNTvkjH",
+    "drive_url": "https://drive.google.com/file/d/1qqPIIyYaVXtgN3vhgJiTepZg7XNTvkjH/view?usp=drivesdk",
+    "output": "/images/shelter/gallery-shelter-dog.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/gallery-shelter-dog-779A7855.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/gallery-shelter-dog.webp",
+    "bytes": 209482
+  },
+  {
+    "sample_number": 95,
+    "slug": "gallery-portrait-cat",
+    "source_name": "779A7896.jpg",
+    "drive_id": "1Onxagn4m3QUr7b2tm9hoDCEFzB8uJtfU",
+    "drive_url": "https://drive.google.com/file/d/1Onxagn4m3QUr7b2tm9hoDCEFzB8uJtfU/view?usp=drivesdk",
+    "output": "/images/shelter/gallery-portrait-cat.webp",
+    "original_path": "/opt/data/shelter-imagery-analysis/selected-originals/gallery-portrait-cat-779A7896.jpg",
+    "webp_path": "/opt/data/projects/animalhouse/public/images/shelter/gallery-portrait-cat.webp",
+    "bytes": 68374
+  }
+]

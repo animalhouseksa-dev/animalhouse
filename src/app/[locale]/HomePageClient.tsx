@@ -23,10 +23,14 @@ import {
 } from "lucide-react";
 
 const imageSrcs = [
-  "/images/facility.png",
-  "/images/cats1.jpg",
-  "/images/dogs1.jpg",
-  "/images/kittens1.jpg",
+  "/images/shelter/gallery-tuxedo-cat.webp",
+  "/images/shelter/gallery-dog-walk.webp",
+  "/images/shelter/gallery-fluffy-cat.webp",
+  "/images/shelter/gallery-cat-tree.webp",
+  "/images/shelter/gallery-lounging-cat.webp",
+  "/images/shelter/gallery-white-cat.webp",
+  "/images/shelter/gallery-cat-perch.webp",
+  "/images/shelter/gallery-shelter-dog.webp",
 ];
 
 export default function HomePageClient() {
@@ -74,6 +78,10 @@ export default function HomePageClient() {
     "",
     "",
     "",
+    "md:col-span-2",
+    "",
+    "",
+    "md:col-span-2",
   ];
 
   // ── Hero intro + parallax ──
@@ -135,7 +143,7 @@ export default function HomePageClient() {
           ref={heroBgRef}
           className="absolute inset-0 -z-10 will-change-[filter,transform]"
         >
-          <Image src="/images/cover.jpg" alt="Animal House rescue" fill priority className="object-cover" />
+          <Image src="/images/shelter/shelter-hero.webp" alt="Animal House rescue animals gathered in the sanctuary" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.55)_48%,#0d0d0b_100%)] opacity-90" />
         </div>
 
@@ -257,7 +265,7 @@ export default function HomePageClient() {
       {/* Parallax sanctuary */}
       <section id="sanctuary" ref={sanctuaryRef} className="relative min-h-screen overflow-hidden px-5 py-24 sm:px-8 lg:px-12">
         <div ref={sanctuaryImgRef} className="absolute inset-0 -z-10 will-change-transform">
-          <Image src="/images/facility.png" alt="Animal House sanctuary" fill className="object-cover" />
+          <Image src="/images/shelter/shelter-sanctuary.webp" alt="Animal House indoor sanctuary with rescued cats and dogs" fill className="object-cover" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(36,18,52,0.88)_0%,rgba(36,18,52,0.58)_44%,rgba(36,18,52,0.18)_100%)]" />
         </div>
         <div className="mx-auto flex min-h-[74vh] max-w-7xl items-center">
@@ -289,8 +297,8 @@ export default function HomePageClient() {
           </AnimatedSection>
           <div className="grid gap-6 lg:grid-cols-2">
             {[
-              { title: policies("intakeTitle"), image: "/images/cats2.jpg", keys: ["intake1", "intake2", "intake3", "intake4"] as const },
-              { title: policies("adoptionTitle"), image: "/images/dogs2.jpg", keys: ["adoption1", "adoption2", "adoption3"] as const },
+              { title: policies("intakeTitle"), image: "/images/shelter/shelter-intake.webp", keys: ["intake1", "intake2", "intake3", "intake4"] as const },
+              { title: policies("adoptionTitle"), image: "/images/shelter/shelter-adoption.webp", keys: ["adoption1", "adoption2", "adoption3"] as const },
             ].map((card) => (
               <AnimatedSection key={card.title} className="group overflow-hidden rounded-[2.25rem] border border-white/10 bg-white/[0.04]">
                 <div className="relative h-80 overflow-hidden">
@@ -381,7 +389,7 @@ export default function HomePageClient() {
 
       {/* CTA Banner */}
       <section className="relative bg-[#241234] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-5 bg-[url('/images/cover.jpg')] bg-cover bg-center" />
+        <div className="absolute inset-0 opacity-5 bg-[url('/images/shelter/shelter-hero.webp')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#241234]/40 to-[#241234]/95" />
         <div className="relative max-w-7xl mx-auto px-5 py-20 sm:px-8 lg:px-12 lg:py-28 text-center">
           <AnimatedSection>
