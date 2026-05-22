@@ -297,7 +297,7 @@ export default function HomePageClient() {
 
             {/* Bottom right — quiet sanctuary moment */}
             <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
-              <Image src="/images/shelter/sanctuary-side-3.webp" alt="Quiet moment inside the sanctuary with cats in soft light" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <Image src="/images/shelter/sanctuary-side-3.webp" alt="Cat relaxing near a shelter gate in soft natural light" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </AnimatedSection>
           </div>
