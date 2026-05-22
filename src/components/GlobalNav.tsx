@@ -5,8 +5,8 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { PawPrint } from "lucide-react";
 
-const navKeys = ["story", "vision", "sanctuary", "policies", "impact", "contact"] as const;
-const navHrefs = ["#story", "#vision", "#sanctuary", "#policies", "#impact", "#contact"] as const;
+const navKeys = ["story", "sanctuary", "vision", "policies", "impact", "contact"] as const;
+const navHrefs = ["#story", "#sanctuary", "#vision", "#policies", "#impact", "#contact"] as const;
 
 export default function GlobalNav() {
   const t = useTranslations("navLinks");

@@ -28,8 +28,8 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">{t('navigate')}</h4>
             <ul className="space-y-2.5 text-sm">
               <li><a href="#story" className="hover:text-white transition-colors">{navT('story')}</a></li>
-              <li><a href="#vision" className="hover:text-white transition-colors">{navT('vision')}</a></li>
               <li><a href="#sanctuary" className="hover:text-white transition-colors">{navT('sanctuary')}</a></li>
+              <li><a href="#vision" className="hover:text-white transition-colors">{navT('vision')}</a></li>
               <li><a href="#policies" className="hover:text-white transition-colors">{navT('policies')}</a></li>
               <li><a href="#impact" className="hover:text-white transition-colors">{navT('impact')}</a></li>
             </ul>
