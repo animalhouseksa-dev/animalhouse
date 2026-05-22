@@ -291,7 +291,7 @@ export default function HomePageClient() {
 
             {/* Bottom left — animal group gathering */}
             <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
-              <Image src="/images/shelter/sanctuary-side-2.webp" alt="Animals gathered in the golden-hour sanctuary space" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <Image src="/images/shelter/sanctuary-side-2.webp" alt="Golden tabby cat lounging contentedly in a woven cat tree basket" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </AnimatedSection>
 
