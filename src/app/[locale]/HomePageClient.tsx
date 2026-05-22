@@ -143,7 +143,7 @@ export default function HomePageClient() {
           ref={heroBgRef}
           className="absolute inset-0 -z-10 will-change-[filter,transform]"
         >
-          <Image src="/images/shelter/shelter-hero.webp" alt="Animal House rescue animals gathered in the sanctuary" fill priority className="object-cover" />
+          <Image src="/images/shelter/shelter-sunset.webp" alt="Golden sunrise over the sanctuary's misty wetlands at dawn" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.55)_48%,#0d0d0b_100%)] opacity-90" />
         </div>
 
@@ -262,22 +262,52 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Parallax sanctuary */}
-      <section id="sanctuary" ref={sanctuaryRef} className="relative min-h-screen overflow-hidden px-5 py-24 sm:px-8 lg:px-12">
-        <div ref={sanctuaryImgRef} className="absolute inset-0 -z-10 will-change-transform">
-          <Image src="/images/shelter/shelter-sanctuary.webp" alt="Animal House indoor sanctuary with rescued cats and dogs" fill className="object-cover" />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(36,18,52,0.88)_0%,rgba(36,18,52,0.58)_44%,rgba(36,18,52,0.18)_100%)]" />
-        </div>
-        <div className="mx-auto flex min-h-[74vh] max-w-7xl items-center">
-          <AnimatedSection className="max-w-2xl">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.34em] text-white/50">{hp("sanctuary.label")}</p>
-            <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
-              {hp("sanctuary.title")}
-            </h2>
-            <div className="mt-10 grid gap-3 sm:grid-cols-2">
+      {/* Editorial sanctuary gallery — pro photography layout */}
+      <section id="sanctuary" ref={sanctuaryRef} className="bg-[#fbf8ff] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+        <div className="mx-auto max-w-7xl">
+          <AnimatedSection className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div className="max-w-3xl">
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#8b5fc7]">{hp("sanctuary.label")}</p>
+              <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
+                {hp("sanctuary.title")}
+              </h2>
+            </div>
+            <p className="max-w-sm text-lg leading-8 text-[#2d2139]/58">Wide corridors filled with warm light, open play yards, quiet recovery spaces, and plenty of places for every creature to find their own corner of peace.</p>
+          </AnimatedSection>
+
+          {/* Pro photography grid — wide shots, editorial feel */}
+          <div ref={sanctuaryImgRef} className="grid auto-rows-[17rem] gap-4 md:grid-cols-4">
+            {/* Large hero — sanctuary wide shot with golden light */}
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black md:col-span-2 md:row-span-2">
+              <Image src="/images/shelter/sanctuary-wide-1.webp" alt="Spacious sanctuary interior with rescued animals in warm golden sunlight" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            </AnimatedSection>
+
+            {/* Right top — outdoor corridor scene */}
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black md:col-span-2">
+              <Image src="/images/shelter/sanctuary-outdoor-1.webp" alt="Outdoor sanctuary corridor with greenery and animals resting" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+
+            {/* Bottom left — animal group gathering */}
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
+              <Image src="/images/shelter/sanctuary-side-2.webp" alt="Animals gathered in the golden-hour sanctuary space" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+
+            {/* Bottom right — quiet sanctuary moment */}
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
+              <Image src="/images/shelter/sanctuary-side-3.webp" alt="Quiet moment inside the sanctuary with cats in soft light" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+          </div>
+
+          {/* Facility features beneath imagery */}
+          <AnimatedSection className="mt-12">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {facility.map((item) => (
-                <div key={item} className="flex gap-3 rounded-2xl border border-white/10 bg-white/10 p-4 text-sm leading-6 text-white/75 backdrop-blur-md">
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-white" />
+                <div key={item} className="flex gap-3 rounded-2xl border border-[#e7dbf6] bg-white p-4 text-sm leading-6 text-[#2d2139]/70">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#8b5fc7]" />
                   <span>{item}</span>
                 </div>
               ))}
