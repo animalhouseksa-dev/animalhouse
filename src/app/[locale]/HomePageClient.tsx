@@ -238,30 +238,6 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Vision pillars */}
-      <section id="vision" className="bg-white px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
-        <div className="mx-auto max-w-7xl">
-          <AnimatedSection className="mb-14 max-w-4xl">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#8b5fc7]">{hp("vision.sectionLabel")}</p>
-            <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
-              {hp("vision.title")}
-            </h2>
-          </AnimatedSection>
-          <StaggerContainer className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
-            {visionPillars.map((pillar, index) => (
-              <StaggerItem key={pillar.title}>
-                <article className="flex h-full flex-col rounded-[2rem] border border-[#e7dbf6] bg-[#fbf8ff] p-6">
-                  <div className="mb-10 text-sm font-semibold text-[#2d2139]/35">{String(index + 1).padStart(2, "0")}</div>
-                  <h3 className="mb-4 text-2xl font-semibold leading-tight tracking-[-0.04em]">{pillar.title}</h3>
-                  <p className="mb-5 leading-7 text-[#2d2139]/58">{pillar.text}</p>
-                  <p className="mt-auto border-t border-[#d8c7ef] pt-5 text-sm font-semibold uppercase tracking-[0.14em] text-[#8b5fc7]">{pillar.proof}</p>
-                </article>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
       {/* Editorial sanctuary gallery — pro photography layout */}
       <section id="sanctuary" ref={sanctuaryRef} className="bg-[#fbf8ff] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-7xl">
@@ -313,6 +289,30 @@ export default function HomePageClient() {
               ))}
             </div>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Vision pillars */}
+      <section id="vision" className="bg-white px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
+        <div className="mx-auto max-w-7xl">
+          <AnimatedSection className="mb-14 max-w-4xl">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#8b5fc7]">{hp("vision.sectionLabel")}</p>
+            <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
+              {hp("vision.title")}
+            </h2>
+          </AnimatedSection>
+          <StaggerContainer className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+            {visionPillars.map((pillar, index) => (
+              <StaggerItem key={pillar.title}>
+                <article className="flex h-full flex-col rounded-[2rem] border border-[#e7dbf6] bg-[#fbf8ff] p-6">
+                  <div className="mb-10 text-sm font-semibold text-[#2d2139]/35">{String(index + 1).padStart(2, "0")}</div>
+                  <h3 className="mb-4 text-2xl font-semibold leading-tight tracking-[-0.04em]">{pillar.title}</h3>
+                  <p className="mb-5 leading-7 text-[#2d2139]/58">{pillar.text}</p>
+                  <p className="mt-auto border-t border-[#d8c7ef] pt-5 text-sm font-semibold uppercase tracking-[0.14em] text-[#8b5fc7]">{pillar.proof}</p>
+                </article>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
         </div>
       </section>
 
