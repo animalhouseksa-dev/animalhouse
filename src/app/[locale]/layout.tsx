@@ -29,17 +29,17 @@ const notoSansArabic = Noto_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "Animal House — Give Them a Home",
+  title: "Animal House: Give Them a Home",
   description:
     "A NO-KILL animal rescue in Saudi Arabia founded by Colin Rhys and Khadija Abdullah. We rescue, rehabilitate, and rehome cats and dogs across the Kingdom.",
   openGraph: {
-    title: "Animal House — Give Them a Home",
+    title: "Animal House: Give Them a Home",
     description: "A NO-KILL animal rescue in Saudi Arabia. Rescue. Rehabilitate. Rehome.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Animal House — Give Them a Home",
+    title: "Animal House: Give Them a Home",
     description: "A NO-KILL animal rescue in Saudi Arabia",
   },
 };

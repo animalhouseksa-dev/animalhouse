@@ -50,7 +50,7 @@ export default function Footer() {
               <li>3,000+ {t('catsRescued')}</li>
               <li>2,500+ {t('catsSpayed')}</li>
               <li>150+ {t('dogsSpayed')}</li>
-              <li>270,000+ {t('birthsPrevented')}</li>
+              <li>270k+ {t('birthsPrevented')}</li>
               <li>250+ {t('dogsRescued')}</li>
               <li>100+ {t('volunteersEngaged')}</li>
               <li>1.2B+ Media Impressions</li>

@@ -13,7 +13,7 @@
   },
   "hero": {
     "title": "Every Animal Deserves a Loving Home",
-    "subtitle": "Animal House is a NO-KILL rescue based in Riyadh, Saudi Arabia. Founded by Khadija Abdullah, we rescue cats and dogs from across the Kingdom — from Arar to Jeddah — and find them loving homes as far as Los Angeles and Paris.",
+    "subtitle": "Animal House is a NO-KILL rescue based in Riyadh, Saudi Arabia. Founded by Khadija Abdullah, we rescue cats and dogs from across the Kingdom, from Arar to Jeddah, and find them loving homes as far as Los Angeles and Paris.",
     "ctaAdopt": "Adopt a Friend",
     "ctaDonate": "Support Our Mission"
   },
@@ -37,7 +37,7 @@
     "title": "Our Story",
     "history": "Animal House began with Khadija Abdullah’s work to protect Riyadh’s most vulnerable cats and dogs. Today, that hands-on rescue mission is growing into a larger, evidence-led model for animal welfare in Saudi Arabia.",
     "nokill": "We are a NO-KILL rescue. Any animal who joins us knows they will live their life out in peace on this earth.",
-    "facility": "Our current sanctuary operates from an Istraha outside Riyadh with dedicated spaces for cats, dogs, quarantine, kittens, nursing mothers, and FIV-positive cats — built around calm daily care rather than cages.",
+    "facility": "Our current sanctuary operates from an Istraha outside Riyadh with dedicated spaces for cats, dogs, quarantine, kittens, nursing mothers, and FIV-positive cats, built around calm daily care rather than cages.",
     "team": "Our team consists of 4 full-time members who live on-site: a Shelter Director, 2 full-time cleaners, and a driver for pick-up and drop-off. We are supported by a network of dedicated volunteers."
   },
   "policies": {
@@ -214,7 +214,7 @@
     "testimonial3Name": "Noura Al-Harbi",
     "testimonial3Role": "Corporate Partner",
     "ctaTitle": "Ready to Make a Difference?",
-    "ctaSubtitle": "No gift is too small. A single vaccine, a meal, or a surgery — every donation is a promise that we will never turn an animal away."
+    "ctaSubtitle": "No gift is too small. A single vaccine, a meal, or a surgery: every donation is a promise that we will never turn an animal away."
   },
   "volunteerPage": {
     "metadata": {
@@ -323,7 +323,7 @@
           "detail": "Humane population control"
         },
         {
-          "value": "270,000+",
+          "value": "270k+",
           "label": "Future births prevented",
           "detail": "By our TNR efforts"
         },
@@ -376,7 +376,7 @@
       "sectionLabel": "Our future plans",
       "title": "The next Animal House must be built for scale.",
       "intro1": "The current sanctuary proves what focused rescue can do. The next phase is a purpose-built location with stronger veterinary workflows, better intake capacity, safer species-specific zones, and room for community education.",
-      "intro2": "Support now helps turn an improvised rescue operation into a lasting Saudi model for no-kill care — ambitious, transparent, and beautiful enough to make people stop, look, and act.",
+      "intro2": "Support now helps turn an improvised rescue operation into a lasting Saudi model for no-kill care that is ambitious, transparent, and beautiful enough to make people stop, look, and act.",
       "notes": [
         {
           "eyebrow": "Next-location ambition",
@@ -430,8 +430,8 @@
       "label": "The sanctuary",
       "title": "A working rescue site, cared for daily and ready for its next chapter.",
       "facility": [
-        "Cat colony area — open living, not cages",
-        "Dog pack area — social group housing",
+        "Cat colony area: open living, not cages",
+        "Dog pack area: social group housing",
         "Quarantine rooms for new arrivals",
         "Kitten nursery for vulnerable babies",
         "Nursing mothers room",
@@ -490,7 +490,7 @@
         },
         {
           "label": "International rehoming",
-          "copy": "When the right family is abroad, Animal House makes the distance work — because a permanent safe home is the goal."
+          "copy": "When the right family is abroad, Animal House makes the distance work, because a permanent safe home is the goal."
         }
       ],
       "leadText": "Our future plans are the next chapter of the rescue.",
@@ -508,7 +508,7 @@
     },
     "cta": {
       "title": "Help build the next chapter.",
-      "desc": "Your support turns rescue work into lasting infrastructure for cats and dogs in Saudi Arabia — safer spaces, stronger systems, and more lives saved.",
+      "desc": "Your support turns rescue work into lasting infrastructure for cats and dogs in Saudi Arabia: safer spaces, stronger systems, and more lives saved.",
       "ctaPrimary": "Get in Touch",
       "ctaSecondary": "See the Proof"
     },
@@ -561,7 +561,7 @@
     },
     "hero": {
       "title": "About Animal House",
-      "subtitle": "From a dream to a movement — discover how two people and a growing community are changing the future for animals in Saudi Arabia."
+      "subtitle": "From a dream to a movement. Discover how two people and a growing community are changing the future for animals in Saudi Arabia."
     },
     "mission": {
       "title": "Our Mission",
@@ -586,8 +586,8 @@
     "facility": {
       "title": "Our Facility",
       "paragraph1": "Our current facility is housed within an Istraha 45 minutes from Riyadh. It includes dedicated zones for cats, dogs, quarantine, kittens, nursing mothers, and FIV-positive cats.",
-      "item1": "Cat colony area — open living, not cages",
-      "item2": "Dog pack area — social group housing",
+      "item1": "Cat colony area: open living, not cages",
+      "item2": "Dog pack area: social group housing",
       "item3": "Quarantine rooms for new arrivals",
       "item4": "Kitten nursery for vulnerable babies",
       "item5": "Nursing mothers room",
