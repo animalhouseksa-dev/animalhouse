@@ -367,7 +367,6 @@ export default function HomePageClient() {
               <AnimatedSection key={image.alt} delay={index * 0.05} className={`group relative overflow-hidden rounded-[2rem] bg-black ${galleryClasses[index]}`}>
                 <Image src={imageSrcs[index]} alt={image.alt} fill className="object-cover transition duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-80" />
-                <span className="absolute bottom-5 left-5 text-sm font-semibold uppercase tracking-[0.18em] text-white/85">{image.alt}</span>
               </AnimatedSection>
             ))}
           </div>
