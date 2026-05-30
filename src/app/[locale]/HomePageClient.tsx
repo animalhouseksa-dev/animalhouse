@@ -627,7 +627,7 @@ export default function HomePageClient() {
           <div className="divide-y divide-[#e7dbf6]">
             {visionPillars.map((pillar) => (
               <AnimatedSection key={pillar.title} className="group flex flex-col gap-3 py-8 md:flex-row md:items-start md:gap-8">
-                <p className="shrink-0 font-serif text-2xl font-semibold leading-[0.95] tracking-[-0.04em] text-[#8b5fc7] md:pt-0.5">
+                <p className="shrink-0 font-serif text-3xl font-semibold leading-[0.95] tracking-[-0.04em] text-[#8b5fc7] translate-y-[5px]">
                   We must
                 </p>
                 <div className="flex-1">
