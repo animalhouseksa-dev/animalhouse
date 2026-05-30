@@ -507,10 +507,6 @@ export default function HomePageClient() {
       {/* CTA Banner — light theme (lilac & white) */}
       <section className="relative bg-[#fbf8ff] text-[#19131f] overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03] bg-[url('/images/shelter/shelter-hero.webp')] bg-cover bg-center" />
-        {/* Subtle logo watermark */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04]">
-          <Image src="/images/logo/animal-house-logo.svg" alt="" width={600} height={160} />
-        </div>
         <div className="relative max-w-7xl mx-auto px-5 py-20 sm:px-8 lg:px-12 lg:py-28 text-center">
           <AnimatedSection>
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5 text-[#241234]">
@@ -629,11 +625,6 @@ export default function HomePageClient() {
               </StaggerItem>
             ))}
           </StaggerContainer>
-
-          {/* Subtle logo mark as closing brand reinforcement */}
-          <div className="flex justify-center mt-16">
-            <Image src="/images/logo/animal-house-logo.svg" alt="Animal House" width={180} height={50} className="h-12 w-auto opacity-20" />
-          </div>
         </div>
       </section>
     </main>
