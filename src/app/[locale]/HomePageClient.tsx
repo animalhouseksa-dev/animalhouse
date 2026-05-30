@@ -396,7 +396,7 @@ export default function HomePageClient() {
           <div className="grid gap-6 lg:grid-cols-2">
             {[
               { title: policies("intakeTitle"), image: "/images/shelter/shelter-intake.webp", keys: ["intake1", "intake2", "intake3", "intake4"] as const },
-              { title: policies("adoptionTitle"), image: "/images/shelter/shelter-adoption.webp", keys: ["adoption1", "adoption2", "adoption3"] as const },
+              { title: policies("adoptionTitle"), image: "/images/shelter/shelter-adoption.webp", keys: ["adoption1", "adoption2", "adoption3", "adoption4"] as const },
             ].map((card) => (
               <AnimatedSection key={card.title} className="group overflow-hidden rounded-[2.25rem] border border-[#d8c7ef] bg-white shadow-[0_24px_80px_rgba(91,53,133,0.10)]">
                 <div className="relative h-80 overflow-hidden">
