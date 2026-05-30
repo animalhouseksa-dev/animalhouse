@@ -22,7 +22,8 @@ import {
   Send,
 } from "lucide-react";
 
-const imageSrcs = [
+// ── Gallery images (12) — used ONLY in the editorial gallery section ──
+const galleryImageSrcs = [
   "/images/shelter/gallery-tuxedo-cat.webp",
   "/images/shelter/gallery-dog-walk.webp",
   "/images/shelter/gallery-fluffy-cat.webp",
@@ -35,10 +36,6 @@ const imageSrcs = [
   "/images/shelter/gallery-portrait-cat.webp",
   "/images/shelter/thumb-1naVdjWmGTTSWlnIlB5DGF6V5rQUhcQZT.webp",
   "/images/shelter/thumb-1DtmbLOIOpN2SuS8HmKdyTWQK_XgtUiCb.webp",
-  "/images/shelter/thumb-1-iTt3zh-hkicXetZgtcMHu8ZiueAqZBv.webp",
-  "/images/shelter/thumb-1L-gGTlvtBczzXgEOYKpeviy8ZHjuFL-2.webp",
-  "/images/shelter/thumb-1-aF4gvxTn5pjJckOBEekzdgfNBoTb1ku.webp",
-  "/images/shelter/thumb-1D9N_B_JIUeuIswW7ziqTK938smhiK8Rx.webp",
 ];
 
 export default function HomePageClient() {
@@ -72,26 +69,26 @@ export default function HomePageClient() {
   // ── Facility list ──
   const facility = hp.raw("sanctuary.facility") as string[];
 
-  // ── Facility images — one diverse photo per feature ──
+  // ── Facility images — unique photos for each facility feature ──
   const facilityImages = [
-    "/images/shelter/gallery-tuxedo-cat.webp",
-    "/images/shelter/gallery-shelter-dog.webp",
     "/images/shelter/shelter-intake.webp",
+    "/images/shelter/shelter-adoption.webp",
+    "/images/shelter/shelter-sanctuary.webp",
     "/images/shelter/gallery-white-cat.webp",
     "/images/shelter/gallery-lounging-cat.webp",
-    "/images/shelter/gallery-gate-cat.webp",
-    "/images/shelter/shelter-adoption.webp",
+    "/images/shelter/gallery-tuxedo-cat.webp",
+    "/images/shelter/gallery-shelter-dog.webp",
   ];
 
-  // ── Standard of care images (matching the 7 facility items) ──
+  // ── Standard of care images — unique set, no overlap with facility or gallery ──
   const careImages = [
     "/images/shelter/gallery-dog-walk.webp",
-    "/images/shelter/thumb-1-2KRwPbsKme14QbtOAy4atDnxjFDv0VH.webp",
-    "/images/shelter/shelter-sanctuary.webp",
-    "/images/shelter/gallery-cat-tree.webp",
     "/images/shelter/gallery-fluffy-cat.webp",
-    "/images/shelter/gallery-portrait-cat.webp",
-    "/images/shelter/thumb-1naVdjWmGTTSWlnIlB5DGF6V5rQUhcQZT.webp",
+    "/images/shelter/gallery-cat-tree.webp",
+    "/images/shelter/gallery-gate-cat.webp",
+    "/images/shelter/gallery-cat-perch.webp",
+    "/images/shelter/sanctuary-side-2.webp",
+    "/images/shelter/sanctuary-outdoor-1.webp",
   ];
 
   // ── Impact pillars ──
@@ -242,7 +239,7 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Editorial sanctuary gallery — pro photography layout (MOVED UP after stats) */}
+      {/* Editorial sanctuary gallery — pro photography layout */}
       <section id="sanctuary" ref={sanctuaryRef} className="bg-[#fbf8ff] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <AnimatedSection className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
@@ -254,9 +251,9 @@ export default function HomePageClient() {
             </div>
           </AnimatedSection>
 
-          {/* Expanded photography grid — 10 images showing various parts of facility */}
+          {/* Photography grid — 6 unique sanctuary images */}
           <div ref={sanctuaryImgRef} className="grid auto-rows-[15rem] gap-4 md:grid-cols-4">
-            {/* Large hero — sanctuary wide shot with golden light (2x2) */}
+            {/* Large hero — sanctuary wide shot (2x2) */}
             <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black md:col-span-2 md:row-span-2">
               <Image src="/images/shelter/sanctuary-wide-1.webp" alt="Spacious sanctuary interior with rescued animals in warm golden sunlight" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
@@ -264,13 +261,13 @@ export default function HomePageClient() {
 
             {/* Right top — outdoor sanctuary view */}
             <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black md:col-span-2">
-              <Image src="/images/shelter/sanctuary-outdoor-1.webp" alt="Tuxedo cat portrait in soft sanctuary lighting" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <Image src="/images/shelter/sanctuary-outdoor-1.webp" alt="Outdoor sanctuary view with rescued animals" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </AnimatedSection>
 
-            {/* 4 more images */}
+            {/* Side images */}
             <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
-              <Image src="/images/shelter/sanctuary-side-2.webp" alt="Brown and white tabby cat portrait with striking green eyes" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <Image src="/images/shelter/sanctuary-side-2.webp" alt="Cat portrait with striking green eyes" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </AnimatedSection>
 
@@ -290,27 +287,7 @@ export default function HomePageClient() {
             </AnimatedSection>
           </div>
 
-          {/* Second row of 4 more sanctuary images */}
-          <div className="grid auto-rows-[13rem] gap-4 mt-4 md:grid-cols-4">
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
-              <Image src="/images/shelter/gallery-dog-walk.webp" alt="Dog walking area in the sanctuary" fill className="object-cover transition duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
-              <Image src="/images/shelter/gallery-cat-tree.webp" alt="Cat enrichment area with climbing structures" fill className="object-cover transition duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
-              <Image src="/images/shelter/gallery-gate-cat.webp" alt="Cat near shelter entrance gate" fill className="object-cover transition duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
-              <Image src="/images/shelter/gallery-portrait-cat.webp" alt="Cat portrait in sanctuary lighting" fill className="object-cover transition duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
-          </div>
-
-          {/* Facility features — photo + text cards (ISSUE 9) */}
+          {/* Facility features — photo + text cards */}
           <AnimatedSection className="mt-12">
             <h3 className="mb-6 text-2xl font-semibold tracking-[-0.04em] text-[#2d2139]/80">Our Facilities</h3>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -331,7 +308,7 @@ export default function HomePageClient() {
             </div>
           </AnimatedSection>
 
-          {/* Standard of Care — every bullet with matching photo (ISSUE 13) */}
+          {/* Standard of Care — every bullet with matching photo */}
           <AnimatedSection className="mt-16">
             <div className="mb-8">
               <p className="mb-3 text-xs font-bold uppercase tracking-[0.32em] text-[#8b5fc7]">Standard of Care</p>
@@ -382,72 +359,22 @@ export default function HomePageClient() {
                     <Icon className="mb-8 h-7 w-7 text-[#8b5fc7]" />
                     <p className="mb-3 text-[0.68rem] font-bold uppercase tracking-[0.26em] text-[#2d2139]/35">{note.eyebrow}</p>
                     <h3 className="mb-4 text-2xl font-semibold tracking-[-0.04em]">{note.title}</h3>
-                    <p className="leading-7 text-[#2d2139]/62">{note.text || about("nokill")}</p>
+                    {note.text !== undefined ? (
+                      <p className="leading-7 text-[#2d2139]/62">{note.text}</p>
+                    ) : null}
                   </article>
                 </StaggerItem>
               );
             })}
           </StaggerContainer>
-
-          {/* Extra photo row in story section */}
-          <div className="mt-12 grid gap-4 md:grid-cols-3">
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black h-64">
-              <Image src="/images/shelter/gallery-dog-walk.webp" alt="Animals enjoying the sanctuary" fill className="object-cover transition duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black h-64">
-              <Image src="/images/shelter/thumb-1-2KRwPbsKme14QbtOAy4atDnxjFDv0VH.webp" alt="Shelter residents" fill className="object-cover transition duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black h-64">
-              <Image src="/images/shelter/thumb-1naVdjWmGTTSWlnIlB5DGF6V5rQUhcQZT.webp" alt="Peaceful sanctuary moment" fill className="object-cover transition duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
-          </div>
         </div>
       </section>
 
-      {/* Vision pillars */}
-      <section id="vision" className="bg-white px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
+      {/* Policies — light theme (lilac & white) */}
+      <section id="policies" className="bg-[#fbf8ff] px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <AnimatedSection className="mb-14 max-w-4xl">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#8b5fc7]">{hp("vision.sectionLabel")}</p>
-            <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
-              {hp("vision.title")}
-            </h2>
-          </AnimatedSection>
-          <StaggerContainer className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
-            {visionPillars.map((pillar, index) => (
-              <StaggerItem key={pillar.title}>
-                <article className="flex h-full flex-col rounded-[2rem] border border-[#e7dbf6] bg-[#fbf8ff] p-6">
-                  <div className="mb-10 text-sm font-semibold text-[#2d2139]/35">{String(index + 1).padStart(2, "0")}</div>
-                  <h3 className="mb-4 text-2xl font-semibold leading-tight tracking-[-0.04em]">{pillar.title}</h3>
-                  <p className="mb-5 leading-7 text-[#2d2139]/58">{pillar.text}</p>
-                  <p className="mt-auto border-t border-[#d8c7ef] pt-5 text-sm font-semibold uppercase tracking-[0.14em] text-[#8b5fc7]">{pillar.proof}</p>
-                </article>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-
-          {/* Photo interlude */}
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black h-72">
-              <Image src="/images/shelter/thumb-1L-gGTlvtBczzXgEOYKpeviy8ZHjuFL-2.webp" alt="Future vision for animals" fill className="object-cover transition duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black h-72">
-              <Image src="/images/shelter/thumb-1-aF4gvxTn5pjJckOBEekzdgfNBoTb1ku.webp" alt="Community of rescue" fill className="object-cover transition duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Policies */}
-      <section id="policies" className="bg-[#241234] px-5 py-24 text-white sm:px-8 lg:px-12 lg:py-32">
-        <div className="mx-auto max-w-7xl">
-          <AnimatedSection className="mb-14 max-w-4xl">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.34em] text-white/38">{hp("policies.sectionLabel")}</p>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.34em] text-[#8b5fc7]/60">{hp("policies.sectionLabel")}</p>
             <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
               {hp("policies.homeTitle")}
             </h2>
@@ -457,16 +384,16 @@ export default function HomePageClient() {
               { title: policies("intakeTitle"), image: "/images/shelter/shelter-intake.webp", keys: ["intake1", "intake2", "intake3", "intake4"] as const },
               { title: policies("adoptionTitle"), image: "/images/shelter/shelter-adoption.webp", keys: ["adoption1", "adoption2", "adoption3"] as const },
             ].map((card) => (
-              <AnimatedSection key={card.title} className="group overflow-hidden rounded-[2.25rem] border border-white/10 bg-white/[0.04]">
+              <AnimatedSection key={card.title} className="group overflow-hidden rounded-[2.25rem] border border-[#d8c7ef] bg-white shadow-[0_24px_80px_rgba(91,53,133,0.10)]">
                 <div className="relative h-80 overflow-hidden">
                   <Image src={card.image} alt={card.title} fill className="object-cover transition duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent" />
-                  <h3 className="absolute bottom-6 left-6 right-6 text-3xl font-semibold tracking-[-0.05em]">{card.title}</h3>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <h3 className="absolute bottom-6 left-6 right-6 text-3xl font-semibold tracking-[-0.05em] text-white">{card.title}</h3>
                 </div>
                 <div className="space-y-4 p-6 md:p-8">
                   {card.keys.map((key) => (
-                    <div key={key} className="flex gap-4 border-t border-white/10 pt-4 text-white/68 first:border-t-0 first:pt-0">
-                      <Heart className="mt-1 h-4 w-4 shrink-0 text-white/80" />
+                    <div key={key} className="flex gap-4 border-t border-[#e7dbf6] pt-4 text-[#2d2139]/68 first:border-t-0 first:pt-0">
+                      <Heart className="mt-1 h-4 w-4 shrink-0 text-[#8b5fc7]" />
                       <p className="leading-7">{policies(key)}</p>
                     </div>
                   ))}
@@ -478,7 +405,7 @@ export default function HomePageClient() {
       </section>
 
       {/* Editorial gallery */}
-      <section className="bg-[#fbf8ff] px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
+      <section className="bg-white px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <AnimatedSection className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-3xl">
@@ -492,7 +419,7 @@ export default function HomePageClient() {
           <div className="grid auto-rows-[17rem] gap-4 md:grid-cols-4">
             {galleryImages.map((image, index) => (
               <AnimatedSection key={image.alt} delay={index * 0.05} className={`group relative overflow-hidden rounded-[2rem] bg-black ${galleryClasses[index] || ''}`}>
-                <Image src={imageSrcs[index]} alt={image.alt} fill className="object-cover transition duration-700 group-hover:scale-105" />
+                <Image src={galleryImageSrcs[index]} alt={image.alt} fill className="object-cover transition duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-80" />
               </AnimatedSection>
             ))}
@@ -501,7 +428,7 @@ export default function HomePageClient() {
       </section>
 
       {/* Impact pillars */}
-      <section id="impact" className="bg-white px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
+      <section id="impact" className="bg-[#fbf8ff] px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <AnimatedSection className="mx-auto mb-16 max-w-4xl text-center">
             <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
@@ -513,7 +440,7 @@ export default function HomePageClient() {
               const Icon = impactIconMap[i];
               return (
                 <StaggerItem key={pillar.label}>
-                  <article className="h-full rounded-[2rem] border border-[#e7dbf6] bg-[#fbf8ff] p-7">
+                  <article className="h-full rounded-[2rem] border border-[#e7dbf6] bg-white p-7 shadow-[0_12px_40px_rgba(91,53,133,0.06)]">
                     <Icon className="mb-10 h-7 w-7 text-[#8b5fc7]" />
                     <h3 className="mb-4 text-2xl font-semibold leading-tight tracking-[-0.04em]">{pillar.label}</h3>
                     <p className="leading-7 text-[#2d2139]/58">{pillar.copy}</p>
@@ -523,17 +450,17 @@ export default function HomePageClient() {
             })}
           </StaggerContainer>
 
-          <AnimatedSection className="mt-16 rounded-[2.5rem] bg-[#241234] p-8 text-white md:p-12">
+          <AnimatedSection className="mt-16 rounded-[2.5rem] border border-[#d8c7ef] bg-white p-8 md:p-12 shadow-[0_24px_80px_rgba(91,53,133,0.08)]">
             <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div>
-                <Home className="mb-8 h-8 w-8 text-white/60" />
-                <h3 className="text-4xl font-semibold leading-[1] tracking-[-0.06em] md:text-6xl">
+                <Home className="mb-8 h-8 w-8 text-[#8b5fc7]/60" />
+                <h3 className="text-4xl font-semibold leading-[1] tracking-[-0.06em] text-[#2d2139] md:text-6xl">
                   {hp("impact.leadText")}
                 </h3>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 {impactGrid.map((item) => (
-                  <div key={item} className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-6 text-white/68">
+                  <div key={item} className="rounded-2xl border border-[#e7dbf6] bg-[#fbf8ff]/60 p-4 text-sm leading-6 text-[#2d2139]/68">
                     {item}
                   </div>
                 ))}
@@ -543,11 +470,11 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Contact section */}
-      <section id="contact" className="bg-[#241234] px-5 py-24 text-white sm:px-8 lg:px-12 lg:py-32">
+      {/* Contact section — light theme (lilac & white) */}
+      <section id="contact" className="bg-white px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="mb-14 max-w-4xl">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.34em] text-white/38">{hp("contact.sectionLabel")}</p>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.34em] text-[#8b5fc7]/60">{hp("contact.sectionLabel")}</p>
             <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
               {hp("contact.title")}
             </h2>
@@ -555,20 +482,14 @@ export default function HomePageClient() {
           <div className="grid gap-8 lg:grid-cols-2">
             <AnimatedSection>
               <div className="space-y-6">
-                <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
-                    <Mail className="w-5 h-5 text-white/70" />
+                <div className="flex items-start gap-4 rounded-2xl border border-[#e7dbf6] bg-[#fbf8ff]/60 p-6">
+                  <div className="w-10 h-10 rounded-xl bg-[#8b5fc7]/10 flex items-center justify-center shrink-0">
+                    <Mail className="w-5 h-5 text-[#8b5fc7]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white mb-1">{hp("contact.emailLabel")}</h3>
-                    <p className="text-sm text-white/50">{hp("contact.emailValue")}</p>
+                    <h3 className="font-semibold text-[#2d2139] mb-1">{hp("contact.emailLabel")}</h3>
+                    <p className="text-sm text-[#2d2139]/50">{hp("contact.emailValue")}</p>
                   </div>
-                </div>
-
-                {/* Extra photo in contact section */}
-                <div className="relative h-48 rounded-2xl overflow-hidden">
-                  <Image src="/images/shelter/thumb-1D9N_B_JIUeuIswW7ziqTK938smhiK8Rx.webp" alt="Reach out to help animals" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
               </div>
             </AnimatedSection>
@@ -579,28 +500,27 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* CTA Banner — MOVED TO BOTTOM (future plans) */}
-      <section className="relative bg-[#241234] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-5 bg-[url('/images/shelter/shelter-hero.webp')] bg-cover bg-center" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#241234]/40 to-[#241234]/95" />
+      {/* CTA Banner — light theme (lilac & white) */}
+      <section className="relative bg-[#fbf8ff] text-[#19131f] overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03] bg-[url('/images/shelter/shelter-hero.webp')] bg-cover bg-center" />
         <div className="relative max-w-7xl mx-auto px-5 py-20 sm:px-8 lg:px-12 lg:py-28 text-center">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5 text-[#241234]">
               {hp("cta.title")}
             </h2>
-            <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="text-lg md:text-xl text-[#2d2139]/60 max-w-2xl mx-auto mb-10 leading-relaxed">
               {hp("cta.desc")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                className="inline-block px-8 py-4 rounded-full bg-white text-black text-lg font-semibold hover:bg-white/85 transition-colors shadow-lg"
+                className="inline-block px-8 py-4 rounded-full bg-[#8b5fc7] text-white text-lg font-semibold hover:bg-[#7a4fb5] transition-colors shadow-lg"
               >
                 {hp("cta.ctaPrimary")}
               </a>
               <a
                 href="#impact"
-                className="inline-block px-8 py-4 rounded-full border border-white/20 text-white text-lg font-semibold hover:bg-white/10 transition-colors"
+                className="inline-block px-8 py-4 rounded-full border-2 border-[#8b5fc7] text-[#8b5fc7] text-lg font-semibold hover:bg-[#8b5fc7]/10 transition-colors"
               >
                 {hp("cta.ctaSecondary")}
               </a>
@@ -609,17 +529,17 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Newsletter signup */}
-      <section className="bg-[#1c1028] px-5 py-20 text-white sm:px-8 lg:px-12">
+      {/* Newsletter signup — light theme (lilac & white) */}
+      <section className="bg-[#fbf8ff] border-t border-[#d8c7ef] px-5 py-20 text-[#19131f] sm:px-8 lg:px-12">
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection>
-            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/10 text-white/70 mb-6">
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#8b5fc7]/10 text-[#8b5fc7] mb-6">
               <Send className="w-7 h-7" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#241234] mb-4">
               {hp("newsletter.homeTitle")}
             </h2>
-            <p className="text-lg text-white/50 mb-8 max-w-xl mx-auto leading-relaxed">
+            <p className="text-lg text-[#2d2139]/50 mb-8 max-w-xl mx-auto leading-relaxed">
               {hp("newsletter.homeSubtitle")}
             </p>
             <form
@@ -656,27 +576,51 @@ export default function HomePageClient() {
                   if (newsletterStatus === "error") setNewsletterStatus("idle");
                 }}
                 placeholder={hp("newsletter.placeholder")}
-                className="flex-1 max-w-md px-5 py-3.5 rounded-xl border border-white/10 bg-white/5 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent text-sm"
+                className="flex-1 max-w-md px-5 py-3.5 rounded-xl border border-[#d8c7ef] bg-white text-[#2d2139] placeholder:text-[#2d2139]/30 focus:outline-none focus:ring-2 focus:ring-[#8b5fc7]/20 focus:border-[#8b5fc7] text-sm"
               />
               <button
                 type="submit"
                 disabled={newsletterStatus === "sending"}
-                className="px-7 py-3.5 rounded-xl bg-white text-black text-sm font-semibold hover:bg-white/85 transition-colors shadow-md disabled:opacity-60"
+                className="px-7 py-3.5 rounded-xl bg-[#8b5fc7] text-white text-sm font-semibold hover:bg-[#7a4fb5] transition-colors shadow-md disabled:opacity-60"
               >
                 {newsletterStatus === "sending" ? hp("newsletter.homeSending") : hp("newsletter.homeButton")}
               </button>
             </form>
             {newsletterStatus === "success" && (
-              <p className="mt-4 text-sm text-white/70 font-medium">
+              <p className="mt-4 text-sm text-[#8b5fc7] font-medium">
                 {hp("newsletter.homeSuccess")}
               </p>
             )}
             {newsletterStatus === "error" && (
-              <p className="mt-4 text-sm text-white/50 font-medium">
+              <p className="mt-4 text-sm text-red-500 font-medium">
                 {hp("newsletter.homeError")}
               </p>
             )}
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Vision pillars — moved to end */}
+      <section id="vision" className="bg-white px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32 border-t border-[#d8c7ef]">
+        <div className="mx-auto max-w-7xl">
+          <AnimatedSection className="mb-14 max-w-4xl">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#8b5fc7]">{hp("vision.sectionLabel")}</p>
+            <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
+              {hp("vision.title")}
+            </h2>
+          </AnimatedSection>
+          <StaggerContainer className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+            {visionPillars.map((pillar, index) => (
+              <StaggerItem key={pillar.title}>
+                <article className="flex h-full flex-col rounded-[2rem] border border-[#e7dbf6] bg-[#fbf8ff] p-6">
+                  <div className="mb-10 text-sm font-semibold text-[#2d2139]/35">{String(index + 1).padStart(2, "0")}</div>
+                  <h3 className="mb-4 text-2xl font-semibold leading-tight tracking-[-0.04em]">{pillar.title}</h3>
+                  <p className="mb-5 leading-7 text-[#2d2139]/58">{pillar.text}</p>
+                  <p className="mt-auto border-t border-[#d8c7ef] pt-5 text-sm font-semibold uppercase tracking-[0.14em] text-[#8b5fc7]">{pillar.proof}</p>
+                </article>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
         </div>
       </section>
     </main>
@@ -715,12 +659,12 @@ function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-8 text-center">
-        <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 018 0z" /></svg>
+      <div className="rounded-2xl border border-[#e7dbf6] bg-[#fbf8ff]/60 p-8 text-center">
+        <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#8b5fc7]/10 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-[#8b5fc7]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 018 0z" /></svg>
         </div>
-        <h3 className="text-xl font-semibold text-white mb-2">{contactSuccess("success.title")}</h3>
-        <p className="text-white/50">{contactSuccess("success.desc")}</p>
+        <h3 className="text-xl font-semibold text-[#2d2139] mb-2">{contactSuccess("success.title")}</h3>
+        <p className="text-[#2d2139]/50">{contactSuccess("success.desc")}</p>
       </div>
     );
   }
@@ -728,52 +672,52 @@ function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label className="block text-xs font-semibold uppercase tracking-wider text-white/40 mb-2">{formT("nameLabel")}</label>
+        <label className="block text-xs font-semibold uppercase tracking-wider text-[#2d2139]/40 mb-2">{formT("nameLabel")}</label>
         <input
           type="text"
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
           placeholder={formT("namePlaceholder")}
-          className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/[0.03] text-white placeholder:text-white/25 focus:outline-none focus:ring-2 focus:ring-white/15 focus:border-transparent transition-all text-sm"
+          className="w-full px-4 py-3 rounded-xl border border-[#e7dbf6] bg-white text-[#2d2139] placeholder:text-[#2d2139]/25 focus:outline-none focus:ring-2 focus:ring-[#8b5fc7]/15 focus:border-[#8b5fc7] transition-all text-sm"
         />
       </div>
       <div>
-        <label className="block text-xs font-semibold uppercase tracking-wider text-white/40 mb-2">{formT("emailLabel")}</label>
+        <label className="block text-xs font-semibold uppercase tracking-wider text-[#2d2139]/40 mb-2">{formT("emailLabel")}</label>
         <input
           type="email"
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
           placeholder={formT("emailPlaceholder")}
-          className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/[0.03] text-white placeholder:text-white/25 focus:outline-none focus:ring-2 focus:ring-white/15 focus:border-transparent transition-all text-sm"
+          className="w-full px-4 py-3 rounded-xl border border-[#e7dbf6] bg-white text-[#2d2139] placeholder:text-[#2d2139]/25 focus:outline-none focus:ring-2 focus:ring-[#8b5fc7]/15 focus:border-[#8b5fc7] transition-all text-sm"
         />
       </div>
       <div>
-        <label className="block text-xs font-semibold uppercase tracking-wider text-white/40 mb-2">{formT("subjectLabel")}</label>
+        <label className="block text-xs font-semibold uppercase tracking-wider text-[#2d2139]/40 mb-2">{formT("subjectLabel")}</label>
         <input
           type="text"
           value={form.subject}
           onChange={(e) => setForm({ ...form, subject: e.target.value })}
           placeholder={formT("subjectPlaceholder")}
-          className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/[0.03] text-white placeholder:text-white/25 focus:outline-none focus:ring-2 focus:ring-white/15 focus:border-transparent transition-all text-sm"
+          className="w-full px-4 py-3 rounded-xl border border-[#e7dbf6] bg-white text-[#2d2139] placeholder:text-[#2d2139]/25 focus:outline-none focus:ring-2 focus:ring-[#8b5fc7]/15 focus:border-[#8b5fc7] transition-all text-sm"
         />
       </div>
       <div>
-        <label className="block text-xs font-semibold uppercase tracking-wider text-white/40 mb-2">{formT("messageLabel")}</label>
+        <label className="block text-xs font-semibold uppercase tracking-wider text-[#2d2139]/40 mb-2">{formT("messageLabel")}</label>
         <textarea
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
           placeholder={formT("messagePlaceholder")}
           rows={5}
-          className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/[0.03] text-white placeholder:text-white/25 focus:outline-none focus:ring-2 focus:ring-white/15 focus:border-transparent transition-all resize-none text-sm"
+          className="w-full px-4 py-3 rounded-xl border border-[#e7dbf6] bg-white text-[#2d2139] placeholder:text-[#2d2139]/25 focus:outline-none focus:ring-2 focus:ring-[#8b5fc7]/15 focus:border-[#8b5fc7] transition-all resize-none text-sm"
         />
       </div>
       {status === "error" && (
-        <p className="text-sm text-white/50">{formT("error")}</p>
+        <p className="text-sm text-red-500">{formT("error")}</p>
       )}
       <button
         type="submit"
         disabled={status === "sending"}
-        className="w-full py-4 rounded-xl bg-white text-black font-semibold hover:bg-white/85 transition-colors disabled:opacity-60 text-sm"
+        className="w-full py-4 rounded-xl bg-[#8b5fc7] text-white font-semibold hover:bg-[#7a4fb5] transition-colors disabled:opacity-60 text-sm"
       >
         {status === "sending" ? formT("sending") : formT("submit")}
       </button>
