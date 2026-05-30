@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
 import { Link } from "@/i18n/routing";
 
 const navKeys = ["story", "sanctuary", "policies", "vision", "impact", "contact"] as const;
@@ -37,7 +36,9 @@ export default function GlobalNav() {
           }}
           className="flex items-center gap-2"
         >
-          <Image src="/images/logo/animal-house-logo.svg" alt="Animal House" width={140} height={36} className="h-9 w-auto" />
+          <span className="font-serif text-2xl font-semibold normal-case leading-none tracking-[-0.06em] text-white sm:text-[1.65rem]">
+            Animal House
+          </span>
         </a>
         <div className="hidden items-center gap-5 md:flex">
           {navKeys.map((key, i) => (
