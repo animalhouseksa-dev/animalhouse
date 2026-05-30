@@ -33,9 +33,6 @@ const galleryImageSrcs = [
   "/images/shelter/gallery-cat-perch.webp",
   "/images/shelter/gallery-shelter-dog.webp",
   "/images/shelter/gallery-gate-cat.webp",
-  "/images/shelter/gallery-portrait-cat.webp",
-  "/images/shelter/thumb-1naVdjWmGTTSWlnIlB5DGF6V5rQUhcQZT.webp",
-  "/images/shelter/thumb-1DtmbLOIOpN2SuS8HmKdyTWQK_XgtUiCb.webp",
 ];
 
 export default function HomePageClient() {
@@ -354,8 +351,8 @@ export default function HomePageClient() {
                 <div className="grid gap-3 sm:grid-cols-2 md:gap-4">
                   <AnimatedSection delay={0.1} className="group relative min-h-[17rem] overflow-hidden rounded-xl bg-black">
                     <Image
-                      src="/images/shelter/sanctuary-side-2.webp"
-                      alt="Cat portrait with striking green eyes"
+                      src="/images/shelter/thumb-1-2KRwPbsKme14QbtOAy4atDnxjFDv0VH.webp"
+                      alt="Black and white cat receiving affection at the sanctuary"
                       fill
                       sizes="(min-width: 768px) 21vw, 50vw"
                       className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.05]"
@@ -379,8 +376,8 @@ export default function HomePageClient() {
             <div className="mt-3 grid gap-3 md:grid-cols-12 md:gap-4">
               <AnimatedSection delay={0.2} className="group relative min-h-[19rem] overflow-hidden rounded-xl bg-black md:col-span-4">
                 <Image
-                  src="/images/shelter/shelter-sanctuary.webp"
-                  alt="Spacious sanctuary wetlands and green spaces"
+                  src="/images/shelter/thumb-1D9N_B_JIUeuIswW7ziqTK938smhiK8Rx.webp"
+                  alt="Cats resting together in the sanctuary yard"
                   fill
                   sizes="(min-width: 768px) 33vw, 100vw"
                   className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.035]"
