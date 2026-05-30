@@ -69,26 +69,26 @@ export default function HomePageClient() {
   // ── Facility list ──
   const facility = hp.raw("sanctuary.facility") as string[];
 
-  // ── Facility images — unique photos for each facility feature ──
+  // ── Facility images — Drive imports, each used exactly once on this page ──
   const facilityImages = [
-    "/images/shelter/shelter-intake.webp",
-    "/images/shelter/shelter-adoption.webp",
-    "/images/shelter/shelter-sanctuary.webp",
-    "/images/shelter/gallery-white-cat.webp",
-    "/images/shelter/gallery-lounging-cat.webp",
-    "/images/shelter/gallery-tuxedo-cat.webp",
-    "/images/shelter/gallery-shelter-dog.webp",
+    "/images/shelter/drive/facility-cat-colony.webp",
+    "/images/shelter/drive/facility-dog-yard.webp",
+    "/images/shelter/drive/facility-quarantine.webp",
+    "/images/shelter/drive/facility-kitten-room.webp",
+    "/images/shelter/drive/facility-nursing-room.webp",
+    "/images/shelter/drive/facility-fiv-care.webp",
+    "/images/shelter/drive/facility-vet-care.webp",
   ];
 
-  // ── Standard of care images — unique set, no overlap with facility or gallery ──
+  // ── Standard of care images — Drive imports, no overlap with any other section ──
   const careImages = [
-    "/images/shelter/gallery-dog-walk.webp",
-    "/images/shelter/gallery-fluffy-cat.webp",
-    "/images/shelter/gallery-cat-tree.webp",
-    "/images/shelter/gallery-gate-cat.webp",
-    "/images/shelter/gallery-cat-perch.webp",
-    "/images/shelter/sanctuary-side-2.webp",
-    "/images/shelter/sanctuary-outdoor-1.webp",
+    "/images/shelter/drive/care-cat-colony.webp",
+    "/images/shelter/drive/care-dog-pack.webp",
+    "/images/shelter/drive/care-quarantine.webp",
+    "/images/shelter/drive/care-kitten-nursery.webp",
+    "/images/shelter/drive/care-nursing-mothers.webp",
+    "/images/shelter/drive/care-fiv-isolation.webp",
+    "/images/shelter/drive/care-vet-visits.webp",
   ];
   const facilityCardClasses = [
     "md:col-span-5 lg:col-span-4 lg:row-span-2",
@@ -389,7 +389,7 @@ export default function HomePageClient() {
               </AnimatedSection>
               <AnimatedSection delay={0.25} className="group relative min-h-[19rem] overflow-hidden rounded-xl bg-black md:col-span-5">
                 <Image
-                  src="/images/shelter/gallery-shelter-dog.webp"
+                  src="/images/shelter/thumb-1L-gGTlvtBczzXgEOYKpeviy8ZHjuFL-2.webp"
                   alt="Shelter dog in a spacious enclosure"
                   fill
                   sizes="(min-width: 768px) 42vw, 100vw"
