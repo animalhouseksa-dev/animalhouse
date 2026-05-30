@@ -1,16 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
-  <!-- Paw Icon -->
-  <g transform="translate(2, 6)">
-    <!-- Main pad -->
-    <path d="M24 18c0-6-5.5-12-12-12S0 12 0 18c0 5 4 10 12 16 8-6 12-11 12-16z" fill="#C8A8E8"/>
-    <!-- Toe beans -->
-    <ellipse cx="5" cy="5" rx="3.5" ry="4" fill="#C8A8E8"/>
-    <ellipse cx="19" cy="5" rx="3.5" ry="4" fill="#C8A8E8"/>
-    <ellipse cx="-1" cy="13" rx="3" ry="3.5" fill="#C8A8E8"/>
-    <ellipse cx="25" cy="13" rx="3" ry="3.5" fill="#C8A8E8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 68" width="260" height="68" fill="none">
+  <defs>
+    <linearGradient id="houseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f2e9ff"/>
+      <stop offset="100%" stop-color="#d8c7ef"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0, 6)">
+    <rect x="6" y="30" width="42" height="24" rx="3" fill="url(#houseGrad)"/>
+    <path d="M2 33 L27 4 L52 33" fill="url(#houseGrad)" stroke="white" stroke-width="1" stroke-opacity="0.3" stroke-linejoin="round"/>
+    <rect x="38" y="12" width="8" height="14" rx="2" fill="url(#houseGrad)"/>
+    <rect x="21" y="38" width="12" height="16" rx="6" fill="white" opacity="0.25"/>
   </g>
-  <!-- Animal House Text -->
-  <text x="40" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="600" fill="#19131f" letter-spacing="0.02em">
+  <text x="62" y="44" font-family="'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="700" fill="white" letter-spacing="-0.025em">
     Animal House
+  </text>
+  <text x="62" y="58" font-family="'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif" font-size="8.5" font-weight="600" fill="white" letter-spacing="0.2em" opacity="0.7">
+    NO-KILL RESCUE · RIYADH
   </text>
 </svg>
