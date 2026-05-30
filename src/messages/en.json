@@ -296,7 +296,7 @@
       "ctaAdopt": "Adopt a Friend",
       "ctaDonate": "Support Our Mission",
       "badge": "NO-KILL Rescue · Riyadh",
-      "ctaStory": "Our future plans",
+      "ctaStory": "Our story",
       "ctaProof": "See our impact"
     },
     "stats": {
@@ -695,11 +695,11 @@
     }
   },
   "navLinks": {
-    "story": "Future Plans",
-    "vision": "Vision",
     "sanctuary": "Sanctuary",
+    "story": "Our Story",
     "policies": "Policies",
     "impact": "Impact",
-    "contact": "Contact"
+    "contact": "Contact",
+    "vision": "Future Plans"
   }
 }

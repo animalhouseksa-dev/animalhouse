@@ -5,8 +5,8 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 
-const navKeys = ["story", "sanctuary", "vision", "policies", "impact", "contact"] as const;
-const navHrefs = ["#story", "#sanctuary", "#vision", "#policies", "#impact", "#contact"] as const;
+const navKeys = ["sanctuary", "story", "policies", "impact", "contact", "vision"] as const;
+const navHrefs = ["#sanctuary", "#story", "#policies", "#impact", "#contact", "#vision"] as const;
 
 export default function GlobalNav() {
   const t = useTranslations("navLinks");
