@@ -53,6 +53,7 @@ export default function HomePageClient() {
   const heroBadgeRef = useRef<HTMLParagraphElement>(null);
   const heroTitleRef = useRef<HTMLHeadingElement>(null);
   const heroRightRef = useRef<HTMLDivElement>(null);
+  const heroStatsRef = useRef<(HTMLDivElement | null)[]>([]); // staggered stats strip
   const sanctuaryImgRef = useRef<HTMLDivElement>(null);
 
   // ── Stats ──
@@ -131,6 +132,11 @@ export default function HomePageClient() {
       tl.to(heroBadgeRef.current, { opacity: 1, y: 0, duration: 1.0 }, 0.1)
         .to(heroTitleRef.current, { opacity: 1, y: 0, duration: 1.4 }, 0.2)
         .to(heroRightRef.current, { opacity: 1, y: 0, duration: 1.2 }, 0.55);
+
+      // Stats strip — staggered left-to-right reveal after subtitle
+      heroStatsRef.current.forEach((el, i) => {
+        if (el) tl.to(el, { opacity: 1, y: 0, duration: 0.8, ease: "expo.out" }, 0.9 + i * 0.1);
+      });
 
       // Hero scroll-off: scale up, blur, fade-to-dark while content drifts up faster.
       // Single scrubbed timeline so all properties move in lockstep with scroll.
@@ -220,8 +226,13 @@ export default function HomePageClient() {
             <div className="flex flex-wrap items-end gap-x-8 gap-y-4 border-t border-white/10 pt-6 md:gap-x-12">
               {statsItems
                 .slice(0, 5)
-                .map((stat) => (
-                  <div key={stat.label} className="flex flex-col">
+                .map((stat, i) => (
+                  <div
+                    key={stat.label}
+                    ref={(el) => { heroStatsRef.current[i] = el }}
+                    style={{ opacity: 0, transform: "translateY(24px)" }}
+                    className="flex flex-col"
+                  >
                     <span className="text-3xl font-bold tracking-[-0.04em] text-white md:text-5xl">{stat.value}</span>
                     <span className="mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-white/50 md:text-[0.65rem]">{stat.label}</span>
                   </div>
