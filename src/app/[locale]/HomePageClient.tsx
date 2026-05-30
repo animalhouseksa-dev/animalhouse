@@ -301,40 +301,92 @@ export default function HomePageClient() {
             </div>
           </AnimatedSection>
 
-          {/* Photography grid — 6 unique sanctuary images */}
-          <div ref={sanctuaryImgRef} className="grid auto-rows-[15rem] gap-4 md:grid-cols-4">
-            {/* Large hero — sanctuary wide shot (2x2) */}
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black md:col-span-2 md:row-span-2">
-              <Image src="/images/shelter/sanctuary-wide-1.webp" alt="Spacious sanctuary interior with rescued animals in warm golden sunlight" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-            </AnimatedSection>
+          {/* High-end editorial photography layout — varied crops, thin gutters, restrained corners */}
+          <div ref={sanctuaryImgRef} className="relative">
+            <div className="pointer-events-none absolute -left-8 top-16 hidden h-px w-32 bg-[#8b5fc7]/35 lg:block" />
+            <div className="grid gap-3 md:grid-cols-12 md:gap-4">
+              <AnimatedSection className="group relative min-h-[34rem] overflow-hidden rounded-xl bg-black shadow-[0_34px_110px_rgba(32,18,47,0.18)] md:col-span-7 lg:min-h-[42rem]">
+                <Image
+                  src="/images/shelter/sanctuary-wide-1.webp"
+                  alt="Spacious sanctuary interior with rescued animals in warm golden sunlight"
+                  fill
+                  sizes="(min-width: 768px) 58vw, 100vw"
+                  className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.035]"
+                  priority={false}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 text-white md:p-7">
+                  <p className="mb-2 text-[0.62rem] font-bold uppercase tracking-[0.34em] text-white/55">01 / Main colony</p>
+                  <p className="max-w-md text-2xl font-semibold leading-[1.05] tracking-[-0.05em] md:text-4xl">A lived-in sanctuary, photographed like the home it is.</p>
+                </div>
+              </AnimatedSection>
 
-            {/* Right top — outdoor sanctuary view */}
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black md:col-span-2">
-              <Image src="/images/shelter/sanctuary-outdoor-1.webp" alt="Outdoor sanctuary view with rescued animals" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
+              <div className="grid gap-3 md:col-span-5 md:grid-rows-[1fr_auto] md:gap-4">
+                <AnimatedSection delay={0.05} className="group relative min-h-[20rem] overflow-hidden rounded-xl bg-black md:min-h-0">
+                  <Image
+                    src="/images/shelter/sanctuary-outdoor-1.webp"
+                    alt="Outdoor sanctuary view with rescued animals"
+                    fill
+                    sizes="(min-width: 768px) 42vw, 100vw"
+                    className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.035]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+                  <p className="absolute bottom-5 left-5 text-[0.62rem] font-bold uppercase tracking-[0.34em] text-white/70">Open air spaces</p>
+                </AnimatedSection>
 
-            {/* Side images */}
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
-              <Image src="/images/shelter/sanctuary-side-2.webp" alt="Cat portrait with striking green eyes" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
+                <div className="grid gap-3 sm:grid-cols-2 md:gap-4">
+                  <AnimatedSection delay={0.1} className="group relative min-h-[17rem] overflow-hidden rounded-xl bg-black">
+                    <Image
+                      src="/images/shelter/sanctuary-side-2.webp"
+                      alt="Cat portrait with striking green eyes"
+                      fill
+                      sizes="(min-width: 768px) 21vw, 50vw"
+                      className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.05]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+                  </AnimatedSection>
+                  <AnimatedSection delay={0.15} className="group relative min-h-[17rem] overflow-hidden rounded-xl bg-black">
+                    <Image
+                      src="/images/shelter/sanctuary-side-3.webp"
+                      alt="Cat relaxing near a shelter gate in soft natural light"
+                      fill
+                      sizes="(min-width: 768px) 21vw, 50vw"
+                      className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.05]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+                  </AnimatedSection>
+                </div>
+              </div>
+            </div>
 
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
-              <Image src="/images/shelter/sanctuary-side-3.webp" alt="Cat relaxing near a shelter gate in soft natural light" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
-
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
-              <Image src="/images/shelter/shelter-sanctuary.webp" alt="Spacious sanctuary wetlands and green spaces" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
-
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
-              <Image src="/images/shelter/gallery-shelter-dog.webp" alt="Shelter dog in a spacious enclosure" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </AnimatedSection>
+            <div className="mt-3 grid gap-3 md:grid-cols-12 md:gap-4">
+              <AnimatedSection delay={0.2} className="group relative min-h-[19rem] overflow-hidden rounded-xl bg-black md:col-span-4">
+                <Image
+                  src="/images/shelter/shelter-sanctuary.webp"
+                  alt="Spacious sanctuary wetlands and green spaces"
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.035]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+              </AnimatedSection>
+              <AnimatedSection delay={0.25} className="group relative min-h-[19rem] overflow-hidden rounded-xl bg-black md:col-span-5">
+                <Image
+                  src="/images/shelter/gallery-shelter-dog.webp"
+                  alt="Shelter dog in a spacious enclosure"
+                  fill
+                  sizes="(min-width: 768px) 42vw, 100vw"
+                  className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.035]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <p className="absolute bottom-5 left-5 max-w-xs text-xl font-semibold leading-tight tracking-[-0.04em] text-white">Shelter life with dignity, space, and daily care.</p>
+              </AnimatedSection>
+              <AnimatedSection delay={0.3} className="flex min-h-[19rem] flex-col justify-between rounded-xl border border-[#e7dbf6] bg-white p-6 text-[#2d2139] md:col-span-3 md:p-7">
+                <p className="text-[0.62rem] font-bold uppercase tracking-[0.34em] text-[#8b5fc7]">Photo essay</p>
+                <p className="font-serif text-3xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-4xl">Quiet proof of what rescue can look like.</p>
+                <p className="text-sm leading-6 text-[#2d2139]/58">Less postcard, more place: rooms, routines, sunlight, shade, and animals who know they are safe.</p>
+              </AnimatedSection>
+            </div>
           </div>
 
           {/* Facility features — photo + text cards */}
