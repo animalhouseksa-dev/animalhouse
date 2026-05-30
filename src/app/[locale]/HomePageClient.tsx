@@ -40,7 +40,6 @@ const galleryImageSrcs = [
 
 export default function HomePageClient() {
   const hp = useTranslations("homePage");
-  const about = useTranslations("about");
   const policies = useTranslations("policies");
   const [email, setEmail] = useState("");
   const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -91,6 +90,24 @@ export default function HomePageClient() {
     "/images/shelter/sanctuary-side-2.webp",
     "/images/shelter/sanctuary-outdoor-1.webp",
   ];
+  const facilityCardClasses = [
+    "md:col-span-5 lg:col-span-4 lg:row-span-2",
+    "md:col-span-7 lg:col-span-5",
+    "md:col-span-4 lg:col-span-3",
+    "md:col-span-4 lg:col-span-3",
+    "md:col-span-4 lg:col-span-4",
+    "md:col-span-6 lg:col-span-5",
+    "md:col-span-6 lg:col-span-4",
+  ];
+  const careCardClasses = [
+    "md:col-span-6 lg:col-span-7",
+    "md:col-span-6 lg:col-span-5",
+    "md:col-span-4",
+    "md:col-span-4",
+    "md:col-span-4",
+    "md:col-span-6",
+    "md:col-span-6",
+  ];
 
   // ── Impact pillars ──
   const impactPillarsRaw = hp.raw("impact.pillars") as Array<{ label: string; copy: string }>;
@@ -102,22 +119,22 @@ export default function HomePageClient() {
   // ── Gallery images ──
   const galleryImages = hp.raw("gallery.images") as Array<{ alt: string; className?: string }>;
   const galleryClasses = [
-    "md:col-span-2 md:row-span-2",
-    "",
-    "",
-    "",
+    "md:col-span-7 md:row-span-2",
+    "md:col-span-5",
+    "md:col-span-3",
     "md:col-span-2",
-    "",
-    "",
-    "md:col-span-2",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
+    "md:col-span-4",
+    "md:col-span-4",
+    "md:col-span-4",
+    "md:col-span-5",
+    "md:col-span-3",
+    "md:col-span-4",
+    "md:col-span-6",
+    "md:col-span-6",
+    "md:col-span-4",
+    "md:col-span-4",
+    "md:col-span-4",
+    "md:col-span-4",
   ];
 
   // ── Hero intro + parallax ──
@@ -317,7 +334,7 @@ export default function HomePageClient() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 text-white md:p-7">
                   <p className="mb-2 text-[0.62rem] font-bold uppercase tracking-[0.34em] text-white/55">01 / Main colony</p>
-                  <p className="max-w-md text-2xl font-semibold leading-[1.05] tracking-[-0.05em] md:text-4xl">A lived-in sanctuary, photographed like the home it is.</p>
+                  <p className="max-w-md text-2xl font-semibold leading-[1.05] tracking-[-0.05em] md:text-4xl">Safe, open spaces for animals to heal, rest, and live with dignity.</p>
                 </div>
               </AnimatedSection>
 
@@ -383,26 +400,34 @@ export default function HomePageClient() {
               </AnimatedSection>
               <AnimatedSection delay={0.3} className="flex min-h-[19rem] flex-col justify-between rounded-xl border border-[#e7dbf6] bg-white p-6 text-[#2d2139] md:col-span-3 md:p-7">
                 <p className="text-[0.62rem] font-bold uppercase tracking-[0.34em] text-[#8b5fc7]">Photo essay</p>
-                <p className="font-serif text-3xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-4xl">Quiet proof of what rescue can look like.</p>
-                <p className="text-sm leading-6 text-[#2d2139]/58">Less postcard, more place: rooms, routines, sunlight, shade, and animals who know they are safe.</p>
+                <p className="font-serif text-3xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-4xl">A real refuge, built around daily care.</p>
+                <p className="text-sm leading-6 text-[#2d2139]/58">Every space supports the animals’ routine: shelter, shade, room to move, and people looking after them every day.</p>
               </AnimatedSection>
             </div>
           </div>
 
-          {/* Facility features — photo + text cards */}
+          {/* Facility features — editorial photo cards */}
           <AnimatedSection className="mt-12">
-            <h3 className="mb-6 text-2xl font-semibold tracking-[-0.04em] text-[#2d2139]/80">Our Facilities</h3>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mb-6 flex items-end justify-between gap-6">
+              <h3 className="text-2xl font-semibold tracking-[-0.04em] text-[#2d2139]/80">Our Facilities</h3>
+              <div className="hidden h-px flex-1 bg-[#8b5fc7]/20 md:block" />
+            </div>
+            <div className="grid auto-rows-[15rem] gap-3 md:grid-cols-12 md:gap-4 lg:auto-rows-[13rem]">
               {facility.map((item, idx) => (
-                <div key={item} className="group overflow-hidden rounded-2xl border border-[#e7dbf6] bg-white shadow-[0_12px_40px_rgba(91,53,133,0.08)]">
-                  <div className="relative h-36">
-                    <Image src={facilityImages[idx]} alt={item} fill className="object-cover transition duration-500 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                  </div>
-                  <div className="p-4 text-sm leading-6 text-[#2d2139]/70">
+                <div key={item} className={`group relative overflow-hidden rounded-xl bg-black ${facilityCardClasses[idx] ?? "md:col-span-4"}`}>
+                  <Image
+                    src={facilityImages[idx]}
+                    alt={item}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
+                    <p className="mb-2 text-[0.58rem] font-bold uppercase tracking-[0.32em] text-white/45">{String(idx + 1).padStart(2, "0")}</p>
                     <div className="flex gap-2 items-start">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#8b5fc7]" />
-                      <span>{item}</span>
+                      <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-white/70" />
+                      <span className="max-w-sm text-lg font-semibold leading-tight tracking-[-0.04em]">{item}</span>
                     </div>
                   </div>
                 </div>
@@ -418,16 +443,25 @@ export default function HomePageClient() {
                 How we care for every life
               </h3>
             </div>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-3 md:grid-cols-12 md:gap-4">
               {facility.map((item, idx) => (
-                <article key={`care-${idx}`} className="group overflow-hidden rounded-[1.5rem] border border-[#e7dbf6] bg-white">
-                  <div className="relative h-44">
-                    <Image src={careImages[idx]} alt={item} fill className="object-cover transition duration-500 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <article key={`care-${idx}`} className={`group overflow-hidden rounded-xl border border-[#e7dbf6] bg-white md:grid md:grid-cols-[0.95fr_1.05fr] ${careCardClasses[idx] ?? "md:col-span-4"}`}>
+                  <div className="relative min-h-[15rem] overflow-hidden">
+                    <Image
+                      src={careImages[idx]}
+                      alt={item}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
                   </div>
-                  <div className="p-5">
-                    <h4 className="mb-2 text-lg font-semibold tracking-[-0.03em] text-[#2d2139]/85">{item}</h4>
-                    <p className="text-sm leading-6 text-[#2d2139]/55">Every area is designed for comfort, safety, and the wellbeing of our residents.</p>
+                  <div className="flex min-h-[15rem] flex-col justify-between p-5 md:p-6">
+                    <p className="text-[0.58rem] font-bold uppercase tracking-[0.32em] text-[#8b5fc7]">Care standard / {String(idx + 1).padStart(2, "0")}</p>
+                    <div>
+                      <h4 className="mb-3 text-xl font-semibold leading-tight tracking-[-0.04em] text-[#2d2139]/85">{item}</h4>
+                      <p className="text-sm leading-6 text-[#2d2139]/55">Every area is designed for comfort, safety, and the wellbeing of our residents.</p>
+                    </div>
                   </div>
                 </article>
               ))}
@@ -445,18 +479,27 @@ export default function HomePageClient() {
               {hp("policies.homeTitle")}
             </h2>
           </AnimatedSection>
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid gap-4 lg:grid-cols-12">
             {[
-              { title: policies("intakeTitle"), image: "/images/shelter/shelter-intake.webp", keys: ["intake1", "intake2", "intake3", "intake4"] as const },
-              { title: policies("adoptionTitle"), image: "/images/shelter/shelter-adoption.webp", keys: ["adoption1", "adoption2", "adoption3"] as const },
-            ].map((card) => (
-              <AnimatedSection key={card.title} className="group overflow-hidden rounded-[2.25rem] border border-[#d8c7ef] bg-white shadow-[0_24px_80px_rgba(91,53,133,0.10)]">
-                <div className="relative h-80 overflow-hidden">
-                  <Image src={card.image} alt={card.title} fill className="object-cover transition duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <h3 className="absolute bottom-6 left-6 right-6 text-3xl font-semibold tracking-[-0.05em] text-white">{card.title}</h3>
+              { title: policies("intakeTitle"), image: "/images/shelter/shelter-intake.webp", keys: ["intake1", "intake2", "intake3", "intake4"] as const, kicker: "Arrival protocol" },
+              { title: policies("adoptionTitle"), image: "/images/shelter/shelter-adoption.webp", keys: ["adoption1", "adoption2", "adoption3"] as const, kicker: "Forever homes" },
+            ].map((card, index) => (
+              <AnimatedSection key={card.title} className={`group overflow-hidden rounded-xl border border-[#d8c7ef] bg-white shadow-[0_24px_80px_rgba(91,53,133,0.08)] ${index === 0 ? "lg:col-span-7" : "lg:col-span-5"}`}>
+                <div className="relative h-[26rem] overflow-hidden">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white md:p-7">
+                    <p className="mb-3 text-[0.6rem] font-bold uppercase tracking-[0.34em] text-white/55">{card.kicker}</p>
+                    <h3 className="max-w-lg text-3xl font-semibold leading-[1.02] tracking-[-0.05em] md:text-4xl">{card.title}</h3>
+                  </div>
                 </div>
-                <div className="space-y-4 p-6 md:p-8">
+                <div className="space-y-4 p-6 md:p-7">
                   {card.keys.map((key) => (
                     <div key={key} className="flex gap-4 border-t border-[#e7dbf6] pt-4 text-[#2d2139]/68 first:border-t-0 first:pt-0">
                       <Heart className="mt-1 h-4 w-4 shrink-0 text-[#8b5fc7]" />
@@ -482,11 +525,20 @@ export default function HomePageClient() {
             </div>
             <p className="max-w-sm text-lg leading-8 text-[#2d2139]/58">{hp("gallery.descriptiveText")}</p>
           </AnimatedSection>
-          <div className="grid auto-rows-[17rem] gap-4 md:grid-cols-4">
+          <div className="grid auto-rows-[15rem] gap-3 md:grid-cols-12 md:gap-4 lg:auto-rows-[17rem]">
             {galleryImages.map((image, index) => (
-              <AnimatedSection key={image.alt} delay={index * 0.05} className={`group relative overflow-hidden rounded-[2rem] bg-black ${galleryClasses[index] || ''}`}>
-                <Image src={galleryImageSrcs[index]} alt={image.alt} fill className="object-cover transition duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-80" />
+              <AnimatedSection key={image.alt} delay={index * 0.04} className={`group relative overflow-hidden rounded-xl bg-black ${galleryClasses[index] || "md:col-span-4"}`}>
+                <Image
+                  src={galleryImageSrcs[index]}
+                  alt={image.alt}
+                  fill
+                  sizes="(min-width: 1024px) 42vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-75" />
+                {index < 3 ? (
+                  <p className="absolute bottom-5 left-5 right-5 text-[0.6rem] font-bold uppercase tracking-[0.32em] text-white/60">Portrait / {String(index + 1).padStart(2, "0")}</p>
+                ) : null}
               </AnimatedSection>
             ))}
           </div>
