@@ -375,7 +375,7 @@
     "story": {
       "sectionLabel": "Our future plans",
       "title": "The next Animal House must be built for scale.",
-      "intro1": "The current sanctuary proves what focused rescue can do. The next phase is a purpose-built location with stronger veterinary workflows, better intake capacity, safer species-specific zones, and room for community education.",
+      "intro1": "The current sanctuary proves what Khadijah Abdullah's focused rescue can do. The next phase is a purpose-built location with stronger veterinary workflows, better intake capacity, safer species-specific zones, and room for community education.",
       "intro2": "Support now helps turn an improvised rescue operation into a lasting Saudi model for no-kill care that is ambitious, transparent, and beautiful enough to make people stop, look, and act.",
       "notes": [
         {
@@ -386,7 +386,7 @@
         {
           "eyebrow": "Designed for care",
           "title": "Calm, clean, species-specific spaces",
-          "text": "Purpose-built cat and dog areas will reduce stress, improve welfare, and help every rescue move through care with dignity."
+          "text": "Every animal who joins us is treated as a life worth protecting, with dedicated quarantine, kitten, nursing, and specialist-care areas supporting the daily mission."
         },
         {
           "eyebrow": "Built to inspire support",
@@ -400,29 +400,29 @@
       "title": "Proof, care, education, and scale.",
       "pillars": [
         {
-          "title": "Rescue with urgency",
-          "proof": "Immediate action saves lives.",
-          "text": "Respond to cats and dogs in danger, stabilize them, and move them into safe care."
+          "title": "Immediate action",
+          "proof": "Nobody can argue with results.",
+          "text": "Solve the problem on the ground through rescue work, not talk."
         },
         {
-          "title": "TNR with consistent data",
-          "proof": "Numbers keep the mission honest.",
-          "text": "Track sterilization work carefully so population-control impact stays clear across the whole site."
+          "title": "Data + proof",
+          "proof": "Nobody can argue with data + proof.",
+          "text": "Retain and train wildlife investigators to expose crimes and publish the data needed for action."
         },
         {
-          "title": "A sanctuary worth seeing",
-          "proof": "Beauty can move people to act.",
-          "text": "Use striking photography and honest facility storytelling to make the rescue feel tangible and worthy of support."
+          "title": "History + awareness",
+          "proof": "Nobody can argue with history.",
+          "text": "Amplify sermons and historic teachings that drive awareness around the fair treatment of animals."
         },
         {
-          "title": "Youth and community learning",
-          "proof": "Culture changes through experience.",
-          "text": "Host educational visits that help young people understand mercy, responsibility, and animal welfare."
+          "title": "Youth engagement",
+          "proof": "Nobody can decide the future of animals in KSA better than them.",
+          "text": "Engage the youth of Saudi Arabia because they will define the next era of animal welfare."
         },
         {
-          "title": "A model that can grow",
-          "proof": "Saudi Arabia needs scalable solutions.",
-          "text": "Build systems, partnerships, and future capacity that can influence animal welfare beyond one shelter."
+          "title": "First-world progress",
+          "proof": "Nobody can argue with first world progress.",
+          "text": "Develop a sustainable shelter model that can scale across Saudi Arabia, starting with the capital."
         }
       ]
     },
@@ -503,6 +503,10 @@
         {
           "label": "International rehoming",
           "copy": "When the right family is abroad, Animal House makes the distance work, because a permanent safe home is the goal."
+        },
+        {
+          "label": "Community outreach",
+          "copy": "Over 100 community feeding and water stations installed across Riyadh, keeping street animals nourished while building goodwill."
         }
       ],
       "leadText": "Our future plans are the next chapter of the rescue.",
@@ -515,7 +519,11 @@
         "Future KPI: 240+ cats adopted annually",
         "Future KPI: 50+ dogs adopted annually",
         "100+ community feeding and water stations installed",
-        "Partnership pathway with public and private stakeholders across Riyadh"
+        "Partnership pathway with public and private stakeholders across Riyadh",
+        "Annual budget breakdown published with full expense transparency",
+        "Weekly vet visits ensuring timely medical care for every intake",
+        "2-week mandatory quarantine protocol for all new arrivals",
+        "Post-adoption welfare checks: bi-monthly updates on every rehomed animal"
       ]
     },
     "cta": {

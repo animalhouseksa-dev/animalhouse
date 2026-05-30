@@ -252,7 +252,6 @@ export default function HomePageClient() {
                 {hp("sanctuary.title")}
               </h2>
             </div>
-            <p className="max-w-sm text-lg leading-8 text-[#2d2139]/58">Wide corridors filled with warm light, open play yards, quiet recovery spaces, and plenty of places for every creature to find their own corner of peace.</p>
           </AnimatedSection>
 
           {/* Expanded photography grid — 10 images showing various parts of facility */}
