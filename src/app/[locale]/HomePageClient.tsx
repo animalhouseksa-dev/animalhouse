@@ -69,7 +69,7 @@ export default function HomePageClient() {
   // ── Facility images — Drive imports, each used exactly once on this page ──
   const facilityImages = [
     "/images/shelter/drive/facility-cat-colony.webp",
-    "/images/shelter/drive/facility-dog-yard.webp",
+    "/images/shelter/shelter-hero.webp",
     "/images/shelter/drive/facility-quarantine.webp",
     "/images/shelter/drive/facility-kitten-room.webp",
     "/images/shelter/drive/facility-nursing-room.webp",
