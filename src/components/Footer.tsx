@@ -1,7 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { PawPrint, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -14,9 +15,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 text-white text-xl font-bold mb-4">
-              <PawPrint className="w-6 h-6 text-white/80" />
-              Animal House
+            <div className="mb-4">
+              <Image src="/images/logo/animal-house-logo.svg" alt="Animal House" width={160} height={40} className="h-10 w-auto" />
             </div>
             <p className="text-sm leading-relaxed mb-6">
               {t('brandDesc')}

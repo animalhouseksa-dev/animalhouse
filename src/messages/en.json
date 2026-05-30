@@ -564,6 +564,61 @@
       "homeSending": "Subscribing...",
       "homeSuccess": "Thank you for subscribing! We'll be in touch soon.",
       "homeError": "Please enter a valid email address."
+    },
+    "partners": {
+      "title": "Strategic Partners"
+    },
+    "adoptionSection": {
+      "sectionLabel": "Find your companion",
+      "title": "Dogs and Cats for Adoption",
+      "descriptiveText": "Every animal here has survived hardship and is ready to bring joy to a loving home. Meet them, and if one speaks to you, start the adoption process today.",
+      "adoptedBadge": "Adopted",
+      "adoptedStatus": "Found their forever home",
+      "availableCta": "Apply to Adopt",
+      "speciesCat": "Cat",
+      "speciesDog": "Dog",
+      "animals": {
+        "luna": {
+          "name": "Luna",
+          "description": "A gentle tuxedo girl who loves quiet laps and sunny windowsills. Patient with children and gets along with other cats."
+        },
+        "rex": {
+          "name": "Rex",
+          "description": "A loyal medium-sized mix with boundless energy. Perfect jogging companion and great with kids who love the outdoors."
+        },
+        "milo": {
+          "name": "Milo",
+          "description": "A fluffy boy rescued as a kitten. Now grown and adored by his adoptive family in Jeddah."
+        },
+        "buddy": {
+          "name": "Buddy",
+          "description": "A scruffy, sweet-faced boy who was found wandering on a highway. He is calm, house-trained, and craves gentle attention."
+        },
+        "kira": {
+          "name": "Kira",
+          "description": "A playful tabby who rules the cat tree. Loves interactive toys and will chat back when you talk to her."
+        },
+        "snowball": {
+          "name": "Snowball",
+          "description": "A striking white cat who was adopted by a wonderful family in Riyadh. She spends her days on velvet cushions now."
+        },
+        "pepper": {
+          "name": "Pepper",
+          "description": "A curious ginger cat who perches high to survey the room. Independent but affectionate on her own terms."
+        },
+        "daisy": {
+          "name": "Daisy",
+          "description": "A relaxed soul who believes every surface is a bed. Excellent apartment cat who purrs at the slightest touch."
+        },
+        "shadow": {
+          "name": "Shadow",
+          "description": "A mysterious gate-cat who watched the world from behind bars. Now living comfortably with a patient family."
+        },
+        "bella": {
+          "name": "Bella",
+          "description": "A poised portrait cat with striking eyes and a soft purr. She warms up slowly but becomes fiercely loyal."
+        }
+      }
     }
   },
   "aboutPage": {

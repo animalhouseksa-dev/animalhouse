@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
-import { PawPrint } from "lucide-react";
 
 const navKeys = ["story", "sanctuary", "vision", "policies", "impact", "contact"] as const;
 const navHrefs = ["#story", "#sanctuary", "#vision", "#policies", "#impact", "#contact"] as const;
@@ -35,10 +35,9 @@ export default function GlobalNav() {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="flex items-center gap-2 font-semibold text-white"
+          className="flex items-center gap-2"
         >
-          <PawPrint className="h-4 w-4" />
-          Animal House
+          <Image src="/images/logo/animal-house-logo.svg" alt="Animal House" width={140} height={36} className="h-9 w-auto" />
         </a>
         <div className="hidden items-center gap-5 md:flex">
           {navKeys.map((key, i) => (

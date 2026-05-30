@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import AnimatedSection from "@/components/AnimatedSection";
 import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
+import AdoptionSection from "@/components/AdoptionSection";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -157,6 +158,10 @@ export default function HomePageClient() {
         <div ref={heroContentRef} className="relative z-10 flex min-h-screen items-end px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-24 will-change-[transform,opacity]">
           <div className="mx-auto grid w-full max-w-7xl items-end gap-10 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
+              {/* Hero logo */}
+              <div className="mb-4" style={{ opacity: 0, transform: "translateY(24px)" }}>
+                <Image src="/images/logo/animal-house-logo.svg" alt="Animal House" width={180} height={45} className="h-11 w-auto" />
+              </div>
               <p
                 ref={heroBadgeRef}
                 style={{ opacity: 0, transform: "translateY(24px)" }}
@@ -416,6 +421,9 @@ export default function HomePageClient() {
         </div>
       </section>
 
+      {/* Adoption section */}
+      <AdoptionSection />
+
       {/* CTA Banner */}
       <section className="relative bg-[#241234] text-white overflow-hidden">
         <div className="absolute inset-0 opacity-5 bg-[url('/images/shelter/shelter-hero.webp')] bg-cover bg-center" />
@@ -546,6 +554,23 @@ export default function HomePageClient() {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* Strategic Partners */}
+      <section className="bg-[#0a0a08] px-5 py-16 text-white sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl text-center">
+          <AnimatedSection>
+            <h2 className="text-balance font-serif text-3xl font-semibold leading-[0.95] tracking-[-0.05em] text-white mb-12">
+              {hp("partners.title")}
+            </h2>
+          </AnimatedSection>
+          <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
+            <div className="h-16 w-48 rounded-xl bg-white/5 border border-white/10 p-3 flex items-center justify-center">
+              <Image src="/images/partners/uc-daviss-logo.svg" alt="UC Daviss" width={180} height={70} className="h-12 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }
