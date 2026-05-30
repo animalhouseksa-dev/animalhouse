@@ -254,6 +254,41 @@ export default function HomePageClient() {
         </div>
       </section>
 
+      {/* Story */}
+      <section id="story" className="bg-[#fbf8ff] px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
+        <div className="mx-auto max-w-7xl">
+          <AnimatedSection className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+            <div>
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#8b5fc7]">{hp("story.sectionLabel")}</p>
+              <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
+                {hp("story.title")}
+              </h2>
+            </div>
+            <div className="space-y-7 text-xl leading-9 text-[#2d2139]/70">
+              <p>{storyIntro.intro1}</p>
+              <p>{storyIntro.intro2}</p>
+            </div>
+          </AnimatedSection>
+
+          <StaggerContainer className="mt-16 grid gap-5 md:grid-cols-3">
+            {storyNotes.map((note, i) => {
+              const Icon = storyNoteIcons[i];
+              return (
+                <StaggerItem key={note.title}>
+                  <article className="h-full rounded-[2rem] bg-white p-7 shadow-[0_24px_80px_rgba(91,53,133,0.12)] ring-1 ring-[#e7dbf6]">
+                    <Icon className="mb-8 h-7 w-7 text-[#8b5fc7]" />
+                    <p className="mb-3 text-[0.68rem] font-bold uppercase tracking-[0.26em] text-[#2d2139]/35">{note.eyebrow}</p>
+                    <h3 className="mb-4 text-2xl font-semibold tracking-[-0.04em]">{note.title}</h3>
+                    {note.text !== undefined ? (
+                      <p className="leading-7 text-[#2d2139]/62">{note.text}</p>
+                    ) : null}
+                  </article>
+                </StaggerItem>
+              );
+            })}
+          </StaggerContainer>
+        </div>
+      </section>
       {/* Editorial sanctuary gallery — pro photography layout */}
       <section id="sanctuary" ref={sanctuaryRef} className="bg-[#fbf8ff] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-7xl">
@@ -346,42 +381,6 @@ export default function HomePageClient() {
               ))}
             </div>
           </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Story */}
-      <section id="story" className="bg-[#fbf8ff] px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
-        <div className="mx-auto max-w-7xl">
-          <AnimatedSection className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
-            <div>
-              <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#8b5fc7]">{hp("story.sectionLabel")}</p>
-              <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
-                {hp("story.title")}
-              </h2>
-            </div>
-            <div className="space-y-7 text-xl leading-9 text-[#2d2139]/70">
-              <p>{storyIntro.intro1}</p>
-              <p>{storyIntro.intro2}</p>
-            </div>
-          </AnimatedSection>
-
-          <StaggerContainer className="mt-16 grid gap-5 md:grid-cols-3">
-            {storyNotes.map((note, i) => {
-              const Icon = storyNoteIcons[i];
-              return (
-                <StaggerItem key={note.title}>
-                  <article className="h-full rounded-[2rem] bg-white p-7 shadow-[0_24px_80px_rgba(91,53,133,0.12)] ring-1 ring-[#e7dbf6]">
-                    <Icon className="mb-8 h-7 w-7 text-[#8b5fc7]" />
-                    <p className="mb-3 text-[0.68rem] font-bold uppercase tracking-[0.26em] text-[#2d2139]/35">{note.eyebrow}</p>
-                    <h3 className="mb-4 text-2xl font-semibold tracking-[-0.04em]">{note.title}</h3>
-                    {note.text !== undefined ? (
-                      <p className="leading-7 text-[#2d2139]/62">{note.text}</p>
-                    ) : null}
-                  </article>
-                </StaggerItem>
-              );
-            })}
-          </StaggerContainer>
         </div>
       </section>
 
