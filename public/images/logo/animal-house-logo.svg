@@ -1,16 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
-  <!-- Paw Icon -->
-  <g transform="translate(2, 6)">
-    <!-- Main pad -->
-    <path d="M24 18c0-6-5.5-12-12-12S0 12 0 18c0 5 4 10 12 16 8-6 12-11 12-16z" fill="#C8A8E8"/>
-    <!-- Toe beans -->
-    <ellipse cx="5" cy="5" rx="3.5" ry="4" fill="#C8A8E8"/>
-    <ellipse cx="19" cy="5" rx="3.5" ry="4" fill="#C8A8E8"/>
-    <ellipse cx="-1" cy="13" rx="3" ry="3.5" fill="#C8A8E8"/>
-    <ellipse cx="25" cy="13" rx="3" ry="3.5" fill="#C8A8E8"/>
-  </g>
-  <!-- Animal House Text -->
-  <text x="40" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="600" fill="white" letter-spacing="0.02em">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 40" width="240" height="40" fill="none">
+  <text x="0" y="30" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="600" fill="white" letter-spacing="0.02em">
     Animal House
   </text>
 </svg>
