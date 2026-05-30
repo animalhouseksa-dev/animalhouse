@@ -80,7 +80,7 @@ export default function HomePageClient() {
   // ── Standard of care images — Drive imports, no overlap with any other section ──
   const careImages = [
     "/images/shelter/drive/care-cat-colony.webp",
-    "/images/shelter/shelter-hero.webp",
+    "/images/shelter/gallery-shelter-dog.webp",
     "/images/shelter/drive/care-quarantine.webp",
     "/images/shelter/drive/care-kitten-nursery.webp",
     "/images/shelter/drive/care-nursing-mothers.webp",
