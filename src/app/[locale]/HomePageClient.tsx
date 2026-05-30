@@ -96,7 +96,7 @@ export default function HomePageClient() {
 
   // ── Impact pillars ──
   const impactPillarsRaw = hp.raw("impact.pillars") as Array<{ label: string; copy: string }>;
-  const impactIconMap = [Stethoscope, PawPrint, Sparkles, Globe2];
+  const impactIconMap = [Stethoscope, PawPrint, Sparkles, Globe2, Heart];
 
   // ── Impact grid ──
   const impactGrid = hp.raw("impact.grid") as string[];
