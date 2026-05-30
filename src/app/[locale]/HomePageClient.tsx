@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import AnimatedSection from "@/components/AnimatedSection";
 import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
-import AdoptionSection from "@/components/AdoptionSection";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -32,6 +31,14 @@ const imageSrcs = [
   "/images/shelter/gallery-white-cat.webp",
   "/images/shelter/gallery-cat-perch.webp",
   "/images/shelter/gallery-shelter-dog.webp",
+  "/images/shelter/gallery-gate-cat.webp",
+  "/images/shelter/gallery-portrait-cat.webp",
+  "/images/shelter/thumb-1naVdjWmGTTSWlnIlB5DGF6V5rQUhcQZT.webp",
+  "/images/shelter/thumb-1DtmbLOIOpN2SuS8HmKdyTWQK_XgtUiCb.webp",
+  "/images/shelter/thumb-1-iTt3zh-hkicXetZgtcMHu8ZiueAqZBv.webp",
+  "/images/shelter/thumb-1L-gGTlvtBczzXgEOYKpeviy8ZHjuFL-2.webp",
+  "/images/shelter/thumb-1-aF4gvxTn5pjJckOBEekzdgfNBoTb1ku.webp",
+  "/images/shelter/thumb-1D9N_B_JIUeuIswW7ziqTK938smhiK8Rx.webp",
 ];
 
 export default function HomePageClient() {
@@ -65,6 +72,28 @@ export default function HomePageClient() {
   // ── Facility list ──
   const facility = hp.raw("sanctuary.facility") as string[];
 
+  // ── Facility images — one diverse photo per feature ──
+  const facilityImages = [
+    "/images/shelter/gallery-tuxedo-cat.webp",
+    "/images/shelter/gallery-shelter-dog.webp",
+    "/images/shelter/shelter-intake.webp",
+    "/images/shelter/gallery-white-cat.webp",
+    "/images/shelter/gallery-lounging-cat.webp",
+    "/images/shelter/gallery-gate-cat.webp",
+    "/images/shelter/shelter-adoption.webp",
+  ];
+
+  // ── Standard of care images (matching the 7 facility items) ──
+  const careImages = [
+    "/images/shelter/gallery-dog-walk.webp",
+    "/images/shelter/thumb-1-2KRwPbsKme14QbtOAy4atDnxjFDv0VH.webp",
+    "/images/shelter/shelter-sanctuary.webp",
+    "/images/shelter/gallery-cat-tree.webp",
+    "/images/shelter/gallery-fluffy-cat.webp",
+    "/images/shelter/gallery-portrait-cat.webp",
+    "/images/shelter/thumb-1naVdjWmGTTSWlnIlB5DGF6V5rQUhcQZT.webp",
+  ];
+
   // ── Impact pillars ──
   const impactPillarsRaw = hp.raw("impact.pillars") as Array<{ label: string; copy: string }>;
   const impactIconMap = [Stethoscope, PawPrint, Sparkles, Globe2];
@@ -83,6 +112,14 @@ export default function HomePageClient() {
     "",
     "",
     "md:col-span-2",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
   ];
 
   // ── Hero intro + parallax ──
@@ -158,10 +195,6 @@ export default function HomePageClient() {
         <div ref={heroContentRef} className="relative z-10 flex min-h-screen items-end px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-24 will-change-[transform,opacity]">
           <div className="mx-auto grid w-full max-w-7xl items-end gap-10 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              {/* Hero logo */}
-              <div className="mb-4" style={{ opacity: 0, transform: "translateY(24px)" }}>
-                <Image src="/images/logo/animal-house-logo.svg" alt="Animal House" width={180} height={45} className="h-11 w-auto" />
-              </div>
               <p
                 ref={heroBadgeRef}
                 style={{ opacity: 0, transform: "translateY(24px)" }}
@@ -209,6 +242,122 @@ export default function HomePageClient() {
         </div>
       </section>
 
+      {/* Editorial sanctuary gallery — pro photography layout (MOVED UP after stats) */}
+      <section id="sanctuary" ref={sanctuaryRef} className="bg-[#fbf8ff] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+        <div className="mx-auto max-w-7xl">
+          <AnimatedSection className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div className="max-w-3xl">
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#8b5fc7]">{hp("sanctuary.label")}</p>
+              <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
+                {hp("sanctuary.title")}
+              </h2>
+            </div>
+            <p className="max-w-sm text-lg leading-8 text-[#2d2139]/58">Wide corridors filled with warm light, open play yards, quiet recovery spaces, and plenty of places for every creature to find their own corner of peace.</p>
+          </AnimatedSection>
+
+          {/* Expanded photography grid — 10 images showing various parts of facility */}
+          <div ref={sanctuaryImgRef} className="grid auto-rows-[15rem] gap-4 md:grid-cols-4">
+            {/* Large hero — sanctuary wide shot with golden light (2x2) */}
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black md:col-span-2 md:row-span-2">
+              <Image src="/images/shelter/sanctuary-wide-1.webp" alt="Spacious sanctuary interior with rescued animals in warm golden sunlight" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            </AnimatedSection>
+
+            {/* Right top — outdoor sanctuary view */}
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black md:col-span-2">
+              <Image src="/images/shelter/sanctuary-outdoor-1.webp" alt="Tuxedo cat portrait in soft sanctuary lighting" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+
+            {/* 4 more images */}
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
+              <Image src="/images/shelter/sanctuary-side-2.webp" alt="Brown and white tabby cat portrait with striking green eyes" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
+              <Image src="/images/shelter/sanctuary-side-3.webp" alt="Cat relaxing near a shelter gate in soft natural light" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
+              <Image src="/images/shelter/shelter-sanctuary.webp" alt="Spacious sanctuary wetlands and green spaces" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
+              <Image src="/images/shelter/gallery-shelter-dog.webp" alt="Shelter dog in a spacious enclosure" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+          </div>
+
+          {/* Second row of 4 more sanctuary images */}
+          <div className="grid auto-rows-[13rem] gap-4 mt-4 md:grid-cols-4">
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
+              <Image src="/images/shelter/gallery-dog-walk.webp" alt="Dog walking area in the sanctuary" fill className="object-cover transition duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
+              <Image src="/images/shelter/gallery-cat-tree.webp" alt="Cat enrichment area with climbing structures" fill className="object-cover transition duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
+              <Image src="/images/shelter/gallery-gate-cat.webp" alt="Cat near shelter entrance gate" fill className="object-cover transition duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
+              <Image src="/images/shelter/gallery-portrait-cat.webp" alt="Cat portrait in sanctuary lighting" fill className="object-cover transition duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+          </div>
+
+          {/* Facility features — photo + text cards (ISSUE 9) */}
+          <AnimatedSection className="mt-12">
+            <h3 className="mb-6 text-2xl font-semibold tracking-[-0.04em] text-[#2d2139]/80">Our Facilities</h3>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {facility.map((item, idx) => (
+                <div key={item} className="group overflow-hidden rounded-2xl border border-[#e7dbf6] bg-white shadow-[0_12px_40px_rgba(91,53,133,0.08)]">
+                  <div className="relative h-36">
+                    <Image src={facilityImages[idx]} alt={item} fill className="object-cover transition duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  </div>
+                  <div className="p-4 text-sm leading-6 text-[#2d2139]/70">
+                    <div className="flex gap-2 items-start">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#8b5fc7]" />
+                      <span>{item}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
+
+          {/* Standard of Care — every bullet with matching photo (ISSUE 13) */}
+          <AnimatedSection className="mt-16">
+            <div className="mb-8">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.32em] text-[#8b5fc7]">Standard of Care</p>
+              <h3 className="text-balance font-serif text-3xl font-semibold leading-[1] tracking-[-0.04em] md:text-4xl">
+                How we care for every life
+              </h3>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {facility.map((item, idx) => (
+                <article key={`care-${idx}`} className="group overflow-hidden rounded-[1.5rem] border border-[#e7dbf6] bg-white">
+                  <div className="relative h-44">
+                    <Image src={careImages[idx]} alt={item} fill className="object-cover transition duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  </div>
+                  <div className="p-5">
+                    <h4 className="mb-2 text-lg font-semibold tracking-[-0.03em] text-[#2d2139]/85">{item}</h4>
+                    <p className="text-sm leading-6 text-[#2d2139]/55">Every area is designed for comfort, safety, and the wellbeing of our residents.</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Story */}
       <section id="story" className="bg-[#fbf8ff] px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-7xl">
@@ -240,60 +389,22 @@ export default function HomePageClient() {
               );
             })}
           </StaggerContainer>
-        </div>
-      </section>
 
-      {/* Editorial sanctuary gallery — pro photography layout */}
-      <section id="sanctuary" ref={sanctuaryRef} className="bg-[#fbf8ff] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
-        <div className="mx-auto max-w-7xl">
-          <AnimatedSection className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div className="max-w-3xl">
-              <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#8b5fc7]">{hp("sanctuary.label")}</p>
-              <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
-                {hp("sanctuary.title")}
-              </h2>
-            </div>
-            <p className="max-w-sm text-lg leading-8 text-[#2d2139]/58">Wide corridors filled with warm light, open play yards, quiet recovery spaces, and plenty of places for every creature to find their own corner of peace.</p>
-          </AnimatedSection>
-
-          {/* Pro photography grid — wide shots, editorial feel */}
-          <div ref={sanctuaryImgRef} className="grid auto-rows-[17rem] gap-4 md:grid-cols-4">
-            {/* Large hero — sanctuary wide shot with golden light */}
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black md:col-span-2 md:row-span-2">
-              <Image src="/images/shelter/sanctuary-wide-1.webp" alt="Spacious sanctuary interior with rescued animals in warm golden sunlight" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-            </AnimatedSection>
-
-            {/* Right top — shelter cat portrait */}
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black md:col-span-2">
-              <Image src="/images/shelter/sanctuary-outdoor-1.webp" alt="Tuxedo cat portrait in soft sanctuary lighting" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+          {/* Extra photo row in story section */}
+          <div className="mt-12 grid gap-4 md:grid-cols-3">
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black h-64">
+              <Image src="/images/shelter/gallery-dog-walk.webp" alt="Animals enjoying the sanctuary" fill className="object-cover transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </AnimatedSection>
-
-            {/* Bottom left — animal group gathering */}
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
-              <Image src="/images/shelter/sanctuary-side-2.webp" alt="Brown and white tabby cat portrait with striking green eyes" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black h-64">
+              <Image src="/images/shelter/thumb-1-2KRwPbsKme14QbtOAy4atDnxjFDv0VH.webp" alt="Shelter residents" fill className="object-cover transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </AnimatedSection>
-
-            {/* Bottom right — quiet sanctuary moment */}
-            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black">
-              <Image src="/images/shelter/sanctuary-side-3.webp" alt="Cat relaxing near a shelter gate in soft natural light" fill className="object-cover transition duration-700 group-hover:scale-[1.02]" />
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black h-64">
+              <Image src="/images/shelter/thumb-1naVdjWmGTTSWlnIlB5DGF6V5rQUhcQZT.webp" alt="Peaceful sanctuary moment" fill className="object-cover transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </AnimatedSection>
           </div>
-
-          {/* Facility features beneath imagery */}
-          <AnimatedSection className="mt-12">
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {facility.map((item) => (
-                <div key={item} className="flex gap-3 rounded-2xl border border-[#e7dbf6] bg-white p-4 text-sm leading-6 text-[#2d2139]/70">
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#8b5fc7]" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-          </AnimatedSection>
         </div>
       </section>
 
@@ -318,6 +429,18 @@ export default function HomePageClient() {
               </StaggerItem>
             ))}
           </StaggerContainer>
+
+          {/* Photo interlude */}
+          <div className="mt-12 grid gap-4 md:grid-cols-2">
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black h-72">
+              <Image src="/images/shelter/thumb-1L-gGTlvtBczzXgEOYKpeviy8ZHjuFL-2.webp" alt="Future vision for animals" fill className="object-cover transition duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+            <AnimatedSection className="group relative overflow-hidden rounded-[2rem] bg-black h-72">
+              <Image src="/images/shelter/thumb-1-aF4gvxTn5pjJckOBEekzdgfNBoTb1ku.webp" alt="Community of rescue" fill className="object-cover transition duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
@@ -369,7 +492,7 @@ export default function HomePageClient() {
           </AnimatedSection>
           <div className="grid auto-rows-[17rem] gap-4 md:grid-cols-4">
             {galleryImages.map((image, index) => (
-              <AnimatedSection key={image.alt} delay={index * 0.05} className={`group relative overflow-hidden rounded-[2rem] bg-black ${galleryClasses[index]}`}>
+              <AnimatedSection key={image.alt} delay={index * 0.05} className={`group relative overflow-hidden rounded-[2rem] bg-black ${galleryClasses[index] || ''}`}>
                 <Image src={imageSrcs[index]} alt={image.alt} fill className="object-cover transition duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-80" />
               </AnimatedSection>
@@ -421,10 +544,43 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Adoption section */}
-      <AdoptionSection />
+      {/* Contact section */}
+      <section id="contact" className="bg-[#241234] px-5 py-24 text-white sm:px-8 lg:px-12 lg:py-32">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection className="mb-14 max-w-4xl">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.34em] text-white/38">{hp("contact.sectionLabel")}</p>
+            <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
+              {hp("contact.title")}
+            </h2>
+          </AnimatedSection>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <AnimatedSection>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                    <Mail className="w-5 h-5 text-white/70" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-1">{hp("contact.emailLabel")}</h3>
+                    <p className="text-sm text-white/50">{hp("contact.emailValue")}</p>
+                  </div>
+                </div>
 
-      {/* CTA Banner */}
+                {/* Extra photo in contact section */}
+                <div className="relative h-48 rounded-2xl overflow-hidden">
+                  <Image src="/images/shelter/thumb-1D9N_B_JIUeuIswW7ziqTK938smhiK8Rx.webp" alt="Reach out to help animals" fill className="object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </div>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={0.1}>
+              <ContactForm />
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner — MOVED TO BOTTOM (future plans) */}
       <section className="relative bg-[#241234] text-white overflow-hidden">
         <div className="absolute inset-0 opacity-5 bg-[url('/images/shelter/shelter-hero.webp')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#241234]/40 to-[#241234]/95" />
@@ -451,36 +607,6 @@ export default function HomePageClient() {
               </a>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Contact section */}
-      <section id="contact" className="bg-[#241234] px-5 py-24 text-white sm:px-8 lg:px-12 lg:py-32">
-        <div className="max-w-7xl mx-auto">
-          <AnimatedSection className="mb-14 max-w-4xl">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.34em] text-white/38">{hp("contact.sectionLabel")}</p>
-            <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
-              {hp("contact.title")}
-            </h2>
-          </AnimatedSection>
-          <div className="grid gap-8 lg:grid-cols-2">
-            <AnimatedSection>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
-                    <Mail className="w-5 h-5 text-white/70" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-white mb-1">{hp("contact.emailLabel")}</h3>
-                    <p className="text-sm text-white/50">{hp("contact.emailValue")}</p>
-                  </div>
-                </div>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={0.1}>
-              <ContactForm />
-            </AnimatedSection>
-          </div>
         </div>
       </section>
 
@@ -554,23 +680,6 @@ export default function HomePageClient() {
           </AnimatedSection>
         </div>
       </section>
-
-      {/* Strategic Partners */}
-      <section className="bg-[#0a0a08] px-5 py-16 text-white sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl text-center">
-          <AnimatedSection>
-            <h2 className="text-balance font-serif text-3xl font-semibold leading-[0.95] tracking-[-0.05em] text-white mb-12">
-              {hp("partners.title")}
-            </h2>
-          </AnimatedSection>
-          <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
-            <div className="h-16 w-48 rounded-xl bg-white/5 border border-white/10 p-3 flex items-center justify-center">
-              <Image src="/images/partners/uc-daviss-logo.svg" alt="UC Daviss" width={180} height={70} className="h-12 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-            </div>
-          </div>
-        </div>
-      </section>
-
     </main>
   );
 }
@@ -609,7 +718,7 @@ function ContactForm() {
     return (
       <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-8 text-center">
         <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 018 0z" /></svg>
         </div>
         <h3 className="text-xl font-semibold text-white mb-2">{contactSuccess("success.title")}</h3>
         <p className="text-white/50">{contactSuccess("success.desc")}</p>
