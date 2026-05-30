@@ -441,6 +441,33 @@ export default function HomePageClient() {
         </div>
       </section>
 
+      {/* Vision pillars — horizontal line format */}
+      <section id="vision" className="bg-white px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
+        <div className="mx-auto max-w-5xl">
+          <AnimatedSection className="mb-16 max-w-4xl">
+            <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
+              {hp("vision.title")}
+            </h2>
+          </AnimatedSection>
+          <div className="divide-y divide-[#e7dbf6]">
+            {visionPillars.map((pillar) => (
+              <AnimatedSection key={pillar.title} className="group flex flex-col gap-3 py-8 md:flex-row md:items-start md:gap-8">
+                <p className="shrink-0 font-serif text-3xl font-semibold leading-[0.95] tracking-[-0.04em] text-[#8b5fc7] translate-y-[5px]">
+                  We must
+                </p>
+                <div className="flex-1">
+                  <p className="text-2xl font-medium leading-8 text-[#19131f]/80">
+                    {pillar.text.replace(/^We must\s+/i, "").replace(/^we must\s+/i, "")}
+                  </p>
+                  <p className="mt-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#9966cc]/70">
+                    {pillar.proof}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Impact pillars */}
       <section id="impact" className="bg-[#fbf8ff] px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-7xl">
@@ -611,35 +638,6 @@ export default function HomePageClient() {
               </p>
             )}
           </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Vision pillars — moved to end */}
-      {/* Vision pillars — horizontal line format from PDF */}
-      <section id="vision" className="bg-white px-5 py-24 text-[#19131f] sm:px-8 lg:px-12 lg:py-32">
-        <div className="mx-auto max-w-5xl">
-          <AnimatedSection className="mb-16 max-w-4xl">
-            <h2 className="text-balance font-serif text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
-              {hp("vision.title")}
-            </h2>
-          </AnimatedSection>
-          <div className="divide-y divide-[#e7dbf6]">
-            {visionPillars.map((pillar) => (
-              <AnimatedSection key={pillar.title} className="group flex flex-col gap-3 py-8 md:flex-row md:items-start md:gap-8">
-                <p className="shrink-0 font-serif text-3xl font-semibold leading-[0.95] tracking-[-0.04em] text-[#8b5fc7] translate-y-[5px]">
-                  We must
-                </p>
-                <div className="flex-1">
-                  <p className="text-2xl font-medium leading-8 text-[#19131f]/80">
-                    {pillar.text.replace(/^We must\s+/i, "").replace(/^we must\s+/i, "")}
-                  </p>
-                  <p className="mt-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#9966cc]/70">
-                    {pillar.proof}
-                  </p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
         </div>
       </section>
     </main>
