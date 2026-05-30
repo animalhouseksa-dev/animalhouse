@@ -189,53 +189,57 @@ export default function HomePageClient() {
           className="pointer-events-none absolute inset-0 -z-[5] bg-black opacity-0 will-change-[opacity]"
         />
 
-        <div ref={heroContentRef} className="relative z-10 flex min-h-screen items-end px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-24 will-change-[transform,opacity]">
-          <div className="mx-auto grid w-full max-w-7xl items-end gap-10 lg:grid-cols-[1.15fr_0.85fr]">
-            <div>
-              <p
-                ref={heroBadgeRef}
-                style={{ opacity: 0, transform: "translateY(24px)" }}
-                className="mb-5 text-xs font-semibold uppercase tracking-[0.42em] text-white/70"
-              >
-                {hp("hero.badge")}
-              </p>
-              <h1
-                ref={heroTitleRef}
-                style={{ opacity: 0, transform: "translateY(56px)" }}
-                className="max-w-5xl text-balance font-serif text-6xl font-semibold leading-[0.92] tracking-[-0.06em] text-white sm:text-7xl md:text-8xl lg:text-[8.5rem]"
-              >
-                {hp("hero.title")}
-              </h1>
-            </div>
-            <div
+        <div ref={heroContentRef} className="relative z-10 flex min-h-screen flex-col justify-between px-5 pb-10 pt-32 sm:px-8 lg:px-12 lg:pb-16 lg:pt-40 will-change-[transform,opacity]">
+          {/* Title row */}
+          <div className="mx-auto w-full max-w-7xl">
+            <p
+              ref={heroBadgeRef}
+              style={{ opacity: 0, transform: "translateY(24px)" }}
+              className="mb-5 text-xs font-semibold uppercase tracking-[0.42em] text-[#f2e9ff]/80"
+            >
+              {hp("hero.badge")}
+            </p>
+            <h1
+              ref={heroTitleRef}
+              style={{ opacity: 0, transform: "translateY(56px)" }}
+              className="max-w-5xl text-balance font-serif text-5xl font-semibold leading-[0.92] tracking-[-0.06em] text-white sm:text-7xl md:text-8xl lg:text-[8rem]"
+            >
+              {hp("hero.title")}
+            </h1>
+            <p
               ref={heroRightRef}
               style={{ opacity: 0, transform: "translateY(36px)" }}
-              className="max-w-xl border-l border-white/20 pl-6"
+              className="mt-6 max-w-2xl text-lg leading-8 text-white/75 md:text-xl"
             >
-              <p className="text-lg leading-8 text-white/78 md:text-xl">{hp("hero.subtitle")}</p>
-              <div className="mt-8 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-white/75">
-                <a href="#story" className="rounded-full border border-white/20 px-5 py-3 backdrop-blur transition hover:border-white/60 hover:text-white">
-                  {hp("hero.ctaStory")}
-                </a>
-                <a href="#impact" className="rounded-full bg-[#f2e9ff] px-5 py-3 text-[#241234] transition hover:bg-white">
-                  {hp("hero.ctaProof")}
-                </a>
-              </div>
+              {hp("hero.subtitle")}
+            </p>
+          </div>
+
+          {/* Stats strip inside hero — bold, above the fold */}
+          <div className="mx-auto w-full max-w-7xl">
+            <div className="flex flex-wrap items-end gap-x-8 gap-y-4 border-t border-white/10 pt-6 md:gap-x-12">
+              {statsItems
+                .slice(0, 5)
+                .map((stat) => (
+                  <div key={stat.label} className="flex flex-col">
+                    <span className="text-3xl font-bold tracking-[-0.04em] text-white md:text-5xl">{stat.value}</span>
+                    <span className="mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-white/50 md:text-[0.65rem]">{stat.label}</span>
+                  </div>
+                ))}
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Impact numbers */}
-      <section className="border-y border-[#d8c7ef] bg-[#fbf8ff] px-5 py-10 sm:px-8 lg:px-12">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px overflow-hidden rounded-[2rem] border border-[#d8c7ef] bg-[#d8c7ef] md:grid-cols-4 lg:grid-cols-8">
-          {statsItems.map((stat) => (
-            <div key={stat.label} className="bg-white/95 p-5 text-center md:p-7">
-              <div className="text-3xl font-semibold tracking-[-0.05em] text-[#5b3585] md:text-4xl">{stat.value}</div>
-              <div className="mt-3 text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-[#2d2139]/62">{stat.label}</div>
-              <div className="mt-2 text-xs leading-5 text-[#2d2139]/45">{stat.detail}</div>
+          {/* CTA row */}
+          <div className="mx-auto w-full max-w-7xl">
+            <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.22em]">
+              <a href="#story" className="rounded-full border border-white/20 px-5 py-3 text-white/75 backdrop-blur transition hover:border-white/60 hover:text-white">
+                {hp("hero.ctaStory")}
+              </a>
+              <a href="#impact" className="rounded-full bg-[#f2e9ff] px-5 py-3 text-[#241234] transition hover:bg-white">
+                {hp("hero.ctaProof")}
+              </a>
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
