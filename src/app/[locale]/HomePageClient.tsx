@@ -522,9 +522,7 @@ export default function HomePageClient() {
                   className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-75" />
-                {index < 3 ? (
-                  <p className="absolute bottom-5 left-5 right-5 text-[0.6rem] font-bold uppercase tracking-[0.32em] text-white/60">Portrait / {String(index + 1).padStart(2, "0")}</p>
-                ) : null}
+                <p className="absolute bottom-5 left-5 right-5 text-[0.6rem] font-bold uppercase tracking-[0.32em] text-white/60">Portrait / {String(index + 1).padStart(2, "0")}</p>
               </AnimatedSection>
             ))}
           </div>
