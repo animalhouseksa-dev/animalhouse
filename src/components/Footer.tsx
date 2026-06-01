@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Heart } from 'lucide-react';
 
@@ -16,7 +15,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-4">
-              <Image src="/images/logo/animal-house-logo.svg" alt="Animal House" width={160} height={40} className="h-10 w-auto" />
+              <span className="font-serif text-2xl font-semibold normal-case leading-none tracking-[-0.06em] text-[#5b3585] sm:text-[1.65rem]">
+                Animal House
+              </span>
             </div>
             <p className="text-sm leading-relaxed mb-6 text-[#2d2139]/60">
               {t('brandDesc')}
