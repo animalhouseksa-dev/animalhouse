@@ -8,7 +8,6 @@ import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
-  CheckCircle2,
   Globe2,
   Heart,
   Home,
@@ -392,8 +391,6 @@ export default function HomePageClient() {
                   sizes="(min-width: 768px) 42vw, 100vw"
                   className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.035]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                <p className="absolute bottom-5 left-5 max-w-xs text-xl font-semibold leading-tight tracking-[-0.04em] text-white">Shelter life with dignity, space, and daily care.</p>
               </AnimatedSection>
               <AnimatedSection delay={0.3} className="flex min-h-[19rem] flex-col justify-between rounded-xl border border-[#e7dbf6] bg-white p-6 text-[#2d2139] md:col-span-3 md:p-7">
                 <p className="text-[0.62rem] font-bold uppercase tracking-[0.34em] text-[#8b5fc7]">Photo essay</p>
@@ -419,14 +416,6 @@ export default function HomePageClient() {
                     sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                     className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.04]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                    <p className="mb-2 text-[0.58rem] font-bold uppercase tracking-[0.32em] text-white/45">{String(idx + 1).padStart(2, "0")}</p>
-                    <div className="flex gap-2 items-start">
-                      <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-white/70" />
-                      <span className="max-w-sm text-lg font-semibold leading-tight tracking-[-0.04em]">{item}</span>
-                    </div>
-                  </div>
                 </div>
               ))}
             </div>
